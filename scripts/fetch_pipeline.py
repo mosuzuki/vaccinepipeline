@@ -406,6 +406,8 @@ def fetch_curated_tables(cfg: Dict[str, Any]) -> List[Dict[str, Any]]:
     for src in cfg.get("automated_curated_sources", []):
         if not src.get("enabled", True):
             continue
+        if src.get("parser") == "cidrap_landscape":
+            continue
         url = src.get("url", "")
         tables = load_tables_from_url(url)
         before = len(out)
@@ -427,6 +429,88 @@ def fetch_curated_tables(cfg: Dict[str, Any]) -> List[Dict[str, Any]]:
             dedup.append(rec)
     return dedup
 
+
+
+def records_from_cidrap_landscape() -> List[Dict[str, Any]]:
+    """Best-effort parser for CIDRAP's coronavirus vaccine technology landscape.
+
+    CIDRAP exposes rich candidate pages in HTML rather than a stable CSV API. This
+    parser deliberately extracts only high-confidence fields from repeated text
+    blocks and silently skips records when the layout changes.
+    """
+    url = "https://cvr.cidrap.umn.edu/coronavirus-vaccine-technology-landscape"
+    try:
+        html = requests.get(url, timeout=40, headers={"User-Agent": "vaccine-pipeline-dashboard/1.0"}).text
+    except Exception as e:
+        log(f"CIDRAP landscape fetch failed: {e}")
+        return []
+    text = re.sub(r"<script.*?</script>|<style.*?</style>", " ", html, flags=re.S | re.I)
+    text = re.sub(r"<[^>]+>", "\n", text)
+    text = re.sub(r"\n+", "\n", text)
+    records: List[Dict[str, Any]] = []
+    # Candidate blocks generally contain: candidate name, Vaccine Candidate Overview, Phase, platform, status.
+    for m in re.finditer(r"\n([^\n]{2,90})\n\s*Print\s*\n\s*Vaccine Candidate Overview(.{0,1400}?)(?=\n[^\n]{2,90}\n\s*Print\s*\n\s*Vaccine Candidate Overview|\Z)", text, flags=re.S):
+        candidate = clean_text(m.group(1))
+        block = m.group(2)
+        if not candidate or candidate.lower() in {"more detail+", "dev"}:
+            continue
+        phase_m = re.search(r"Phase\s*\n\s*([^\n]+)", block, flags=re.I)
+        platform_m = re.search(r"Vaccine Platform\s*\n\s*([^\n]+)", block, flags=re.I)
+        status_m = re.search(r"R&D Status\s*\n\s*([^\n]+)", block, flags=re.I)
+        dev_m = re.search(r"Dev\s*\n\s*([^\n]+)", block, flags=re.I)
+        stage = normalize_stage(phase_m.group(1) if phase_m else "Unknown")
+        platform = clean_text(platform_m.group(1)) if platform_m else classify_platform(candidate)
+        developer = clean_text(dev_m.group(1)) if dev_m else "Unknown"
+        if stage == "Unknown" and not platform:
+            continue
+        records.append({
+            "id": make_id("CIDRAP", [candidate, stage, platform]),
+            "candidate": candidate,
+            "disease_id": "coronavirus",
+            "disease": "Coronavirus / SARS-CoV-2 / MERS",
+            "disease_category": "respiratory",
+            "stage": stage,
+            "stage_order": STAGE_ORDER.get(stage, -1),
+            "platform": platform or "Unclassified",
+            "developer": developer or "Unknown",
+            "sponsors": [developer] if developer and developer != "Unknown" else [],
+            "countries": [],
+            "status": clean_text(status_m.group(1)) if status_m else "CIDRAP landscape candidate",
+            "last_update": datetime.now(timezone.utc).date().isoformat(),
+            "source": "CIDRAP Coronavirus Vaccine Technology Landscape",
+            "source_url": url,
+            "supporting_trial_count": 0,
+            "supporting_trials": [],
+            "notes": "Best-effort parsed from CIDRAP coronavirus vaccine technology landscape.",
+        })
+    # Deduplicate and cap to avoid accidental layout explosions.
+    seen = set(); out = []
+    for r in records:
+        key = (norm_key(r["candidate"]), r["stage"], norm_key(r["platform"]))
+        if key not in seen:
+            seen.add(key); out.append(r)
+    log(f"CIDRAP landscape -> {len(out)} candidate records")
+    return out[:300]
+
+
+def load_public_seed_records() -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
+    """Load real public-source seed records when the runner has no network.
+
+    This avoids reverting the public dashboard to artificial example rows. The seed
+    file is intentionally limited and should be replaced by automated fetch output
+    whenever network access is available.
+    """
+    seed_path = DATA_DIR / "pipeline.json"
+    if seed_path.exists():
+        try:
+            candidates = json.loads(seed_path.read_text(encoding="utf-8"))
+            if candidates and not any(str(r.get("source", "")).lower().startswith("sample") for r in candidates):
+                studies = json.loads((DATA_DIR / "studies.json").read_text(encoding="utf-8")) if (DATA_DIR / "studies.json").exists() else []
+                log(f"Loaded {len(candidates)} public-source seed records from data/pipeline.json")
+                return candidates, studies
+        except Exception as e:
+            log(f"Public seed load failed: {e}")
+    return [], []
 
 def merge_candidate_sources(records: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     # Keep separate source rows if stages differ; merge exact candidate+disease+source duplicates.
@@ -510,10 +594,16 @@ def main() -> int:
     studies = fetch_clinicaltrials(cfg)
     ctg_candidates = aggregate_candidate_records(studies)
     curated_candidates = fetch_curated_tables(cfg)
-    candidates = merge_candidate_sources(ctg_candidates + curated_candidates)
+    cidrap_candidates = records_from_cidrap_landscape()
+    candidates = merge_candidate_sources(ctg_candidates + curated_candidates + cidrap_candidates)
     if not candidates:
-        log("No records fetched; writing sample records so the dashboard remains usable.")
-        candidates, studies = fallback_samples()
+        log("No records fetched from live sources; loading public-source seed records instead of artificial samples.")
+        seed_candidates, seed_studies = load_public_seed_records()
+        if seed_candidates:
+            candidates, studies = seed_candidates, seed_studies
+        else:
+            log("No public seed file available; writing minimal sample records so the dashboard remains usable.")
+            candidates, studies = fallback_samples()
     summary = make_summary(candidates, studies, cfg)
     write_outputs(candidates, studies, summary)
     log(f"Wrote {len(candidates)} candidate records and {len(studies)} supporting trial records.")

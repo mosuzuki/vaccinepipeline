@@ -1,1 +1,66 @@
-[]
+[
+  {
+    "study_id": "NCT04505722",
+    "candidate": "Ad26.COV2.S",
+    "disease": "COVID-19",
+    "stage": "Phase 3",
+    "source": "ClinicalTrials.gov",
+    "source_url": "https://clinicaltrials.gov/study/NCT04505722"
+  },
+  {
+    "study_id": "NCT04526990",
+    "candidate": "Ad5-nCoV",
+    "disease": "COVID-19",
+    "stage": "Phase 3",
+    "source": "ClinicalTrials.gov",
+    "source_url": "https://clinicaltrials.gov/study/NCT04526990"
+  },
+  {
+    "study_id": "NCT04713553",
+    "candidate": "BNT162b2",
+    "disease": "COVID-19",
+    "stage": "Phase 3",
+    "source": "ClinicalTrials.gov",
+    "source_url": "https://clinicaltrials.gov/study/NCT04713553"
+  },
+  {
+    "study_id": "NCT04583995",
+    "candidate": "NVX-CoV2373",
+    "disease": "COVID-19",
+    "stage": "Phase 3",
+    "source": "ClinicalTrials.gov",
+    "source_url": "https://clinicaltrials.gov/study/NCT04583995"
+  },
+  {
+    "study_id": "NCT04470427",
+    "candidate": "mRNA-1273",
+    "disease": "COVID-19",
+    "stage": "Phase 3",
+    "source": "ClinicalTrials.gov",
+    "source_url": "https://clinicaltrials.gov/study/NCT04470427"
+  },
+  {
+    "study_id": "NCT06672055",
+    "candidate": "VXA-CoV2-3.3",
+    "disease": "COVID-19",
+    "stage": "Phase 2/3",
+    "source": "ClinicalTrials.gov",
+    "source_url": "https://clinicaltrials.gov/study/NCT06672055"
+  },
+  {
+    "study_id": "NCT07069309",
+    "candidate": "COVID-19 RNA vaccine candidate",
+    "disease": "COVID-19",
+    "stage": "Phase 1",
+    "source": "ClinicalTrials.gov",
+    "source_url": "https://clinicaltrials.gov/study/NCT07069309"
+  },
+  {
+    "study_id": "NCT06178991",
+    "candidate": "Combined influenza and COVID-19 vaccine",
+    "disease": "COVID-19 / Influenza",
+    "stage": "Phase 1",
+    "source": "ClinicalTrials.gov",
+    "source_url": "https://clinicaltrials.gov/study/NCT06178991"
+  }
+]

@@ -99,9 +99,18 @@ clinicaltrials:
       condition: Cytomegalovirus Infections
       category: congenital
 
-# Best-effort automated public sources. These are parsed only when they expose tables or spreadsheets.
+# Best-effort automated public sources. Table/spreadsheet sources are parsed generically; CIDRAP is parsed with a custom best-effort HTML parser.
 # They are crucial for preclinical candidates, which are generally absent from trial registries.
 automated_curated_sources:
+  - name: CIDRAP Coronavirus Vaccine Technology Landscape
+    id_prefix: CIDRAP
+    url: https://cvr.cidrap.umn.edu/coronavirus-vaccine-technology-landscape
+    disease: Coronavirus / SARS-CoV-2 / MERS
+    disease_id: coronavirus
+    category: respiratory
+    default_stage: Unknown
+    enabled: true
+    parser: cidrap_landscape
   - name: TB Vaccine Preclinical Pipeline
     id_prefix: TBPRE
     url: https://newtbvaccines.org/tb-vaccine-pipeline/preclinical-stage/

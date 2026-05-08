@@ -1,78 +1,1026 @@
 [
   {
-    "id": "SAMPLE-PRE-001",
-    "candidate": "Example preclinical coronavirus vaccine",
-    "disease_id": "coronavirus",
-    "disease": "Coronavirus",
+    "id": "CIDRAP-e1b102cecd",
+    "candidate": "mRNA-1283 / mNEXSPIKE",
+    "disease_id": "covid-19",
+    "disease": "COVID-19",
     "disease_category": "respiratory",
-    "stage": "Preclinical",
-    "stage_order": 1,
-    "platform": "Protein/subunit/VLP",
-    "developer": "Example university",
+    "stage": "Approved/Authorized",
+    "stage_order": 9,
+    "platform": "mRNA/RNA",
+    "developer": "Moderna",
     "sponsors": [
-      "Example university"
+      "Moderna"
     ],
     "countries": [],
-    "status": "Sample",
+    "status": "CIDRAP landscape update",
     "last_update": "2026-05-08",
-    "source": "Sample data",
-    "source_url": "",
+    "source": "CIDRAP Coronavirus Vaccine Technology Landscape",
+    "source_url": "https://cvr.cidrap.umn.edu/coronavirus-vaccine-technology-landscape-updates",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": "Sample record"
+    "notes": ""
   },
   {
-    "id": "SAMPLE-P1-001",
-    "candidate": "Example RSV vaccine",
+    "id": "WHO-ce8ea74ba8",
+    "candidate": "R21/Matrix-M",
+    "disease_id": "malaria",
+    "disease": "Malaria",
+    "disease_category": "parasitic",
+    "stage": "Phase 4",
+    "stage_order": 8,
+    "platform": "Protein/subunit/VLP",
+    "developer": "University of Oxford; Serum Institute of India; Novavax",
+    "sponsors": [
+      "University of Oxford",
+      "Serum Institute of India",
+      "Novavax"
+    ],
+    "countries": [],
+    "status": "WHO/public vaccine landscape",
+    "last_update": "2026-05-08",
+    "source": "WHO Vaccine Pipeline Tracker / public landscape",
+    "source_url": "https://www.who.int/teams/regulation-prequalification/eul/eul-vaccines/tracking-the-new-vaccine-pipeline",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": ""
+  },
+  {
+    "id": "WHO-af4308b118",
+    "candidate": "RTS,S/AS01",
+    "disease_id": "malaria",
+    "disease": "Malaria",
+    "disease_category": "parasitic",
+    "stage": "Phase 4",
+    "stage_order": 8,
+    "platform": "Protein/subunit/VLP",
+    "developer": "GSK; PATH; partners",
+    "sponsors": [
+      "GSK",
+      "PATH",
+      "partners"
+    ],
+    "countries": [],
+    "status": "WHO/public vaccine landscape",
+    "last_update": "2026-05-08",
+    "source": "WHO Vaccine Pipeline Tracker / public landscape",
+    "source_url": "https://www.who.int/teams/regulation-prequalification/eul/eul-vaccines/tracking-the-new-vaccine-pipeline",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": ""
+  },
+  {
+    "id": "PATH-278f1af4ae",
+    "candidate": "Nirsevimab",
     "disease_id": "rsv",
     "disease": "RSV",
     "disease_category": "respiratory",
-    "stage": "Phase 1",
-    "stage_order": 3,
-    "platform": "mRNA/RNA",
-    "developer": "Example biotech",
+    "stage": "Phase 4",
+    "stage_order": 8,
+    "platform": "Preventive mAb",
+    "developer": "AstraZeneca; Sanofi",
     "sponsors": [
-      "Example biotech"
+      "AstraZeneca",
+      "Sanofi"
+    ],
+    "countries": [],
+    "status": "Public RSV tracker / post-authorization evidence",
+    "last_update": "2026-05-08",
+    "source": "PATH RSV and mAb Trial Tracker",
+    "source_url": "https://www.path.org/our-impact/resources/rsv-and-mab-trial-tracker/",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": ""
+  },
+  {
+    "id": "PATH-819ad36c09",
+    "candidate": "RSVPreF3 OA / Arexvy",
+    "disease_id": "rsv",
+    "disease": "RSV",
+    "disease_category": "respiratory",
+    "stage": "Phase 4",
+    "stage_order": 8,
+    "platform": "Protein/subunit/VLP",
+    "developer": "GSK",
+    "sponsors": [
+      "GSK"
+    ],
+    "countries": [],
+    "status": "Public RSV tracker / post-authorization evidence",
+    "last_update": "2026-05-08",
+    "source": "PATH RSV and mAb Trial Tracker",
+    "source_url": "https://www.path.org/our-impact/resources/rsv-and-mab-trial-tracker/",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": ""
+  },
+  {
+    "id": "PATH-65ed6ee2a4",
+    "candidate": "RSVpreF / Abrysvo",
+    "disease_id": "rsv",
+    "disease": "RSV",
+    "disease_category": "respiratory",
+    "stage": "Phase 4",
+    "stage_order": 8,
+    "platform": "Protein/subunit/VLP",
+    "developer": "Pfizer",
+    "sponsors": [
+      "Pfizer"
+    ],
+    "countries": [],
+    "status": "Public RSV tracker / post-authorization evidence",
+    "last_update": "2026-05-08",
+    "source": "PATH RSV and mAb Trial Tracker",
+    "source_url": "https://www.path.org/our-impact/resources/rsv-and-mab-trial-tracker/",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": ""
+  },
+  {
+    "id": "PATH-823ec889b5",
+    "candidate": "mRNA-1345 / mRESVIA",
+    "disease_id": "rsv",
+    "disease": "RSV",
+    "disease_category": "respiratory",
+    "stage": "Phase 4",
+    "stage_order": 8,
+    "platform": "mRNA/RNA",
+    "developer": "Moderna",
+    "sponsors": [
+      "Moderna"
+    ],
+    "countries": [],
+    "status": "Public RSV tracker / post-authorization evidence",
+    "last_update": "2026-05-08",
+    "source": "PATH RSV and mAb Trial Tracker",
+    "source_url": "https://www.path.org/our-impact/resources/rsv-and-mab-trial-tracker/",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": ""
+  },
+  {
+    "id": "CLINICALTRIALS.GOV-ef5b235eb5",
+    "candidate": "Ad26.COV2.S",
+    "disease_id": "covid-19",
+    "disease": "COVID-19",
+    "disease_category": "respiratory",
+    "stage": "Phase 3",
+    "stage_order": 7,
+    "platform": "Viral vector",
+    "developer": "Janssen Vaccines & Prevention",
+    "sponsors": [
+      "Janssen Vaccines & Prevention"
+    ],
+    "countries": [
+      "Multiple countries"
+    ],
+    "status": "Clinical trial record",
+    "last_update": "2026-05-08",
+    "source": "ClinicalTrials.gov",
+    "source_url": "https://clinicaltrials.gov/study/NCT04505722",
+    "supporting_trial_count": 1,
+    "supporting_trials": [
+      "NCT04505722"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "CLINICALTRIALS.GOV-5c45930395",
+    "candidate": "Ad5-nCoV",
+    "disease_id": "covid-19",
+    "disease": "COVID-19",
+    "disease_category": "respiratory",
+    "stage": "Phase 3",
+    "stage_order": 7,
+    "platform": "Viral vector",
+    "developer": "CanSino Biologics; Beijing Institute of Biotechnology",
+    "sponsors": [
+      "CanSino Biologics",
+      "Beijing Institute of Biotechnology"
+    ],
+    "countries": [
+      "Multiple countries"
+    ],
+    "status": "Clinical trial record",
+    "last_update": "2026-05-08",
+    "source": "ClinicalTrials.gov",
+    "source_url": "https://clinicaltrials.gov/study/NCT04526990",
+    "supporting_trial_count": 1,
+    "supporting_trials": [
+      "NCT04526990"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "CLINICALTRIALS.GOV-fa86b9875a",
+    "candidate": "BNT162b2",
+    "disease_id": "covid-19",
+    "disease": "COVID-19",
+    "disease_category": "respiratory",
+    "stage": "Phase 3",
+    "stage_order": 7,
+    "platform": "mRNA/RNA",
+    "developer": "Pfizer; BioNTech",
+    "sponsors": [
+      "Pfizer",
+      "BioNTech"
     ],
     "countries": [
       "United States"
     ],
-    "status": "Active",
+    "status": "Clinical trial record",
     "last_update": "2026-05-08",
-    "source": "Sample data",
-    "source_url": "",
+    "source": "ClinicalTrials.gov",
+    "source_url": "https://clinicaltrials.gov/study/NCT04713553",
     "supporting_trial_count": 1,
     "supporting_trials": [
-      "NCT00000000"
+      "NCT04713553"
     ],
-    "notes": "Sample record"
+    "notes": ""
   },
   {
-    "id": "SAMPLE-P3-001",
-    "candidate": "Example TB vaccine",
+    "id": "CLINICALTRIALS.GOV-6f44ebd7ba",
+    "candidate": "NVX-CoV2373",
+    "disease_id": "covid-19",
+    "disease": "COVID-19",
+    "disease_category": "respiratory",
+    "stage": "Phase 3",
+    "stage_order": 7,
+    "platform": "Protein/subunit/VLP",
+    "developer": "Novavax",
+    "sponsors": [
+      "Novavax"
+    ],
+    "countries": [
+      "United Kingdom"
+    ],
+    "status": "Clinical trial record",
+    "last_update": "2026-05-08",
+    "source": "ClinicalTrials.gov",
+    "source_url": "https://clinicaltrials.gov/study/NCT04583995",
+    "supporting_trial_count": 1,
+    "supporting_trials": [
+      "NCT04583995"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "CIDRAP-6d0ddacfca",
+    "candidate": "PTX-COVID19-B",
+    "disease_id": "covid-19",
+    "disease": "COVID-19",
+    "disease_category": "respiratory",
+    "stage": "Phase 3",
+    "stage_order": 7,
+    "platform": "mRNA/RNA",
+    "developer": "Providence Therapeutics Holdings",
+    "sponsors": [
+      "Providence Therapeutics Holdings"
+    ],
+    "countries": [],
+    "status": "CIDRAP landscape candidate",
+    "last_update": "2026-05-08",
+    "source": "CIDRAP Coronavirus Vaccine Technology Landscape",
+    "source_url": "https://cvr.cidrap.umn.edu/coronavirus-vaccine-technology-landscape",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": ""
+  },
+  {
+    "id": "CLINICALTRIALS.GOV-8d9c848df3",
+    "candidate": "mRNA-1273",
+    "disease_id": "covid-19",
+    "disease": "COVID-19",
+    "disease_category": "respiratory",
+    "stage": "Phase 3",
+    "stage_order": 7,
+    "platform": "mRNA/RNA",
+    "developer": "Moderna; NIAID",
+    "sponsors": [
+      "Moderna",
+      "NIAID"
+    ],
+    "countries": [
+      "United States"
+    ],
+    "status": "Clinical trial record",
+    "last_update": "2026-05-08",
+    "source": "ClinicalTrials.gov",
+    "source_url": "https://clinicaltrials.gov/study/NCT04470427",
+    "supporting_trial_count": 1,
+    "supporting_trials": [
+      "NCT04470427"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "PATH-617710eb78",
+    "candidate": "Clesrovimab / MK-1654",
+    "disease_id": "rsv",
+    "disease": "RSV",
+    "disease_category": "respiratory",
+    "stage": "Phase 3",
+    "stage_order": 7,
+    "platform": "Preventive mAb",
+    "developer": "Merck",
+    "sponsors": [
+      "Merck"
+    ],
+    "countries": [],
+    "status": "Public RSV clinical tracker",
+    "last_update": "2026-05-08",
+    "source": "PATH RSV and mAb Trial Tracker",
+    "source_url": "https://www.path.org/our-impact/resources/rsv-and-mab-trial-tracker/",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": ""
+  },
+  {
+    "id": "TB-1a7baaa8c0",
+    "candidate": "GamTBvac",
     "disease_id": "tuberculosis",
     "disease": "Tuberculosis",
     "disease_category": "bacterial",
     "stage": "Phase 3",
     "stage_order": 7,
-    "platform": "Viral vector",
-    "developer": "Example PDP",
+    "platform": "Protein/subunit/VLP",
+    "developer": "Gamaleya National Research Center",
     "sponsors": [
-      "Example PDP"
+      "Gamaleya National Research Center"
+    ],
+    "countries": [],
+    "status": "Public TB clinical pipeline",
+    "last_update": "2026-05-08",
+    "source": "TB Vaccine Clinical Pipeline",
+    "source_url": "https://newtbvaccines.org/tb-vaccine-pipeline/clinical-phase/",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": ""
+  },
+  {
+    "id": "TB-aceda908b3",
+    "candidate": "M72/AS01E",
+    "disease_id": "tuberculosis",
+    "disease": "Tuberculosis",
+    "disease_category": "bacterial",
+    "stage": "Phase 3",
+    "stage_order": 7,
+    "platform": "Protein/subunit/VLP",
+    "developer": "GSK; Gates MRI; IAVI",
+    "sponsors": [
+      "GSK",
+      "Gates MRI",
+      "IAVI"
+    ],
+    "countries": [],
+    "status": "Public TB clinical pipeline",
+    "last_update": "2026-05-08",
+    "source": "TB Vaccine Clinical Pipeline",
+    "source_url": "https://newtbvaccines.org/tb-vaccine-pipeline/clinical-phase/",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": ""
+  },
+  {
+    "id": "TB-b6dbba2e38",
+    "candidate": "MTBVAC",
+    "disease_id": "tuberculosis",
+    "disease": "Tuberculosis",
+    "disease_category": "bacterial",
+    "stage": "Phase 3",
+    "stage_order": 7,
+    "platform": "Live attenuated",
+    "developer": "Biofabri; University of Zaragoza; TBVI",
+    "sponsors": [
+      "Biofabri",
+      "University of Zaragoza",
+      "TBVI"
+    ],
+    "countries": [],
+    "status": "Public TB clinical pipeline",
+    "last_update": "2026-05-08",
+    "source": "TB Vaccine Clinical Pipeline",
+    "source_url": "https://newtbvaccines.org/tb-vaccine-pipeline/clinical-phase/",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": ""
+  },
+  {
+    "id": "TB-dcdac5a86c",
+    "candidate": "VPM1002",
+    "disease_id": "tuberculosis",
+    "disease": "Tuberculosis",
+    "disease_category": "bacterial",
+    "stage": "Phase 3",
+    "stage_order": 7,
+    "platform": "Live attenuated / recombinant BCG",
+    "developer": "Serum Institute of India; Max Planck Institute",
+    "sponsors": [
+      "Serum Institute of India",
+      "Max Planck Institute"
+    ],
+    "countries": [],
+    "status": "Public TB clinical pipeline",
+    "last_update": "2026-05-08",
+    "source": "TB Vaccine Clinical Pipeline",
+    "source_url": "https://newtbvaccines.org/tb-vaccine-pipeline/clinical-phase/",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": ""
+  },
+  {
+    "id": "CLINICALTRIALS.GOV-92d0b9f7c6",
+    "candidate": "VXA-CoV2-3.3",
+    "disease_id": "covid-19",
+    "disease": "COVID-19",
+    "disease_category": "respiratory",
+    "stage": "Phase 2/3",
+    "stage_order": 6,
+    "platform": "Protein/subunit/VLP",
+    "developer": "Vaxart",
+    "sponsors": [
+      "Vaxart"
     ],
     "countries": [
-      "South Africa",
-      "Kenya"
+      "United States"
     ],
-    "status": "Active",
+    "status": "Clinical trial record",
     "last_update": "2026-05-08",
-    "source": "Sample data",
-    "source_url": "",
-    "supporting_trial_count": 2,
+    "source": "ClinicalTrials.gov",
+    "source_url": "https://clinicaltrials.gov/study/NCT06672055",
+    "supporting_trial_count": 1,
     "supporting_trials": [
-      "NCT11111111",
-      "NCT22222222"
+      "NCT06672055"
     ],
-    "notes": "Sample record"
+    "notes": ""
+  },
+  {
+    "id": "TB-0d6f279e25",
+    "candidate": "BCG revaccination",
+    "disease_id": "tuberculosis",
+    "disease": "Tuberculosis",
+    "disease_category": "bacterial",
+    "stage": "Phase 2/3",
+    "stage_order": 6,
+    "platform": "Live attenuated",
+    "developer": "Multiple academic groups",
+    "sponsors": [
+      "Multiple academic groups"
+    ],
+    "countries": [],
+    "status": "Public TB clinical pipeline",
+    "last_update": "2026-05-08",
+    "source": "TB Vaccine Clinical Pipeline",
+    "source_url": "https://newtbvaccines.org/tb-vaccine-pipeline/clinical-phase/",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": ""
+  },
+  {
+    "id": "CIDRAP-cd35b89802",
+    "candidate": "ReCoV",
+    "disease_id": "covid-19",
+    "disease": "COVID-19",
+    "disease_category": "respiratory",
+    "stage": "Phase 2",
+    "stage_order": 5,
+    "platform": "Protein/subunit/VLP",
+    "developer": "Jiangsu Rec-Biotechnology",
+    "sponsors": [
+      "Jiangsu Rec-Biotechnology"
+    ],
+    "countries": [],
+    "status": "CIDRAP landscape candidate",
+    "last_update": "2026-05-08",
+    "source": "CIDRAP Coronavirus Vaccine Technology Landscape",
+    "source_url": "https://cvr.cidrap.umn.edu/coronavirus-vaccine-technology-landscape",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": ""
+  },
+  {
+    "id": "WHO-99d900a9a3",
+    "candidate": "ACE527",
+    "disease_id": "etec",
+    "disease": "ETEC",
+    "disease_category": "enteric",
+    "stage": "Phase 2",
+    "stage_order": 5,
+    "platform": "Live attenuated",
+    "developer": "PATH; Emergent BioSolutions",
+    "sponsors": [
+      "PATH",
+      "Emergent BioSolutions"
+    ],
+    "countries": [],
+    "status": "WHO/public vaccine landscape",
+    "last_update": "2026-05-08",
+    "source": "WHO Vaccine Pipeline Tracker / public landscape",
+    "source_url": "https://www.who.int/teams/regulation-prequalification/eul/eul-vaccines/tracking-the-new-vaccine-pipeline",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": ""
+  },
+  {
+    "id": "WHO-c938ea3fec",
+    "candidate": "Norovirus VLP vaccine candidates",
+    "disease_id": "norovirus",
+    "disease": "Norovirus",
+    "disease_category": "enteric",
+    "stage": "Phase 2",
+    "stage_order": 5,
+    "platform": "Protein/subunit/VLP",
+    "developer": "Multiple developers",
+    "sponsors": [
+      "Multiple developers"
+    ],
+    "countries": [],
+    "status": "WHO/public vaccine landscape",
+    "last_update": "2026-05-08",
+    "source": "WHO Vaccine Pipeline Tracker / public landscape",
+    "source_url": "https://www.who.int/teams/regulation-prequalification/eul/eul-vaccines/tracking-the-new-vaccine-pipeline",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": ""
+  },
+  {
+    "id": "WHO-650e1be69b",
+    "candidate": "Shigella4V",
+    "disease_id": "shigella",
+    "disease": "Shigella",
+    "disease_category": "enteric",
+    "stage": "Phase 2",
+    "stage_order": 5,
+    "platform": "Conjugate/polysaccharide",
+    "developer": "GSK; LimmaTech Biologics",
+    "sponsors": [
+      "GSK",
+      "LimmaTech Biologics"
+    ],
+    "countries": [],
+    "status": "WHO/public vaccine landscape",
+    "last_update": "2026-05-08",
+    "source": "WHO Vaccine Pipeline Tracker / public landscape",
+    "source_url": "https://www.who.int/teams/regulation-prequalification/eul/eul-vaccines/tracking-the-new-vaccine-pipeline",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": ""
+  },
+  {
+    "id": "TB-3895c9f194",
+    "candidate": "H56:IC31",
+    "disease_id": "tuberculosis",
+    "disease": "Tuberculosis",
+    "disease_category": "bacterial",
+    "stage": "Phase 2",
+    "stage_order": 5,
+    "platform": "Protein/subunit/VLP",
+    "developer": "Statens Serum Institut; Valneva",
+    "sponsors": [
+      "Statens Serum Institut",
+      "Valneva"
+    ],
+    "countries": [],
+    "status": "Public TB clinical pipeline",
+    "last_update": "2026-05-08",
+    "source": "TB Vaccine Clinical Pipeline",
+    "source_url": "https://newtbvaccines.org/tb-vaccine-pipeline/clinical-phase/",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": ""
+  },
+  {
+    "id": "TB-d3ab6d59e1",
+    "candidate": "ID93 + GLA-SE",
+    "disease_id": "tuberculosis",
+    "disease": "Tuberculosis",
+    "disease_category": "bacterial",
+    "stage": "Phase 2",
+    "stage_order": 5,
+    "platform": "Protein/subunit/VLP",
+    "developer": "Access to Advanced Health Institute",
+    "sponsors": [
+      "Access to Advanced Health Institute"
+    ],
+    "countries": [],
+    "status": "Public TB clinical pipeline",
+    "last_update": "2026-05-08",
+    "source": "TB Vaccine Clinical Pipeline",
+    "source_url": "https://newtbvaccines.org/tb-vaccine-pipeline/clinical-phase/",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": ""
+  },
+  {
+    "id": "TB-bf349ac9e7",
+    "candidate": "TB/FLU-04L",
+    "disease_id": "tuberculosis",
+    "disease": "Tuberculosis",
+    "disease_category": "bacterial",
+    "stage": "Phase 2",
+    "stage_order": 5,
+    "platform": "Viral vector",
+    "developer": "Research Institute for Biological Safety Problems",
+    "sponsors": [
+      "Research Institute for Biological Safety Problems"
+    ],
+    "countries": [],
+    "status": "Public TB clinical pipeline",
+    "last_update": "2026-05-08",
+    "source": "TB Vaccine Clinical Pipeline",
+    "source_url": "https://newtbvaccines.org/tb-vaccine-pipeline/clinical-phase/",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": ""
+  },
+  {
+    "id": "CIDRAP-c37219e732",
+    "candidate": "VBI-2901a",
+    "disease_id": "broadly_protective_coronavirus",
+    "disease": "Broadly protective coronavirus",
+    "disease_category": "respiratory",
+    "stage": "Phase 1",
+    "stage_order": 3,
+    "platform": "Protein/subunit/VLP",
+    "developer": "VBI Vaccines",
+    "sponsors": [
+      "VBI Vaccines"
+    ],
+    "countries": [],
+    "status": "CIDRAP landscape candidate",
+    "last_update": "2026-05-08",
+    "source": "CIDRAP Coronavirus Vaccine Technology Landscape",
+    "source_url": "https://cvr.cidrap.umn.edu/coronavirus-vaccine-technology-landscape",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": ""
+  },
+  {
+    "id": "CLINICALTRIALS.GOV-ecf8cf4867",
+    "candidate": "COVID-19 RNA vaccine candidate",
+    "disease_id": "covid-19",
+    "disease": "COVID-19",
+    "disease_category": "respiratory",
+    "stage": "Phase 1",
+    "stage_order": 3,
+    "platform": "mRNA/RNA",
+    "developer": "Pfizer",
+    "sponsors": [
+      "Pfizer"
+    ],
+    "countries": [
+      "United States"
+    ],
+    "status": "Clinical trial record",
+    "last_update": "2026-05-08",
+    "source": "ClinicalTrials.gov",
+    "source_url": "https://clinicaltrials.gov/study/NCT07069309",
+    "supporting_trial_count": 1,
+    "supporting_trials": [
+      "NCT07069309"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "CLINICALTRIALS.GOV-af972d4b9a",
+    "candidate": "Combined influenza and COVID-19 vaccine",
+    "disease_id": "covid-19___influenza",
+    "disease": "COVID-19 / Influenza",
+    "disease_category": "respiratory",
+    "stage": "Phase 1",
+    "stage_order": 3,
+    "platform": "mRNA/RNA",
+    "developer": "Pfizer",
+    "sponsors": [
+      "Pfizer"
+    ],
+    "countries": [
+      "United States"
+    ],
+    "status": "Clinical trial record",
+    "last_update": "2026-05-08",
+    "source": "ClinicalTrials.gov",
+    "source_url": "https://clinicaltrials.gov/study/NCT06178991",
+    "supporting_trial_count": 1,
+    "supporting_trials": [
+      "NCT06178991"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "WHO-17876beace",
+    "candidate": "HIV Env trimer vaccine candidates",
+    "disease_id": "hiv",
+    "disease": "HIV",
+    "disease_category": "viral",
+    "stage": "Phase 1",
+    "stage_order": 3,
+    "platform": "Protein/subunit/VLP",
+    "developer": "Multiple academic / PDP developers",
+    "sponsors": [
+      "Multiple academic / PDP developers"
+    ],
+    "countries": [],
+    "status": "WHO/public vaccine landscape",
+    "last_update": "2026-05-08",
+    "source": "WHO Vaccine Pipeline Tracker / public landscape",
+    "source_url": "https://www.who.int/teams/regulation-prequalification/eul/eul-vaccines/tracking-the-new-vaccine-pipeline",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": ""
+  },
+  {
+    "id": "WHO-70772b70c7",
+    "candidate": "ChAdOx1 Lassa",
+    "disease_id": "lassa_fever",
+    "disease": "Lassa fever",
+    "disease_category": "viral_hemorrhagic_fever",
+    "stage": "Phase 1",
+    "stage_order": 3,
+    "platform": "Viral vector",
+    "developer": "University of Oxford; CEPI partners",
+    "sponsors": [
+      "University of Oxford",
+      "CEPI partners"
+    ],
+    "countries": [],
+    "status": "Public organization pipeline",
+    "last_update": "2026-05-08",
+    "source": "WHO Vaccine Pipeline Tracker / public landscape",
+    "source_url": "https://www.iavi.org/iavi-pipeline/",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": ""
+  },
+  {
+    "id": "WHO-4f6524bc2d",
+    "candidate": "IAVI C102 / rVSVΔG-LASV-GPC",
+    "disease_id": "lassa_fever",
+    "disease": "Lassa fever",
+    "disease_category": "viral_hemorrhagic_fever",
+    "stage": "Phase 1",
+    "stage_order": 3,
+    "platform": "Viral vector",
+    "developer": "IAVI; CEPI partners",
+    "sponsors": [
+      "IAVI",
+      "CEPI partners"
+    ],
+    "countries": [],
+    "status": "Public organization pipeline",
+    "last_update": "2026-05-08",
+    "source": "WHO Vaccine Pipeline Tracker / public landscape",
+    "source_url": "https://www.iavi.org/iavi-pipeline/",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": ""
+  },
+  {
+    "id": "WHO-1760d21a91",
+    "candidate": "ChAd3-Marburg",
+    "disease_id": "marburg_virus_disease",
+    "disease": "Marburg virus disease",
+    "disease_category": "viral_hemorrhagic_fever",
+    "stage": "Phase 1",
+    "stage_order": 3,
+    "platform": "Viral vector",
+    "developer": "Sabin Vaccine Institute; NIAID",
+    "sponsors": [
+      "Sabin Vaccine Institute",
+      "NIAID"
+    ],
+    "countries": [],
+    "status": "Public organization pipeline",
+    "last_update": "2026-05-08",
+    "source": "WHO Vaccine Pipeline Tracker / public landscape",
+    "source_url": "https://www.iavi.org/iavi-pipeline/",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": ""
+  },
+  {
+    "id": "WHO-2cb9ce3c00",
+    "candidate": "rVSVΔG-SUDV-GP",
+    "disease_id": "sudan_ebolavirus_disease",
+    "disease": "Sudan ebolavirus disease",
+    "disease_category": "viral_hemorrhagic_fever",
+    "stage": "Phase 1",
+    "stage_order": 3,
+    "platform": "Viral vector",
+    "developer": "IAVI; Merck; partners",
+    "sponsors": [
+      "IAVI",
+      "Merck",
+      "partners"
+    ],
+    "countries": [],
+    "status": "Public organization pipeline",
+    "last_update": "2026-05-08",
+    "source": "WHO Vaccine Pipeline Tracker / public landscape",
+    "source_url": "https://www.iavi.org/iavi-pipeline/",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": ""
+  },
+  {
+    "id": "TB-7f2a96e4a6",
+    "candidate": "ChAdOx1 85A / MVA85A",
+    "disease_id": "tuberculosis",
+    "disease": "Tuberculosis",
+    "disease_category": "bacterial",
+    "stage": "Phase 1",
+    "stage_order": 3,
+    "platform": "Viral vector",
+    "developer": "University of Oxford",
+    "sponsors": [
+      "University of Oxford"
+    ],
+    "countries": [],
+    "status": "Public TB clinical pipeline",
+    "last_update": "2026-05-08",
+    "source": "TB Vaccine Clinical Pipeline",
+    "source_url": "https://newtbvaccines.org/tb-vaccine-pipeline/clinical-phase/",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": ""
+  },
+  {
+    "id": "CIDRAP-a375cf6b76",
+    "candidate": "S2-S-M-NP",
+    "disease_id": "broadly_protective_coronavirus",
+    "disease": "Broadly protective coronavirus",
+    "disease_category": "respiratory",
+    "stage": "Preclinical",
+    "stage_order": 1,
+    "platform": "Nanoparticle",
+    "developer": "Zhengzhou University; Henan Normal University; Chongqing Medical University",
+    "sponsors": [
+      "Zhengzhou University",
+      "Henan Normal University",
+      "Chongqing Medical University"
+    ],
+    "countries": [],
+    "status": "CIDRAP landscape candidate",
+    "last_update": "2026-05-08",
+    "source": "CIDRAP Coronavirus Vaccine Technology Landscape",
+    "source_url": "https://cvr.cidrap.umn.edu/coronavirus-vaccine-technology-landscape",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": ""
+  },
+  {
+    "id": "CIDRAP-f54150961e",
+    "candidate": "mRBD-NP",
+    "disease_id": "broadly_protective_coronavirus",
+    "disease": "Broadly protective coronavirus",
+    "disease_category": "respiratory",
+    "stage": "Preclinical",
+    "stage_order": 1,
+    "platform": "Nanoparticle",
+    "developer": "Academic developers",
+    "sponsors": [
+      "Academic developers"
+    ],
+    "countries": [],
+    "status": "CIDRAP landscape candidate",
+    "last_update": "2026-05-08",
+    "source": "CIDRAP Coronavirus Vaccine Technology Landscape",
+    "source_url": "https://cvr.cidrap.umn.edu/coronavirus-vaccine-technology-landscape",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": ""
+  },
+  {
+    "id": "CIDRAP-5daf6785f9",
+    "candidate": "KP3-mRNA",
+    "disease_id": "covid-19",
+    "disease": "COVID-19",
+    "disease_category": "respiratory",
+    "stage": "Preclinical",
+    "stage_order": 1,
+    "platform": "mRNA/RNA",
+    "developer": "Academic developers",
+    "sponsors": [
+      "Academic developers"
+    ],
+    "countries": [],
+    "status": "CIDRAP landscape candidate",
+    "last_update": "2026-05-08",
+    "source": "CIDRAP Coronavirus Vaccine Technology Landscape",
+    "source_url": "https://cvr.cidrap.umn.edu/coronavirus-vaccine-technology-landscape",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": ""
+  },
+  {
+    "id": "CIDRAP-c9c90c79b7",
+    "candidate": "MV-014-212",
+    "disease_id": "covid-19",
+    "disease": "COVID-19",
+    "disease_category": "respiratory",
+    "stage": "Preclinical",
+    "stage_order": 1,
+    "platform": "Viral vector",
+    "developer": "University of Alabama at Birmingham; Meissa Vaccines",
+    "sponsors": [
+      "University of Alabama at Birmingham",
+      "Meissa Vaccines"
+    ],
+    "countries": [],
+    "status": "CIDRAP landscape candidate",
+    "last_update": "2026-05-08",
+    "source": "CIDRAP Coronavirus Vaccine Technology Landscape",
+    "source_url": "https://cvr.cidrap.umn.edu/coronavirus-vaccine-technology-landscape",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": ""
+  },
+  {
+    "id": "CIDRAP-9bca5edf39",
+    "candidate": "S-RBD-NUS",
+    "disease_id": "covid-19",
+    "disease": "COVID-19",
+    "disease_category": "respiratory",
+    "stage": "Preclinical",
+    "stage_order": 1,
+    "platform": "Protein/subunit/VLP",
+    "developer": "National University of Singapore",
+    "sponsors": [
+      "National University of Singapore"
+    ],
+    "countries": [],
+    "status": "CIDRAP landscape candidate",
+    "last_update": "2026-05-08",
+    "source": "CIDRAP Coronavirus Vaccine Technology Landscape",
+    "source_url": "https://cvr.cidrap.umn.edu/coronavirus-vaccine-technology-landscape",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": ""
+  },
+  {
+    "id": "CIDRAP-db0c85e842",
+    "candidate": "XBB.1.5-LNP-mRNA-RBD",
+    "disease_id": "covid-19",
+    "disease": "COVID-19",
+    "disease_category": "respiratory",
+    "stage": "Preclinical",
+    "stage_order": 1,
+    "platform": "mRNA/RNA / nanoparticle",
+    "developer": "University of Toronto",
+    "sponsors": [
+      "University of Toronto"
+    ],
+    "countries": [],
+    "status": "CIDRAP landscape candidate",
+    "last_update": "2026-05-08",
+    "source": "CIDRAP Coronavirus Vaccine Technology Landscape",
+    "source_url": "https://cvr.cidrap.umn.edu/coronavirus-vaccine-technology-landscape",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": ""
+  },
+  {
+    "id": "TB-38244fb077",
+    "candidate": "AEC/BC02",
+    "disease_id": "tuberculosis",
+    "disease": "Tuberculosis",
+    "disease_category": "bacterial",
+    "stage": "Preclinical",
+    "stage_order": 1,
+    "platform": "Protein/subunit/VLP",
+    "developer": "Public TB preclinical pipeline developers",
+    "sponsors": [
+      "Public TB preclinical pipeline developers"
+    ],
+    "countries": [],
+    "status": "Public TB preclinical pipeline",
+    "last_update": "2026-05-08",
+    "source": "TB Vaccine Preclinical Pipeline",
+    "source_url": "https://newtbvaccines.org/tb-vaccine-pipeline/preclinical-stage/",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": ""
+  },
+  {
+    "id": "TB-206ce3205f",
+    "candidate": "CMV-TB",
+    "disease_id": "tuberculosis",
+    "disease": "Tuberculosis",
+    "disease_category": "bacterial",
+    "stage": "Preclinical",
+    "stage_order": 1,
+    "platform": "Viral vector",
+    "developer": "Public TB preclinical pipeline developers",
+    "sponsors": [
+      "Public TB preclinical pipeline developers"
+    ],
+    "countries": [],
+    "status": "Public TB preclinical pipeline",
+    "last_update": "2026-05-08",
+    "source": "TB Vaccine Preclinical Pipeline",
+    "source_url": "https://newtbvaccines.org/tb-vaccine-pipeline/preclinical-stage/",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": ""
   }
 ]

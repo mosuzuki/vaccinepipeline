@@ -27,11 +27,13 @@ The script combines:
 
 1. **ClinicalTrials.gov API v2**: automated search of vaccine-related clinical trials, then approximate grouping from trial records into candidate-level records.
 2. **Best-effort curated public sources**: currently includes TB preclinical/clinical pipeline pages and PATH RSV tracker, when parsable as public tables/spreadsheets.
-3. **Manual reference sources**: WHO, CIDRAP, Vaccines Europe, and others are listed as reference sources and can be automated later if a stable data format is available.
+3. **CIDRAP coronavirus landscape**: a best-effort HTML parser extracts coronavirus vaccine candidates, including preclinical records, when the page layout is readable.
+4. **Public-source seed data**: the repository ships with real public-source seed records so the dashboard is not blank or artificial before the first successful GitHub Actions run.
+5. **Manual reference sources**: WHO, Vaccines Europe, IAVI, and others are listed as reference sources and can be automated later if a stable data format is available.
 
 ## Why preclinical needs curated sources
 
-ClinicalTrials.gov mainly contains human clinical trial records, so it cannot fully capture preclinical vaccine candidates. Preclinical candidates require curated pipeline sources such as disease-specific tracker tables, WHO landscape documents, CIDRAP, or developer pipelines.
+ClinicalTrials.gov mainly contains human clinical trial records, so it cannot fully capture preclinical vaccine candidates. Preclinical candidates require curated pipeline sources such as disease-specific tracker tables, WHO landscape documents, CIDRAP, TB Vaccine Pipeline, PATH, or developer pipelines.
 
 ## Local run
 
@@ -56,7 +58,7 @@ http://localhost:8000
 5. Save.
 6. Go to **Actions → Update vaccine pipeline dashboard → Run workflow**.
 
-After the first run, the dashboard will update weekly by GitHub Actions.
+After the first run, the dashboard will update weekly by GitHub Actions. If live source fetching fails because of a temporary network/DNS problem, the script keeps the real public-source seed dataset rather than reverting to artificial sample rows.
 
 ## Editing target diseases
 
