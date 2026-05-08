@@ -406,17 +406,24 @@ def fetch_curated_tables(cfg: Dict[str, Any]) -> List[Dict[str, Any]]:
     for src in cfg.get("automated_curated_sources", []):
         if not src.get("enabled", True):
             continue
-        if src.get("parser") == "cidrap_landscape":
+        before = len(out)
+        parser = src.get("parser")
+        if parser == "cidrap_landscape":
+            out.extend(records_from_cidrap_landscape(src))
+            log(f"Curated source: {src.get('name')} -> {len(out)-before} candidate records")
+            continue
+        if parser == "iavi_pipeline":
+            out.extend(records_from_iavi_pipeline(src))
+            log(f"Curated source: {src.get('name')} -> {len(out)-before} candidate records")
             continue
         url = src.get("url", "")
         tables = load_tables_from_url(url)
-        before = len(out)
         for df in tables:
             rows = records_from_table(df, src)
             # keep plausible vaccine rows only
             for r in rows:
                 joined = " ".join([r.get("candidate", ""), r.get("platform", ""), r.get("disease", "")])
-                if re.search(r"vaccine|BCG|mRNA|protein|viral|vector|attenuated|inactivated|subunit|conjugate|VLP|RSV|TB|tuberculosis|coronavirus|SARS|MERS", joined, re.I):
+                if re.search(r"vaccine|BCG|mRNA|protein|viral|vector|attenuated|inactivated|subunit|conjugate|VLP|RSV|GBS|TB|tuberculosis|mpox|smallpox|coronavirus|SARS|MERS|influenza", joined, re.I):
                     out.append(r)
         log(f"Curated source: {src.get('name')} -> {len(out)-before} candidate records")
     # Deduplicate curated rows
@@ -430,15 +437,9 @@ def fetch_curated_tables(cfg: Dict[str, Any]) -> List[Dict[str, Any]]:
     return dedup
 
 
-
-def records_from_cidrap_landscape() -> List[Dict[str, Any]]:
-    """Best-effort parser for CIDRAP's coronavirus vaccine technology landscape.
-
-    CIDRAP exposes rich candidate pages in HTML rather than a stable CSV API. This
-    parser deliberately extracts only high-confidence fields from repeated text
-    blocks and silently skips records when the layout changes.
-    """
-    url = "https://cvr.cidrap.umn.edu/coronavirus-vaccine-technology-landscape"
+def records_from_cidrap_landscape(source_cfg: Dict[str, Any]) -> List[Dict[str, Any]]:
+    """Best-effort parser for CIDRAP vaccine technology landscapes."""
+    url = source_cfg.get("url", "")
     try:
         html = requests.get(url, timeout=40, headers={"User-Agent": "vaccine-pipeline-dashboard/1.0"}).text
     except Exception as e:
@@ -448,27 +449,26 @@ def records_from_cidrap_landscape() -> List[Dict[str, Any]]:
     text = re.sub(r"<[^>]+>", "\n", text)
     text = re.sub(r"\n+", "\n", text)
     records: List[Dict[str, Any]] = []
-    # Candidate blocks generally contain: candidate name, Vaccine Candidate Overview, Phase, platform, status.
-    for m in re.finditer(r"\n([^\n]{2,90})\n\s*Print\s*\n\s*Vaccine Candidate Overview(.{0,1400}?)(?=\n[^\n]{2,90}\n\s*Print\s*\n\s*Vaccine Candidate Overview|\Z)", text, flags=re.S):
+    for m in re.finditer(r"\n([^\n]{2,100})\n\s*Print\s*\n\s*Vaccine Candidate Overview(.{0,1800}?)(?=\n[^\n]{2,100}\n\s*Print\s*\n\s*Vaccine Candidate Overview|\Z)", text, flags=re.S):
         candidate = clean_text(m.group(1))
         block = m.group(2)
-        if not candidate or candidate.lower() in {"more detail+", "dev"}:
+        if not candidate or candidate.lower() in {"more detail+", "dev", "vaccine candidate overview"}:
             continue
-        phase_m = re.search(r"Phase\s*\n\s*([^\n]+)", block, flags=re.I)
-        platform_m = re.search(r"Vaccine Platform\s*\n\s*([^\n]+)", block, flags=re.I)
+        phase_m = re.search(r"(?:Phase|Stage)\s*\n\s*([^\n]+)", block, flags=re.I)
+        platform_m = re.search(r"(?:Vaccine Platform|Platform|Technology)\s*\n\s*([^\n]+)", block, flags=re.I)
         status_m = re.search(r"R&D Status\s*\n\s*([^\n]+)", block, flags=re.I)
-        dev_m = re.search(r"Dev\s*\n\s*([^\n]+)", block, flags=re.I)
-        stage = normalize_stage(phase_m.group(1) if phase_m else "Unknown")
+        dev_m = re.search(r"(?:Dev|Developer|Developers)\s*\n\s*([^\n]+)", block, flags=re.I)
+        stage = normalize_stage(phase_m.group(1) if phase_m else source_cfg.get("default_stage", "Unknown"))
         platform = clean_text(platform_m.group(1)) if platform_m else classify_platform(candidate)
         developer = clean_text(dev_m.group(1)) if dev_m else "Unknown"
         if stage == "Unknown" and not platform:
             continue
         records.append({
-            "id": make_id("CIDRAP", [candidate, stage, platform]),
+            "id": make_id(source_cfg.get("id_prefix", "CIDRAP"), [candidate, stage, platform]),
             "candidate": candidate,
-            "disease_id": "coronavirus",
-            "disease": "Coronavirus / SARS-CoV-2 / MERS",
-            "disease_category": "respiratory",
+            "disease_id": source_cfg.get("disease_id", "unknown"),
+            "disease": source_cfg.get("disease", "Unknown"),
+            "disease_category": source_cfg.get("category", ""),
             "stage": stage,
             "stage_order": STAGE_ORDER.get(stage, -1),
             "platform": platform or "Unclassified",
@@ -477,20 +477,70 @@ def records_from_cidrap_landscape() -> List[Dict[str, Any]]:
             "countries": [],
             "status": clean_text(status_m.group(1)) if status_m else "CIDRAP landscape candidate",
             "last_update": datetime.now(timezone.utc).date().isoformat(),
-            "source": "CIDRAP Coronavirus Vaccine Technology Landscape",
+            "source": source_cfg.get("name", "CIDRAP landscape"),
             "source_url": url,
             "supporting_trial_count": 0,
             "supporting_trials": [],
-            "notes": "Best-effort parsed from CIDRAP coronavirus vaccine technology landscape.",
+            "notes": f"Best-effort parsed from {source_cfg.get('name', 'CIDRAP landscape')}.",
         })
-    # Deduplicate and cap to avoid accidental layout explosions.
     seen = set(); out = []
     for r in records:
         key = (norm_key(r["candidate"]), r["stage"], norm_key(r["platform"]))
         if key not in seen:
             seen.add(key); out.append(r)
-    log(f"CIDRAP landscape -> {len(out)} candidate records")
     return out[:300]
+
+
+def records_from_iavi_pipeline(source_cfg: Dict[str, Any]) -> List[Dict[str, Any]]:
+    """Best-effort parser for IAVI's static pipeline page."""
+    url = source_cfg.get("url", "https://www.iavi.org/iavi-pipeline/")
+    try:
+        html = requests.get(url, timeout=40, headers={"User-Agent": "vaccine-pipeline-dashboard/1.0"}).text
+    except Exception as e:
+        log(f"IAVI pipeline fetch failed: {e}")
+        return []
+    text = re.sub(r"<script.*?</script>|<style.*?</style>", " ", html, flags=re.S | re.I)
+    text = re.sub(r"<h3[^>]*>", "\n### ", text, flags=re.I)
+    text = re.sub(r"<[^>]+>", "\n", text)
+    text = re.sub(r"\n+", "\n", text)
+    records=[]
+    for m in re.finditer(r"###\s*([^\n]+)(.{0,1600}?)(?=\n###\s*[^\n]+|\Z)", text, flags=re.S):
+        candidate = clean_text(m.group(1))
+        block = m.group(2)
+        if not candidate or candidate.lower() in {"partners"}:
+            continue
+        phase_m = re.search(r"(Pre-clinical|Preclinical|Phase\s*1|Phase\s*2|Phase\s*3|Phase\s*4)", block, flags=re.I)
+        if not phase_m:
+            continue
+        disease = source_cfg.get("disease", "Priority infectious diseases")
+        for d in ["HIV", "Sudan virus", "Lassa virus", "Marburg virus", "Tuberculosis"]:
+            if re.search(re.escape(d), block, re.I):
+                disease = d
+                break
+        partners_m = re.search(r"Partners\s*\n(.{0,350}?)(?:Pre-clinical|Preclinical|Phase\s*\d)", block, flags=re.I|re.S)
+        developer = clean_text(partners_m.group(1)) if partners_m else "IAVI and partners"
+        stage = normalize_stage(phase_m.group(1))
+        records.append({
+            "id": make_id(source_cfg.get("id_prefix", "IAVI"), [candidate, disease, stage]),
+            "candidate": candidate,
+            "disease_id": norm_key(disease).replace(" ", "_"),
+            "disease": disease,
+            "disease_category": source_cfg.get("category", "global_health"),
+            "stage": stage,
+            "stage_order": STAGE_ORDER.get(stage, -1),
+            "platform": classify_platform(candidate) or "Unclassified",
+            "developer": developer or "IAVI and partners",
+            "sponsors": [developer] if developer else ["IAVI and partners"],
+            "countries": [],
+            "status": "IAVI pipeline candidate",
+            "last_update": datetime.now(timezone.utc).date().isoformat(),
+            "source": source_cfg.get("name", "IAVI Pipeline"),
+            "source_url": url,
+            "supporting_trial_count": 0,
+            "supporting_trials": [],
+            "notes": "Best-effort parsed from IAVI pipeline page.",
+        })
+    return records
 
 
 def load_public_seed_records() -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
@@ -594,8 +644,7 @@ def main() -> int:
     studies = fetch_clinicaltrials(cfg)
     ctg_candidates = aggregate_candidate_records(studies)
     curated_candidates = fetch_curated_tables(cfg)
-    cidrap_candidates = records_from_cidrap_landscape()
-    candidates = merge_candidate_sources(ctg_candidates + curated_candidates + cidrap_candidates)
+    candidates = merge_candidate_sources(ctg_candidates + curated_candidates)
     if not candidates:
         log("No records fetched from live sources; loading public-source seed records instead of artificial samples.")
         seed_candidates, seed_studies = load_public_seed_records()

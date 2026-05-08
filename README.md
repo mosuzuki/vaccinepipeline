@@ -1,6 +1,6 @@
-# Vaccine Development Pipeline Dashboard
+# 感染症ワクチン開発パイプライン・ダッシュボード（試行版）
 
-This is a lightweight GitHub Pages dashboard for monitoring the global infectious-disease vaccine development pipeline.
+公開情報に基づく感染症ワクチン開発パイプラインを、GitHub Pagesで軽量に可視化する試行版ダッシュボードです。
 
 The dashboard is intentionally separate from the Vaccine & Immunization news dashboard. It focuses on **candidate vaccines** and classifies each candidate into:
 
@@ -26,10 +26,9 @@ The dashboard is intentionally separate from the Vaccine & Immunization news das
 The script combines:
 
 1. **ClinicalTrials.gov API v2**: automated search of vaccine-related clinical trials, then approximate grouping from trial records into candidate-level records.
-2. **Best-effort curated public sources**: currently includes TB preclinical/clinical pipeline pages and PATH RSV tracker, when parsable as public tables/spreadsheets.
-3. **CIDRAP coronavirus landscape**: a best-effort HTML parser extracts coronavirus vaccine candidates, including preclinical records, when the page layout is readable.
-4. **Public-source seed data**: the repository ships with real public-source seed records so the dashboard is not blank or artificial before the first successful GitHub Actions run.
-5. **Manual reference sources**: WHO, Vaccines Europe, IAVI, and others are listed as reference sources and can be automated later if a stable data format is available.
+2. **Best-effort curated public sources**: TB preclinical/clinical pipeline pages, PATH RSV tracker, PATH GBS tracker, WHO mpox tracker, CIDRAP coronavirus landscape, CIDRAP universal influenza landscape, and IAVI pipeline, when parsable as public tables/spreadsheets/HTML.
+3. **Public-source seed data**: the repository ships with real public-source seed records so the dashboard is not blank or artificial before the first successful GitHub Actions run.
+4. **Manual reference sources**: WHO vaccine pipeline tracker, WHO malaria clinical development review, Vaccines Europe, and Impact Global Health are listed as reference sources and can be automated later if a stable data format is available.
 
 ## Why preclinical needs curated sources
 

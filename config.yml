@@ -111,6 +111,51 @@ automated_curated_sources:
     default_stage: Unknown
     enabled: true
     parser: cidrap_landscape
+  - name: CIDRAP Universal Influenza Vaccine Technology Landscape
+    id_prefix: CIDRAPFLU
+    url: https://ivr.cidrap.umn.edu/universal-influenza-vaccine-technology-landscape
+    disease: Influenza
+    disease_id: influenza
+    category: respiratory
+    default_stage: Unknown
+    enabled: true
+    parser: cidrap_landscape
+  - name: WHO Mpox Vaccine Tracker
+    id_prefix: WHOMPOX
+    url: https://cdn.who.int/media/docs/default-source/consultation-rdb/landscape_vaccines_mpox.xlsx?download=true&sfvrsn=3af0d1a0_8
+    disease: Mpox / Smallpox
+    disease_id: mpox
+    category: orthopoxvirus
+    default_stage: Unknown
+    as_of: 2024-08-30
+    enabled: true
+  - name: PATH GBS Vaccine Clinical Trial Tracker
+    id_prefix: PATHGBS
+    url: https://media.path.org/documents/GBS_Vaccine_Clinical_Trial_Tracker_Dec2025.xlsx
+    disease: Group B Streptococcus
+    disease_id: gbs
+    category: maternal_infant
+    default_stage: Unknown
+    as_of: 2025-12-12
+    enabled: true
+  - name: IAVI Pipeline
+    id_prefix: IAVI
+    url: https://www.iavi.org/iavi-pipeline/
+    disease: Priority infectious diseases
+    disease_id: iavi
+    category: global_health
+    default_stage: Unknown
+    enabled: true
+    parser: iavi_pipeline
+  - name: WHO Malaria Vaccine Clinical Development Review
+    id_prefix: WHOMAL
+    url: https://www.who.int/observatories/global-observatory-on-health-research-and-development/monitoring/who-review-of-malaria-vaccine-clinical-development
+    disease: Malaria
+    disease_id: malaria
+    category: parasitic
+    default_stage: Unknown
+    as_of: 2024-12-31
+    enabled: false
   - name: TB Vaccine Preclinical Pipeline
     id_prefix: TBPRE
     url: https://newtbvaccines.org/tb-vaccine-pipeline/preclinical-stage/
@@ -152,4 +197,22 @@ manual_reference_sources:
     status: manual_reference
   - name: Vaccines Europe Pipeline Dashboard
     url: https://www.vaccineseurope.eu/vaccines-ecosystem/vaccines-pipeline/
+    status: manual_reference
+  - name: CIDRAP Universal Influenza Vaccine Technology Landscape
+    url: https://ivr.cidrap.umn.edu/universal-influenza-vaccine-technology-landscape
+    status: best_effort_automated
+  - name: WHO Mpox Vaccine Tracker
+    url: https://www.who.int/publications/m/item/mpox-vaccine-tracker---list-of-vaccine-candidates-in-research---development
+    status: best_effort_automated
+  - name: PATH GBS Vaccine Clinical Trial Tracker
+    url: https://www.path.org/our-impact/resources/gbs-vaccine-clinical-trial-tracker/
+    status: best_effort_automated
+  - name: IAVI Pipeline
+    url: https://www.iavi.org/iavi-pipeline/
+    status: best_effort_automated
+  - name: WHO malaria vaccine clinical development review
+    url: https://www.who.int/observatories/global-observatory-on-health-research-and-development/monitoring/who-review-of-malaria-vaccine-clinical-development
+    status: manual_reference
+  - name: Impact Global Health Infectious Disease R&D Tracker
+    url: https://www.impactglobalhealth.org/data/infectious-disease
     status: manual_reference

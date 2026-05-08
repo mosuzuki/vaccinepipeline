@@ -22,6 +22,94 @@
     "notes": ""
   },
   {
+    "id": "CIDRAPFLU-575995fa35",
+    "candidate": "mRNA-1083 / mCOMBRIAX",
+    "disease_id": "influenza_covid_19",
+    "disease": "Influenza / COVID-19",
+    "disease_category": "respiratory",
+    "stage": "Approved/Authorized",
+    "stage_order": 9,
+    "platform": "mRNA/RNA",
+    "developer": "Moderna",
+    "sponsors": [
+      "Moderna"
+    ],
+    "countries": [],
+    "status": "European Commission marketing authorization noted by CIDRAP",
+    "last_update": "2026-05-08",
+    "source": "CIDRAP Universal Influenza Vaccine Technology Landscape",
+    "source_url": "https://ivr.cidrap.umn.edu/universal-influenza-vaccine-technology-landscape",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
+  },
+  {
+    "id": "WHOMPOX-0541f81b7e",
+    "candidate": "ACAM2000",
+    "disease_id": "mpox_smallpox",
+    "disease": "Mpox / Smallpox",
+    "disease_category": "orthopoxvirus",
+    "stage": "Approved/Authorized",
+    "stage_order": 9,
+    "platform": "Live vaccinia",
+    "developer": "Emergent BioSolutions",
+    "sponsors": [
+      "Emergent BioSolutions"
+    ],
+    "countries": [],
+    "status": "Repurposed smallpox vaccine in WHO mpox tracker",
+    "last_update": "2026-05-08",
+    "source": "WHO Mpox Vaccine Tracker",
+    "source_url": "https://www.who.int/publications/m/item/mpox-vaccine-tracker---list-of-vaccine-candidates-in-research---development",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
+  },
+  {
+    "id": "WHOMPOX-28b8326607",
+    "candidate": "LC16m8",
+    "disease_id": "mpox_smallpox",
+    "disease": "Mpox / Smallpox",
+    "disease_category": "orthopoxvirus",
+    "stage": "Approved/Authorized",
+    "stage_order": 9,
+    "platform": "Live attenuated",
+    "developer": "KM Biologics",
+    "sponsors": [
+      "KM Biologics"
+    ],
+    "countries": [],
+    "status": "Repurposed smallpox vaccine in WHO mpox tracker",
+    "last_update": "2026-05-08",
+    "source": "WHO Mpox Vaccine Tracker",
+    "source_url": "https://www.who.int/publications/m/item/mpox-vaccine-tracker---list-of-vaccine-candidates-in-research---development",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
+  },
+  {
+    "id": "WHOMPOX-b1ad50c296",
+    "candidate": "MVA-BN / Jynneos / Imvanex",
+    "disease_id": "mpox_smallpox",
+    "disease": "Mpox / Smallpox",
+    "disease_category": "orthopoxvirus",
+    "stage": "Approved/Authorized",
+    "stage_order": 9,
+    "platform": "Viral vector",
+    "developer": "Bavarian Nordic",
+    "sponsors": [
+      "Bavarian Nordic"
+    ],
+    "countries": [],
+    "status": "Repurposed smallpox vaccine in WHO mpox tracker",
+    "last_update": "2026-05-08",
+    "source": "WHO Mpox Vaccine Tracker",
+    "source_url": "https://www.who.int/publications/m/item/mpox-vaccine-tracker---list-of-vaccine-candidates-in-research---development",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
+  },
+  {
     "id": "WHO-ce8ea74ba8",
     "candidate": "R21/Matrix-M",
     "disease_id": "malaria",
@@ -46,6 +134,28 @@
     "notes": ""
   },
   {
+    "id": "WHOMAL-1d54e30bfc",
+    "candidate": "R21/Matrix-M",
+    "disease_id": "malaria",
+    "disease": "Malaria",
+    "disease_category": "parasitic",
+    "stage": "Phase 4",
+    "stage_order": 8,
+    "platform": "Protein/subunit/VLP",
+    "developer": "University of Oxford / Serum Institute of India / Novavax",
+    "sponsors": [
+      "University of Oxford / Serum Institute of India / Novavax"
+    ],
+    "countries": [],
+    "status": "WHO prequalified and recommended malaria vaccine",
+    "last_update": "2026-05-08",
+    "source": "WHO malaria vaccine clinical development review",
+    "source_url": "https://www.who.int/observatories/global-observatory-on-health-research-and-development/monitoring/who-review-of-malaria-vaccine-clinical-development",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
+  },
+  {
     "id": "WHO-af4308b118",
     "candidate": "RTS,S/AS01",
     "disease_id": "malaria",
@@ -68,6 +178,28 @@
     "supporting_trial_count": 0,
     "supporting_trials": [],
     "notes": ""
+  },
+  {
+    "id": "WHOMAL-d3c8d515a3",
+    "candidate": "RTS,S/AS01E",
+    "disease_id": "malaria",
+    "disease": "Malaria",
+    "disease_category": "parasitic",
+    "stage": "Phase 4",
+    "stage_order": 8,
+    "platform": "Protein/subunit/VLP",
+    "developer": "GSK / PATH",
+    "sponsors": [
+      "GSK / PATH"
+    ],
+    "countries": [],
+    "status": "WHO prequalified and recommended malaria vaccine",
+    "last_update": "2026-05-08",
+    "source": "WHO malaria vaccine clinical development review",
+    "source_url": "https://www.who.int/observatories/global-observatory-on-health-research-and-development/monitoring/who-review-of-malaria-vaccine-clinical-development",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
   },
   {
     "id": "PATH-278f1af4ae",
@@ -522,6 +654,72 @@
     "notes": ""
   },
   {
+    "id": "PATHGBS-c09a97bfe0",
+    "candidate": "GBS-NN / NN2",
+    "disease_id": "group_b_streptococcus",
+    "disease": "Group B Streptococcus",
+    "disease_category": "maternal_infant",
+    "stage": "Phase 2",
+    "stage_order": 5,
+    "platform": "Protein/subunit/VLP",
+    "developer": "MinervaX",
+    "sponsors": [
+      "MinervaX"
+    ],
+    "countries": [],
+    "status": "GBS candidate vaccine clinical tracker",
+    "last_update": "2026-05-08",
+    "source": "PATH GBS Vaccine Clinical Trial Tracker",
+    "source_url": "https://www.path.org/our-impact/resources/gbs-vaccine-clinical-trial-tracker/",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
+  },
+  {
+    "id": "PATHGBS-2ac182f2b5",
+    "candidate": "GBS6",
+    "disease_id": "group_b_streptococcus",
+    "disease": "Group B Streptococcus",
+    "disease_category": "maternal_infant",
+    "stage": "Phase 2",
+    "stage_order": 5,
+    "platform": "Conjugate",
+    "developer": "Pfizer",
+    "sponsors": [
+      "Pfizer"
+    ],
+    "countries": [],
+    "status": "GBS candidate vaccine clinical tracker",
+    "last_update": "2026-05-08",
+    "source": "PATH GBS Vaccine Clinical Trial Tracker",
+    "source_url": "https://www.path.org/our-impact/resources/gbs-vaccine-clinical-trial-tracker/",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
+  },
+  {
+    "id": "IAVI-19da601176",
+    "candidate": "rVSVΔG-LASV-GPC",
+    "disease_id": "lassa_virus",
+    "disease": "Lassa virus",
+    "disease_category": "viral_hemorrhagic_fever",
+    "stage": "Phase 2",
+    "stage_order": 5,
+    "platform": "Viral vector",
+    "developer": "IAVI / CEPI / partners",
+    "sponsors": [
+      "IAVI / CEPI / partners"
+    ],
+    "countries": [],
+    "status": "IAVI-led emerging infectious disease candidate",
+    "last_update": "2026-05-08",
+    "source": "IAVI Pipeline",
+    "source_url": "https://www.iavi.org/iavi-pipeline/",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
+  },
+  {
     "id": "WHO-c938ea3fec",
     "candidate": "Norovirus VLP vaccine candidates",
     "disease_id": "norovirus",
@@ -708,6 +906,28 @@
     "notes": ""
   },
   {
+    "id": "PATHGBS-313b3680b8",
+    "candidate": "IVT GBS-06",
+    "disease_id": "group_b_streptococcus",
+    "disease": "Group B Streptococcus",
+    "disease_category": "maternal_infant",
+    "stage": "Phase 1",
+    "stage_order": 3,
+    "platform": "Protein/subunit/VLP",
+    "developer": "Inventprise",
+    "sponsors": [
+      "Inventprise"
+    ],
+    "countries": [],
+    "status": "GBS candidate vaccine clinical tracker",
+    "last_update": "2026-05-08",
+    "source": "PATH GBS Vaccine Clinical Trial Tracker",
+    "source_url": "https://www.path.org/our-impact/resources/gbs-vaccine-clinical-trial-tracker/",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
+  },
+  {
     "id": "WHO-17876beace",
     "candidate": "HIV Env trimer vaccine candidates",
     "disease_id": "hiv",
@@ -728,6 +948,138 @@
     "supporting_trial_count": 0,
     "supporting_trials": [],
     "notes": ""
+  },
+  {
+    "id": "IAVI-8e02181f84",
+    "candidate": "eOD-GT8 60mer mRNA, coreg28v2 60mer mRNA, N332 GT5 mRNA",
+    "disease_id": "hiv",
+    "disease": "HIV",
+    "disease_category": "global_health",
+    "stage": "Phase 1",
+    "stage_order": 3,
+    "platform": "mRNA/RNA",
+    "developer": "IAVI / Moderna / partners",
+    "sponsors": [
+      "IAVI / Moderna / partners"
+    ],
+    "countries": [],
+    "status": "IAVI-led HIV vaccine candidate",
+    "last_update": "2026-05-08",
+    "source": "IAVI Pipeline",
+    "source_url": "https://www.iavi.org/iavi-pipeline/",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
+  },
+  {
+    "id": "CIDRAPFLU-4cfb20782b",
+    "candidate": "Centi-Flu 01",
+    "disease_id": "influenza",
+    "disease": "Influenza",
+    "disease_category": "respiratory",
+    "stage": "Phase 1",
+    "stage_order": 3,
+    "platform": "Unclassified",
+    "developer": "Centivax",
+    "sponsors": [
+      "Centivax"
+    ],
+    "countries": [],
+    "status": "New clinical candidate listed by CIDRAP",
+    "last_update": "2026-05-08",
+    "source": "CIDRAP Universal Influenza Vaccine Technology Landscape",
+    "source_url": "https://ivr.cidrap.umn.edu/universal-influenza-vaccine-technology-landscape",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
+  },
+  {
+    "id": "CIDRAPFLU-4558d9d412",
+    "candidate": "Novel H5 Central Antigen mRNA-LNP",
+    "disease_id": "influenza",
+    "disease": "Influenza",
+    "disease_category": "respiratory",
+    "stage": "Phase 1",
+    "stage_order": 3,
+    "platform": "mRNA/RNA",
+    "developer": "NIAID",
+    "sponsors": [
+      "NIAID"
+    ],
+    "countries": [],
+    "status": "New clinical candidate listed by CIDRAP",
+    "last_update": "2026-05-08",
+    "source": "CIDRAP Universal Influenza Vaccine Technology Landscape",
+    "source_url": "https://ivr.cidrap.umn.edu/universal-influenza-vaccine-technology-landscape",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
+  },
+  {
+    "id": "CIDRAPFLU-d5bd7fa34d",
+    "candidate": "Recombinant trivalent VLP",
+    "disease_id": "influenza",
+    "disease": "Influenza",
+    "disease_category": "respiratory",
+    "stage": "Phase 1",
+    "stage_order": 3,
+    "platform": "Protein/subunit/VLP",
+    "developer": "Aramis Biotechnologies",
+    "sponsors": [
+      "Aramis Biotechnologies"
+    ],
+    "countries": [],
+    "status": "New clinical candidate listed by CIDRAP",
+    "last_update": "2026-05-08",
+    "source": "CIDRAP Universal Influenza Vaccine Technology Landscape",
+    "source_url": "https://ivr.cidrap.umn.edu/universal-influenza-vaccine-technology-landscape",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
+  },
+  {
+    "id": "CIDRAPFLU-52d0db6971",
+    "candidate": "UniFluVec",
+    "disease_id": "influenza",
+    "disease": "Influenza",
+    "disease_category": "respiratory",
+    "stage": "Phase 1",
+    "stage_order": 3,
+    "platform": "Viral vector",
+    "developer": "Capricorn Technologies",
+    "sponsors": [
+      "Capricorn Technologies"
+    ],
+    "countries": [],
+    "status": "New clinical candidate listed by CIDRAP",
+    "last_update": "2026-05-08",
+    "source": "CIDRAP Universal Influenza Vaccine Technology Landscape",
+    "source_url": "https://ivr.cidrap.umn.edu/universal-influenza-vaccine-technology-landscape",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
+  },
+  {
+    "id": "CIDRAPFLU-56e0799ae2",
+    "candidate": "rH5-NE",
+    "disease_id": "influenza",
+    "disease": "Influenza",
+    "disease_category": "respiratory",
+    "stage": "Phase 1",
+    "stage_order": 3,
+    "platform": "Protein/subunit/VLP",
+    "developer": "University of Maryland / BlueWillow Biologics",
+    "sponsors": [
+      "University of Maryland / BlueWillow Biologics"
+    ],
+    "countries": [],
+    "status": "New clinical candidate listed by CIDRAP",
+    "last_update": "2026-05-08",
+    "source": "CIDRAP Universal Influenza Vaccine Technology Landscape",
+    "source_url": "https://ivr.cidrap.umn.edu/universal-influenza-vaccine-technology-landscape",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
   },
   {
     "id": "WHO-70772b70c7",
@@ -776,6 +1128,28 @@
     "notes": ""
   },
   {
+    "id": "IAVI-90c0861507",
+    "candidate": "rVSV∆G-MARV-GP",
+    "disease_id": "marburg_virus",
+    "disease": "Marburg virus",
+    "disease_category": "viral_hemorrhagic_fever",
+    "stage": "Phase 1",
+    "stage_order": 3,
+    "platform": "Viral vector",
+    "developer": "IAVI / partners",
+    "sponsors": [
+      "IAVI / partners"
+    ],
+    "countries": [],
+    "status": "IAVI-led emerging infectious disease candidate",
+    "last_update": "2026-05-08",
+    "source": "IAVI Pipeline",
+    "source_url": "https://www.iavi.org/iavi-pipeline/",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
+  },
+  {
     "id": "WHO-1760d21a91",
     "candidate": "ChAd3-Marburg",
     "disease_id": "marburg_virus_disease",
@@ -797,6 +1171,28 @@
     "supporting_trial_count": 0,
     "supporting_trials": [],
     "notes": ""
+  },
+  {
+    "id": "WHOMPOX-642e517750",
+    "candidate": "BNT166a",
+    "disease_id": "mpox_smallpox",
+    "disease": "Mpox / Smallpox",
+    "disease_category": "orthopoxvirus",
+    "stage": "Phase 1",
+    "stage_order": 3,
+    "platform": "mRNA/RNA",
+    "developer": "BioNTech",
+    "sponsors": [
+      "BioNTech"
+    ],
+    "countries": [],
+    "status": "Clinical candidate tracked by WHO mpox landscape",
+    "last_update": "2026-05-08",
+    "source": "WHO Mpox Vaccine Tracker",
+    "source_url": "https://www.who.int/publications/m/item/mpox-vaccine-tracker---list-of-vaccine-candidates-in-research---development",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
   },
   {
     "id": "WHO-2cb9ce3c00",
@@ -821,6 +1217,50 @@
     "supporting_trial_count": 0,
     "supporting_trials": [],
     "notes": ""
+  },
+  {
+    "id": "IAVI-e68ec635de",
+    "candidate": "rVSV∆G-SEBOV-GP",
+    "disease_id": "sudan_virus",
+    "disease": "Sudan virus",
+    "disease_category": "viral_hemorrhagic_fever",
+    "stage": "Phase 1",
+    "stage_order": 3,
+    "platform": "Viral vector",
+    "developer": "IAVI / BARDA / WHO / Merck / partners",
+    "sponsors": [
+      "IAVI / BARDA / WHO / Merck / partners"
+    ],
+    "countries": [],
+    "status": "IAVI-led emerging infectious disease candidate",
+    "last_update": "2026-05-08",
+    "source": "IAVI Pipeline",
+    "source_url": "https://www.iavi.org/iavi-pipeline/",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
+  },
+  {
+    "id": "IAVI-d3a029828c",
+    "candidate": "rVSV∆G-SUDV-GP",
+    "disease_id": "sudan_virus",
+    "disease": "Sudan virus",
+    "disease_category": "viral_hemorrhagic_fever",
+    "stage": "Phase 1",
+    "stage_order": 3,
+    "platform": "Viral vector",
+    "developer": "IAVI / partners",
+    "sponsors": [
+      "IAVI / partners"
+    ],
+    "countries": [],
+    "status": "IAVI-led emerging infectious disease candidate",
+    "last_update": "2026-05-08",
+    "source": "IAVI Pipeline",
+    "source_url": "https://www.iavi.org/iavi-pipeline/",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
   },
   {
     "id": "TB-7f2a96e4a6",
@@ -980,6 +1420,28 @@
     "notes": ""
   },
   {
+    "id": "IAVI-76b9f6cdc7",
+    "candidate": "rVSVΔG-Env-HIV",
+    "disease_id": "hiv",
+    "disease": "HIV",
+    "disease_category": "global_health",
+    "stage": "Preclinical",
+    "stage_order": 1,
+    "platform": "Viral vector",
+    "developer": "IAVI / Government of Japan",
+    "sponsors": [
+      "IAVI / Government of Japan"
+    ],
+    "countries": [],
+    "status": "IAVI-led HIV vaccine candidate",
+    "last_update": "2026-05-08",
+    "source": "IAVI Pipeline",
+    "source_url": "https://www.iavi.org/iavi-pipeline/",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
+  },
+  {
     "id": "TB-38244fb077",
     "candidate": "AEC/BC02",
     "disease_id": "tuberculosis",
@@ -1022,5 +1484,27 @@
     "supporting_trial_count": 0,
     "supporting_trials": [],
     "notes": ""
+  },
+  {
+    "id": "IAVI-a5b7078467",
+    "candidate": "mRNA-encoded TB antigens",
+    "disease_id": "tuberculosis",
+    "disease": "Tuberculosis",
+    "disease_category": "bacterial",
+    "stage": "Preclinical",
+    "stage_order": 1,
+    "platform": "mRNA/RNA",
+    "developer": "Moderna / NIAID / partners",
+    "sponsors": [
+      "Moderna / NIAID / partners"
+    ],
+    "countries": [],
+    "status": "IAVI TB vaccine candidate",
+    "last_update": "2026-05-08",
+    "source": "IAVI Pipeline",
+    "source_url": "https://www.iavi.org/iavi-pipeline/",
+    "supporting_trial_count": 0,
+    "supporting_trials": [],
+    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
   }
 ]
