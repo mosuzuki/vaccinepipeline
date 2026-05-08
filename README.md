@@ -96,3 +96,23 @@ The script tries to detect common columns such as candidate, vaccine candidate, 
 - Preclinical coverage is incomplete and depends on publicly parsable curated sources.
 - Some public dashboards are interactive or manually maintained and may not expose stable machine-readable data.
 - Commercial sources such as Citeline, AdisInsight, and GlobalData are not included because of licensing restrictions.
+
+## v5: AI支援型トラッカー機能
+
+この版では、タイトルとサブタイトルを以下に変更しています。
+
+- 感染症ワクチン開発パイプライン・ダッシュボード（試行版）
+- 公開情報に基づくAI支援型ワクチン開発動向トラッカー
+
+第一段階のAI支援機能として、以下を実装しています。
+
+1. **候補ワクチン名寄せ**  
+   ClinicalTrials.gov、疾患別パイプライン、企業・PDP系公開ソースで異なる表記になっている候補名を、エイリアスルールと正規化文字列で候補ワクチン単位に統合します。
+
+2. **開発ステージ分類補助**  
+   レジストリのPhase情報、および公開パイプライン表のテキストを、Preclinical / Phase 1 / Phase 2 / Phase 3 / Phase 4 / Approved に正規化します。各候補に `ai_stage_confidence` を付与します。
+
+3. **今週の開発動向サマリー**  
+   前回の `data/pipeline.json` と今回の取得結果を比較し、新規候補、ステージ進行、疾患・技術分類の分布を短い日本語サマリーとして `data/summary.json` に保存し、トップ画面に表示します。
+
+現時点のAI支援は、外部AI APIにデータを送信しない透明なルールベース実装です。将来的にOpenAI API等によるLLM分類・要約を追加する場合も、現在の出力スキーマを維持できます。

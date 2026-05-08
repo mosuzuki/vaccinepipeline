@@ -1,15 +1,15 @@
 {
-  "last_updated": "2026-05-08",
-  "updated_by": "public seed + GitHub Actions",
-  "total_candidates": 66,
-  "preclinical_candidates": 10,
-  "clinical_candidates": 51,
-  "approved_authorized": 5,
+  "generated_at": "2026-05-08T06:59:38.363986+00:00",
+  "candidate_count": 62,
+  "clinical_trial_record_count": 8,
+  "preclinical_candidate_count": 10,
+  "clinical_candidate_count": 52,
   "disease_count": 20,
+  "platform_count": 12,
   "stage_counts": {
     "Approved/Authorized": 5,
-    "Phase 4": 8,
-    "Phase 3": 11,
+    "Phase 4": 5,
+    "Phase 3": 10,
     "Phase 2/3": 2,
     "Phase 2": 10,
     "Phase 1": 20,
@@ -19,9 +19,9 @@
     "COVID-19": 14,
     "Influenza / COVID-19": 1,
     "Mpox / Smallpox": 4,
-    "Malaria": 4,
-    "RSV": 5,
-    "Tuberculosis": 12,
+    "Malaria": 2,
+    "RSV": 4,
+    "Tuberculosis": 11,
     "ETEC": 1,
     "Group B Streptococcus": 3,
     "Lassa virus": 1,
@@ -40,9 +40,9 @@
   "platform_counts": {
     "mRNA/RNA": 13,
     "Live vaccinia": 1,
-    "Live attenuated": 4,
+    "Live attenuated": 3,
     "Viral vector": 17,
-    "Protein/subunit/VLP": 22,
+    "Protein/subunit/VLP": 19,
     "Preventive mAb": 2,
     "Live attenuated / recombinant BCG": 1,
     "Conjugate": 1,
@@ -72,7 +72,20 @@
       "source_url": "https://cvr.cidrap.umn.edu/coronavirus-vaccine-technology-landscape-updates",
       "supporting_trial_count": 0,
       "supporting_trials": [],
-      "notes": ""
+      "notes": "",
+      "canonical_candidate": "mRNA-1283 / mNEXSPIKE",
+      "candidate_match_method": "AI-assisted text normalization",
+      "candidate_match_confidence": "low",
+      "candidate_match_key": "1283 mnexspike",
+      "candidate_aliases": [],
+      "ai_stage_method": "AI-assisted stage classification",
+      "ai_stage_confidence": "medium",
+      "ai_stage_rationale": "Stage normalized from public source text.",
+      "source_records": 1,
+      "sources_seen": [
+        "CIDRAP Coronavirus Vaccine Technology Landscape"
+      ],
+      "ai_candidate_matching": "AI-assisted candidate matching applied"
     },
     {
       "id": "CIDRAPFLU-575995fa35",
@@ -94,7 +107,20 @@
       "source_url": "https://ivr.cidrap.umn.edu/universal-influenza-vaccine-technology-landscape",
       "supporting_trial_count": 0,
       "supporting_trials": [],
-      "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
+      "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available.",
+      "canonical_candidate": "mRNA-1083 / mCOMBRIAX",
+      "candidate_match_method": "AI-assisted text normalization",
+      "candidate_match_confidence": "low",
+      "candidate_match_key": "1083 mcombriax",
+      "candidate_aliases": [],
+      "ai_stage_method": "AI-assisted stage classification",
+      "ai_stage_confidence": "medium",
+      "ai_stage_rationale": "Stage normalized from public source text.",
+      "source_records": 1,
+      "sources_seen": [
+        "CIDRAP Universal Influenza Vaccine Technology Landscape"
+      ],
+      "ai_candidate_matching": "AI-assisted candidate matching applied"
     },
     {
       "id": "WHOMPOX-0541f81b7e",
@@ -116,7 +142,20 @@
       "source_url": "https://www.who.int/publications/m/item/mpox-vaccine-tracker---list-of-vaccine-candidates-in-research---development",
       "supporting_trial_count": 0,
       "supporting_trials": [],
-      "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
+      "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available.",
+      "canonical_candidate": "ACAM2000",
+      "candidate_match_method": "AI-assisted text normalization",
+      "candidate_match_confidence": "low",
+      "candidate_match_key": "acam2000",
+      "candidate_aliases": [],
+      "ai_stage_method": "AI-assisted stage classification",
+      "ai_stage_confidence": "medium",
+      "ai_stage_rationale": "Stage normalized from public source text.",
+      "source_records": 1,
+      "sources_seen": [
+        "WHO Mpox Vaccine Tracker"
+      ],
+      "ai_candidate_matching": "AI-assisted candidate matching applied"
     },
     {
       "id": "WHOMPOX-28b8326607",
@@ -138,7 +177,20 @@
       "source_url": "https://www.who.int/publications/m/item/mpox-vaccine-tracker---list-of-vaccine-candidates-in-research---development",
       "supporting_trial_count": 0,
       "supporting_trials": [],
-      "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
+      "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available.",
+      "canonical_candidate": "LC16m8",
+      "candidate_match_method": "AI-assisted text normalization",
+      "candidate_match_confidence": "low",
+      "candidate_match_key": "lc16m8",
+      "candidate_aliases": [],
+      "ai_stage_method": "AI-assisted stage classification",
+      "ai_stage_confidence": "medium",
+      "ai_stage_rationale": "Stage normalized from public source text.",
+      "source_records": 1,
+      "sources_seen": [
+        "WHO Mpox Vaccine Tracker"
+      ],
+      "ai_candidate_matching": "AI-assisted candidate matching applied"
     },
     {
       "id": "WHOMPOX-b1ad50c296",
@@ -160,7 +212,20 @@
       "source_url": "https://www.who.int/publications/m/item/mpox-vaccine-tracker---list-of-vaccine-candidates-in-research---development",
       "supporting_trial_count": 0,
       "supporting_trials": [],
-      "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
+      "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available.",
+      "canonical_candidate": "MVA-BN / Jynneos / Imvanex",
+      "candidate_match_method": "AI-assisted text normalization",
+      "candidate_match_confidence": "low",
+      "candidate_match_key": "mva bn jynneos imvanex",
+      "candidate_aliases": [],
+      "ai_stage_method": "AI-assisted stage classification",
+      "ai_stage_confidence": "medium",
+      "ai_stage_rationale": "Stage normalized from public source text.",
+      "source_records": 1,
+      "sources_seen": [
+        "WHO Mpox Vaccine Tracker"
+      ],
+      "ai_candidate_matching": "AI-assisted candidate matching applied"
     },
     {
       "id": "WHO-ce8ea74ba8",
@@ -173,9 +238,10 @@
       "platform": "Protein/subunit/VLP",
       "developer": "University of Oxford; Serum Institute of India; Novavax",
       "sponsors": [
-        "University of Oxford",
+        "Novavax",
         "Serum Institute of India",
-        "Novavax"
+        "University of Oxford",
+        "University of Oxford / Serum Institute of India / Novavax"
       ],
       "countries": [],
       "status": "WHO/public vaccine landscape",
@@ -184,29 +250,21 @@
       "source_url": "https://www.who.int/teams/regulation-prequalification/eul/eul-vaccines/tracking-the-new-vaccine-pipeline",
       "supporting_trial_count": 0,
       "supporting_trials": [],
-      "notes": ""
-    },
-    {
-      "id": "WHOMAL-1d54e30bfc",
-      "candidate": "R21/Matrix-M",
-      "disease_id": "malaria",
-      "disease": "Malaria",
-      "disease_category": "parasitic",
-      "stage": "Phase 4",
-      "stage_order": 8,
-      "platform": "Protein/subunit/VLP",
-      "developer": "University of Oxford / Serum Institute of India / Novavax",
-      "sponsors": [
-        "University of Oxford / Serum Institute of India / Novavax"
+      "notes": "",
+      "canonical_candidate": "R21/Matrix-M",
+      "candidate_match_method": "AI-assisted alias rule",
+      "candidate_match_confidence": "high",
+      "candidate_match_key": "r21 matrix m",
+      "candidate_aliases": [],
+      "ai_stage_method": "AI-assisted stage classification",
+      "ai_stage_confidence": "medium",
+      "ai_stage_rationale": "Stage normalized from public source text.",
+      "source_records": 2,
+      "sources_seen": [
+        "WHO Vaccine Pipeline Tracker / public landscape",
+        "WHO malaria vaccine clinical development review"
       ],
-      "countries": [],
-      "status": "WHO prequalified and recommended malaria vaccine",
-      "last_update": "2026-05-08",
-      "source": "WHO malaria vaccine clinical development review",
-      "source_url": "https://www.who.int/observatories/global-observatory-on-health-research-and-development/monitoring/who-review-of-malaria-vaccine-clinical-development",
-      "supporting_trial_count": 0,
-      "supporting_trials": [],
-      "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
+      "ai_candidate_matching": "AI-assisted candidate matching applied"
     },
     {
       "id": "WHO-af4308b118",
@@ -220,6 +278,7 @@
       "developer": "GSK; PATH; partners",
       "sponsors": [
         "GSK",
+        "GSK / PATH",
         "PATH",
         "partners"
       ],
@@ -230,33 +289,27 @@
       "source_url": "https://www.who.int/teams/regulation-prequalification/eul/eul-vaccines/tracking-the-new-vaccine-pipeline",
       "supporting_trial_count": 0,
       "supporting_trials": [],
-      "notes": ""
-    },
-    {
-      "id": "WHOMAL-d3c8d515a3",
-      "candidate": "RTS,S/AS01E",
-      "disease_id": "malaria",
-      "disease": "Malaria",
-      "disease_category": "parasitic",
-      "stage": "Phase 4",
-      "stage_order": 8,
-      "platform": "Protein/subunit/VLP",
-      "developer": "GSK / PATH",
-      "sponsors": [
-        "GSK / PATH"
+      "notes": "",
+      "canonical_candidate": "RTS,S/AS01",
+      "candidate_match_method": "AI-assisted alias rule",
+      "candidate_match_confidence": "high",
+      "candidate_match_key": "rts s as01",
+      "candidate_aliases": [
+        "RTS,S/AS01E"
       ],
-      "countries": [],
-      "status": "WHO prequalified and recommended malaria vaccine",
-      "last_update": "2026-05-08",
-      "source": "WHO malaria vaccine clinical development review",
-      "source_url": "https://www.who.int/observatories/global-observatory-on-health-research-and-development/monitoring/who-review-of-malaria-vaccine-clinical-development",
-      "supporting_trial_count": 0,
-      "supporting_trials": [],
-      "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
+      "ai_stage_method": "AI-assisted stage classification",
+      "ai_stage_confidence": "medium",
+      "ai_stage_rationale": "Stage normalized from public source text.",
+      "source_records": 2,
+      "sources_seen": [
+        "WHO Vaccine Pipeline Tracker / public landscape",
+        "WHO malaria vaccine clinical development review"
+      ],
+      "ai_candidate_matching": "AI-assisted candidate matching applied"
     },
     {
       "id": "PATH-278f1af4ae",
-      "candidate": "Nirsevimab",
+      "candidate": "Nirsevimab / Beyfortus",
       "disease_id": "rsv",
       "disease": "RSV",
       "disease_category": "respiratory",
@@ -275,11 +328,26 @@
       "source_url": "https://www.path.org/our-impact/resources/rsv-and-mab-trial-tracker/",
       "supporting_trial_count": 0,
       "supporting_trials": [],
-      "notes": ""
+      "notes": "",
+      "canonical_candidate": "Nirsevimab / Beyfortus",
+      "candidate_match_method": "AI-assisted alias rule",
+      "candidate_match_confidence": "high",
+      "candidate_match_key": "nirsevimab beyfortus",
+      "candidate_aliases": [
+        "Nirsevimab"
+      ],
+      "ai_stage_method": "AI-assisted stage classification",
+      "ai_stage_confidence": "medium",
+      "ai_stage_rationale": "Stage normalized from public source text.",
+      "source_records": 1,
+      "sources_seen": [
+        "PATH RSV and mAb Trial Tracker"
+      ],
+      "ai_candidate_matching": "AI-assisted candidate matching applied"
     },
     {
       "id": "PATH-819ad36c09",
-      "candidate": "RSVPreF3 OA / Arexvy",
+      "candidate": "RSVpreF / Abrysvo",
       "disease_id": "rsv",
       "disease": "RSV",
       "disease_category": "respiratory",
@@ -288,28 +356,7 @@
       "platform": "Protein/subunit/VLP",
       "developer": "GSK",
       "sponsors": [
-        "GSK"
-      ],
-      "countries": [],
-      "status": "Public RSV tracker / post-authorization evidence",
-      "last_update": "2026-05-08",
-      "source": "PATH RSV and mAb Trial Tracker",
-      "source_url": "https://www.path.org/our-impact/resources/rsv-and-mab-trial-tracker/",
-      "supporting_trial_count": 0,
-      "supporting_trials": [],
-      "notes": ""
-    },
-    {
-      "id": "PATH-65ed6ee2a4",
-      "candidate": "RSVpreF / Abrysvo",
-      "disease_id": "rsv",
-      "disease": "RSV",
-      "disease_category": "respiratory",
-      "stage": "Phase 4",
-      "stage_order": 8,
-      "platform": "Protein/subunit/VLP",
-      "developer": "Pfizer",
-      "sponsors": [
+        "GSK",
         "Pfizer"
       ],
       "countries": [],
@@ -319,11 +366,26 @@
       "source_url": "https://www.path.org/our-impact/resources/rsv-and-mab-trial-tracker/",
       "supporting_trial_count": 0,
       "supporting_trials": [],
-      "notes": ""
+      "notes": "",
+      "canonical_candidate": "RSVpreF / Abrysvo",
+      "candidate_match_method": "AI-assisted alias rule",
+      "candidate_match_confidence": "high",
+      "candidate_match_key": "rsvpref abrysvo",
+      "candidate_aliases": [
+        "RSVPreF3 OA / Arexvy"
+      ],
+      "ai_stage_method": "AI-assisted stage classification",
+      "ai_stage_confidence": "medium",
+      "ai_stage_rationale": "Stage normalized from public source text.",
+      "source_records": 2,
+      "sources_seen": [
+        "PATH RSV and mAb Trial Tracker"
+      ],
+      "ai_candidate_matching": "AI-assisted candidate matching applied"
     },
     {
       "id": "PATH-823ec889b5",
-      "candidate": "mRNA-1345 / mRESVIA",
+      "candidate": "mRNA-1345",
       "disease_id": "rsv",
       "disease": "RSV",
       "disease_category": "respiratory",
@@ -341,7 +403,22 @@
       "source_url": "https://www.path.org/our-impact/resources/rsv-and-mab-trial-tracker/",
       "supporting_trial_count": 0,
       "supporting_trials": [],
-      "notes": ""
+      "notes": "",
+      "canonical_candidate": "mRNA-1345",
+      "candidate_match_method": "AI-assisted alias rule",
+      "candidate_match_confidence": "high",
+      "candidate_match_key": "1345",
+      "candidate_aliases": [
+        "mRNA-1345 / mRESVIA"
+      ],
+      "ai_stage_method": "AI-assisted stage classification",
+      "ai_stage_confidence": "medium",
+      "ai_stage_rationale": "Stage normalized from public source text.",
+      "source_records": 1,
+      "sources_seen": [
+        "PATH RSV and mAb Trial Tracker"
+      ],
+      "ai_candidate_matching": "AI-assisted candidate matching applied"
     },
     {
       "id": "CLINICALTRIALS.GOV-ef5b235eb5",
@@ -367,7 +444,20 @@
       "supporting_trials": [
         "NCT04505722"
       ],
-      "notes": ""
+      "notes": "",
+      "canonical_candidate": "Ad26.COV2.S",
+      "candidate_match_method": "AI-assisted alias rule",
+      "candidate_match_confidence": "high",
+      "candidate_match_key": "ad26 cov2 s",
+      "candidate_aliases": [],
+      "ai_stage_method": "Registry phase mapping",
+      "ai_stage_confidence": "high",
+      "ai_stage_rationale": "Stage mapped from ClinicalTrials.gov phase field.",
+      "source_records": 1,
+      "sources_seen": [
+        "ClinicalTrials.gov"
+      ],
+      "ai_candidate_matching": "AI-assisted candidate matching applied"
     },
     {
       "id": "CLINICALTRIALS.GOV-5c45930395",
@@ -394,7 +484,687 @@
       "supporting_trials": [
         "NCT04526990"
       ],
-      "notes": ""
+      "notes": "",
+      "canonical_candidate": "Ad5-nCoV",
+      "candidate_match_method": "AI-assisted text normalization",
+      "candidate_match_confidence": "low",
+      "candidate_match_key": "ad5 ncov",
+      "candidate_aliases": [],
+      "ai_stage_method": "Registry phase mapping",
+      "ai_stage_confidence": "high",
+      "ai_stage_rationale": "Stage mapped from ClinicalTrials.gov phase field.",
+      "source_records": 1,
+      "sources_seen": [
+        "ClinicalTrials.gov"
+      ],
+      "ai_candidate_matching": "AI-assisted candidate matching applied"
+    },
+    {
+      "id": "CLINICALTRIALS.GOV-fa86b9875a",
+      "candidate": "BNT162b2 / Comirnaty",
+      "disease_id": "covid-19",
+      "disease": "COVID-19",
+      "disease_category": "respiratory",
+      "stage": "Phase 3",
+      "stage_order": 7,
+      "platform": "mRNA/RNA",
+      "developer": "Pfizer; BioNTech",
+      "sponsors": [
+        "Pfizer",
+        "BioNTech"
+      ],
+      "countries": [
+        "United States"
+      ],
+      "status": "Clinical trial record",
+      "last_update": "2026-05-08",
+      "source": "ClinicalTrials.gov",
+      "source_url": "https://clinicaltrials.gov/study/NCT04713553",
+      "supporting_trial_count": 1,
+      "supporting_trials": [
+        "NCT04713553"
+      ],
+      "notes": "",
+      "canonical_candidate": "BNT162b2 / Comirnaty",
+      "candidate_match_method": "AI-assisted alias rule",
+      "candidate_match_confidence": "high",
+      "candidate_match_key": "bnt162b2 comirnaty",
+      "candidate_aliases": [
+        "BNT162b2"
+      ],
+      "ai_stage_method": "Registry phase mapping",
+      "ai_stage_confidence": "high",
+      "ai_stage_rationale": "Stage mapped from ClinicalTrials.gov phase field.",
+      "source_records": 1,
+      "sources_seen": [
+        "ClinicalTrials.gov"
+      ],
+      "ai_candidate_matching": "AI-assisted candidate matching applied"
+    },
+    {
+      "id": "CLINICALTRIALS.GOV-6f44ebd7ba",
+      "candidate": "NVX-CoV2373 / Nuvaxovid",
+      "disease_id": "covid-19",
+      "disease": "COVID-19",
+      "disease_category": "respiratory",
+      "stage": "Phase 3",
+      "stage_order": 7,
+      "platform": "Protein/subunit/VLP",
+      "developer": "Novavax",
+      "sponsors": [
+        "Novavax"
+      ],
+      "countries": [
+        "United Kingdom"
+      ],
+      "status": "Clinical trial record",
+      "last_update": "2026-05-08",
+      "source": "ClinicalTrials.gov",
+      "source_url": "https://clinicaltrials.gov/study/NCT04583995",
+      "supporting_trial_count": 1,
+      "supporting_trials": [
+        "NCT04583995"
+      ],
+      "notes": "",
+      "canonical_candidate": "NVX-CoV2373 / Nuvaxovid",
+      "candidate_match_method": "AI-assisted alias rule",
+      "candidate_match_confidence": "high",
+      "candidate_match_key": "nvx cov2373 nuvaxovid",
+      "candidate_aliases": [
+        "NVX-CoV2373"
+      ],
+      "ai_stage_method": "Registry phase mapping",
+      "ai_stage_confidence": "high",
+      "ai_stage_rationale": "Stage mapped from ClinicalTrials.gov phase field.",
+      "source_records": 1,
+      "sources_seen": [
+        "ClinicalTrials.gov"
+      ],
+      "ai_candidate_matching": "AI-assisted candidate matching applied"
+    },
+    {
+      "id": "CIDRAP-6d0ddacfca",
+      "candidate": "PTX-COVID19-B",
+      "disease_id": "covid-19",
+      "disease": "COVID-19",
+      "disease_category": "respiratory",
+      "stage": "Phase 3",
+      "stage_order": 7,
+      "platform": "mRNA/RNA",
+      "developer": "Providence Therapeutics Holdings",
+      "sponsors": [
+        "Providence Therapeutics Holdings"
+      ],
+      "countries": [],
+      "status": "CIDRAP landscape candidate",
+      "last_update": "2026-05-08",
+      "source": "CIDRAP Coronavirus Vaccine Technology Landscape",
+      "source_url": "https://cvr.cidrap.umn.edu/coronavirus-vaccine-technology-landscape",
+      "supporting_trial_count": 0,
+      "supporting_trials": [],
+      "notes": "",
+      "canonical_candidate": "PTX-COVID19-B",
+      "candidate_match_method": "AI-assisted text normalization",
+      "candidate_match_confidence": "low",
+      "candidate_match_key": "ptx covid19 b",
+      "candidate_aliases": [],
+      "ai_stage_method": "AI-assisted stage classification",
+      "ai_stage_confidence": "medium",
+      "ai_stage_rationale": "Stage normalized from public source text.",
+      "source_records": 1,
+      "sources_seen": [
+        "CIDRAP Coronavirus Vaccine Technology Landscape"
+      ],
+      "ai_candidate_matching": "AI-assisted candidate matching applied"
+    },
+    {
+      "id": "CLINICALTRIALS.GOV-8d9c848df3",
+      "candidate": "mRNA-1273 / Spikevax",
+      "disease_id": "covid-19",
+      "disease": "COVID-19",
+      "disease_category": "respiratory",
+      "stage": "Phase 3",
+      "stage_order": 7,
+      "platform": "mRNA/RNA",
+      "developer": "Moderna; NIAID",
+      "sponsors": [
+        "Moderna",
+        "NIAID"
+      ],
+      "countries": [
+        "United States"
+      ],
+      "status": "Clinical trial record",
+      "last_update": "2026-05-08",
+      "source": "ClinicalTrials.gov",
+      "source_url": "https://clinicaltrials.gov/study/NCT04470427",
+      "supporting_trial_count": 1,
+      "supporting_trials": [
+        "NCT04470427"
+      ],
+      "notes": "",
+      "canonical_candidate": "mRNA-1273 / Spikevax",
+      "candidate_match_method": "AI-assisted alias rule",
+      "candidate_match_confidence": "high",
+      "candidate_match_key": "1273 spikevax",
+      "candidate_aliases": [
+        "mRNA-1273"
+      ],
+      "ai_stage_method": "Registry phase mapping",
+      "ai_stage_confidence": "high",
+      "ai_stage_rationale": "Stage mapped from ClinicalTrials.gov phase field.",
+      "source_records": 1,
+      "sources_seen": [
+        "ClinicalTrials.gov"
+      ],
+      "ai_candidate_matching": "AI-assisted candidate matching applied"
+    },
+    {
+      "id": "PATH-617710eb78",
+      "candidate": "Clesrovimab / MK-1654",
+      "disease_id": "rsv",
+      "disease": "RSV",
+      "disease_category": "respiratory",
+      "stage": "Phase 3",
+      "stage_order": 7,
+      "platform": "Preventive mAb",
+      "developer": "Merck",
+      "sponsors": [
+        "Merck"
+      ],
+      "countries": [],
+      "status": "Public RSV clinical tracker",
+      "last_update": "2026-05-08",
+      "source": "PATH RSV and mAb Trial Tracker",
+      "source_url": "https://www.path.org/our-impact/resources/rsv-and-mab-trial-tracker/",
+      "supporting_trial_count": 0,
+      "supporting_trials": [],
+      "notes": "",
+      "canonical_candidate": "Clesrovimab / MK-1654",
+      "candidate_match_method": "AI-assisted text normalization",
+      "candidate_match_confidence": "low",
+      "candidate_match_key": "clesrovimab mk 1654",
+      "candidate_aliases": [],
+      "ai_stage_method": "AI-assisted stage classification",
+      "ai_stage_confidence": "medium",
+      "ai_stage_rationale": "Stage normalized from public source text.",
+      "source_records": 1,
+      "sources_seen": [
+        "PATH RSV and mAb Trial Tracker"
+      ],
+      "ai_candidate_matching": "AI-assisted candidate matching applied"
+    },
+    {
+      "id": "TB-aceda908b3",
+      "candidate": "M72/AS01E",
+      "disease_id": "tuberculosis",
+      "disease": "Tuberculosis",
+      "disease_category": "bacterial",
+      "stage": "Phase 3",
+      "stage_order": 7,
+      "platform": "Protein/subunit/VLP",
+      "developer": "GSK; Gates MRI; IAVI",
+      "sponsors": [
+        "GSK",
+        "Gates MRI",
+        "IAVI"
+      ],
+      "countries": [],
+      "status": "Public TB clinical pipeline",
+      "last_update": "2026-05-08",
+      "source": "TB Vaccine Clinical Pipeline",
+      "source_url": "https://newtbvaccines.org/tb-vaccine-pipeline/clinical-phase/",
+      "supporting_trial_count": 0,
+      "supporting_trials": [],
+      "notes": "",
+      "canonical_candidate": "M72/AS01E",
+      "candidate_match_method": "AI-assisted alias rule",
+      "candidate_match_confidence": "high",
+      "candidate_match_key": "m72 as01e",
+      "candidate_aliases": [],
+      "ai_stage_method": "AI-assisted stage classification",
+      "ai_stage_confidence": "high",
+      "ai_stage_rationale": "Stage normalized from public source text.",
+      "source_records": 1,
+      "sources_seen": [
+        "TB Vaccine Clinical Pipeline"
+      ],
+      "ai_candidate_matching": "AI-assisted candidate matching applied"
+    },
+    {
+      "id": "TB-1a7baaa8c0",
+      "candidate": "MTBVAC",
+      "disease_id": "tuberculosis",
+      "disease": "Tuberculosis",
+      "disease_category": "bacterial",
+      "stage": "Phase 3",
+      "stage_order": 7,
+      "platform": "Protein/subunit/VLP",
+      "developer": "Gamaleya National Research Center",
+      "sponsors": [
+        "Biofabri",
+        "Gamaleya National Research Center",
+        "TBVI",
+        "University of Zaragoza"
+      ],
+      "countries": [],
+      "status": "Public TB clinical pipeline",
+      "last_update": "2026-05-08",
+      "source": "TB Vaccine Clinical Pipeline",
+      "source_url": "https://newtbvaccines.org/tb-vaccine-pipeline/clinical-phase/",
+      "supporting_trial_count": 0,
+      "supporting_trials": [],
+      "notes": "",
+      "canonical_candidate": "MTBVAC",
+      "candidate_match_method": "AI-assisted alias rule",
+      "candidate_match_confidence": "high",
+      "candidate_match_key": "mtbvac",
+      "candidate_aliases": [
+        "GamTBvac"
+      ],
+      "ai_stage_method": "AI-assisted stage classification",
+      "ai_stage_confidence": "high",
+      "ai_stage_rationale": "Stage normalized from public source text.",
+      "source_records": 2,
+      "sources_seen": [
+        "TB Vaccine Clinical Pipeline"
+      ],
+      "ai_candidate_matching": "AI-assisted candidate matching applied"
+    },
+    {
+      "id": "TB-dcdac5a86c",
+      "candidate": "VPM1002",
+      "disease_id": "tuberculosis",
+      "disease": "Tuberculosis",
+      "disease_category": "bacterial",
+      "stage": "Phase 3",
+      "stage_order": 7,
+      "platform": "Live attenuated / recombinant BCG",
+      "developer": "Serum Institute of India; Max Planck Institute",
+      "sponsors": [
+        "Serum Institute of India",
+        "Max Planck Institute"
+      ],
+      "countries": [],
+      "status": "Public TB clinical pipeline",
+      "last_update": "2026-05-08",
+      "source": "TB Vaccine Clinical Pipeline",
+      "source_url": "https://newtbvaccines.org/tb-vaccine-pipeline/clinical-phase/",
+      "supporting_trial_count": 0,
+      "supporting_trials": [],
+      "notes": "",
+      "canonical_candidate": "VPM1002",
+      "candidate_match_method": "AI-assisted alias rule",
+      "candidate_match_confidence": "high",
+      "candidate_match_key": "vpm1002",
+      "candidate_aliases": [],
+      "ai_stage_method": "AI-assisted stage classification",
+      "ai_stage_confidence": "high",
+      "ai_stage_rationale": "Stage normalized from public source text.",
+      "source_records": 1,
+      "sources_seen": [
+        "TB Vaccine Clinical Pipeline"
+      ],
+      "ai_candidate_matching": "AI-assisted candidate matching applied"
+    },
+    {
+      "id": "CLINICALTRIALS.GOV-92d0b9f7c6",
+      "candidate": "VXA-CoV2-3.3",
+      "disease_id": "covid-19",
+      "disease": "COVID-19",
+      "disease_category": "respiratory",
+      "stage": "Phase 2/3",
+      "stage_order": 6,
+      "platform": "Protein/subunit/VLP",
+      "developer": "Vaxart",
+      "sponsors": [
+        "Vaxart"
+      ],
+      "countries": [
+        "United States"
+      ],
+      "status": "Clinical trial record",
+      "last_update": "2026-05-08",
+      "source": "ClinicalTrials.gov",
+      "source_url": "https://clinicaltrials.gov/study/NCT06672055",
+      "supporting_trial_count": 1,
+      "supporting_trials": [
+        "NCT06672055"
+      ],
+      "notes": "",
+      "canonical_candidate": "VXA-CoV2-3.3",
+      "candidate_match_method": "AI-assisted text normalization",
+      "candidate_match_confidence": "low",
+      "candidate_match_key": "vxa cov2 3 3",
+      "candidate_aliases": [],
+      "ai_stage_method": "Registry phase mapping",
+      "ai_stage_confidence": "high",
+      "ai_stage_rationale": "Stage mapped from ClinicalTrials.gov phase field.",
+      "source_records": 1,
+      "sources_seen": [
+        "ClinicalTrials.gov"
+      ],
+      "ai_candidate_matching": "AI-assisted candidate matching applied"
+    },
+    {
+      "id": "TB-0d6f279e25",
+      "candidate": "BCG",
+      "disease_id": "tuberculosis",
+      "disease": "Tuberculosis",
+      "disease_category": "bacterial",
+      "stage": "Phase 2/3",
+      "stage_order": 6,
+      "platform": "Live attenuated",
+      "developer": "Multiple academic groups",
+      "sponsors": [
+        "Multiple academic groups"
+      ],
+      "countries": [],
+      "status": "Public TB clinical pipeline",
+      "last_update": "2026-05-08",
+      "source": "TB Vaccine Clinical Pipeline",
+      "source_url": "https://newtbvaccines.org/tb-vaccine-pipeline/clinical-phase/",
+      "supporting_trial_count": 0,
+      "supporting_trials": [],
+      "notes": "",
+      "canonical_candidate": "BCG",
+      "candidate_match_method": "AI-assisted alias rule",
+      "candidate_match_confidence": "high",
+      "candidate_match_key": "bcg",
+      "candidate_aliases": [
+        "BCG revaccination"
+      ],
+      "ai_stage_method": "AI-assisted stage classification",
+      "ai_stage_confidence": "high",
+      "ai_stage_rationale": "Stage normalized from public source text.",
+      "source_records": 1,
+      "sources_seen": [
+        "TB Vaccine Clinical Pipeline"
+      ],
+      "ai_candidate_matching": "AI-assisted candidate matching applied"
+    },
+    {
+      "id": "CIDRAP-cd35b89802",
+      "candidate": "ReCoV",
+      "disease_id": "covid-19",
+      "disease": "COVID-19",
+      "disease_category": "respiratory",
+      "stage": "Phase 2",
+      "stage_order": 5,
+      "platform": "Protein/subunit/VLP",
+      "developer": "Jiangsu Rec-Biotechnology",
+      "sponsors": [
+        "Jiangsu Rec-Biotechnology"
+      ],
+      "countries": [],
+      "status": "CIDRAP landscape candidate",
+      "last_update": "2026-05-08",
+      "source": "CIDRAP Coronavirus Vaccine Technology Landscape",
+      "source_url": "https://cvr.cidrap.umn.edu/coronavirus-vaccine-technology-landscape",
+      "supporting_trial_count": 0,
+      "supporting_trials": [],
+      "notes": "",
+      "canonical_candidate": "ReCoV",
+      "candidate_match_method": "AI-assisted text normalization",
+      "candidate_match_confidence": "low",
+      "candidate_match_key": "recov",
+      "candidate_aliases": [],
+      "ai_stage_method": "AI-assisted stage classification",
+      "ai_stage_confidence": "medium",
+      "ai_stage_rationale": "Stage normalized from public source text.",
+      "source_records": 1,
+      "sources_seen": [
+        "CIDRAP Coronavirus Vaccine Technology Landscape"
+      ],
+      "ai_candidate_matching": "AI-assisted candidate matching applied"
+    },
+    {
+      "id": "WHO-99d900a9a3",
+      "candidate": "ACE527",
+      "disease_id": "etec",
+      "disease": "ETEC",
+      "disease_category": "enteric",
+      "stage": "Phase 2",
+      "stage_order": 5,
+      "platform": "Live attenuated",
+      "developer": "PATH; Emergent BioSolutions",
+      "sponsors": [
+        "PATH",
+        "Emergent BioSolutions"
+      ],
+      "countries": [],
+      "status": "WHO/public vaccine landscape",
+      "last_update": "2026-05-08",
+      "source": "WHO Vaccine Pipeline Tracker / public landscape",
+      "source_url": "https://www.who.int/teams/regulation-prequalification/eul/eul-vaccines/tracking-the-new-vaccine-pipeline",
+      "supporting_trial_count": 0,
+      "supporting_trials": [],
+      "notes": "",
+      "canonical_candidate": "ACE527",
+      "candidate_match_method": "AI-assisted text normalization",
+      "candidate_match_confidence": "low",
+      "candidate_match_key": "ace527",
+      "candidate_aliases": [],
+      "ai_stage_method": "AI-assisted stage classification",
+      "ai_stage_confidence": "medium",
+      "ai_stage_rationale": "Stage normalized from public source text.",
+      "source_records": 1,
+      "sources_seen": [
+        "WHO Vaccine Pipeline Tracker / public landscape"
+      ],
+      "ai_candidate_matching": "AI-assisted candidate matching applied"
+    },
+    {
+      "id": "PATHGBS-c09a97bfe0",
+      "candidate": "GBS-NN / NN2",
+      "disease_id": "group_b_streptococcus",
+      "disease": "Group B Streptococcus",
+      "disease_category": "maternal_infant",
+      "stage": "Phase 2",
+      "stage_order": 5,
+      "platform": "Protein/subunit/VLP",
+      "developer": "MinervaX",
+      "sponsors": [
+        "MinervaX"
+      ],
+      "countries": [],
+      "status": "GBS candidate vaccine clinical tracker",
+      "last_update": "2026-05-08",
+      "source": "PATH GBS Vaccine Clinical Trial Tracker",
+      "source_url": "https://www.path.org/our-impact/resources/gbs-vaccine-clinical-trial-tracker/",
+      "supporting_trial_count": 0,
+      "supporting_trials": [],
+      "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available.",
+      "canonical_candidate": "GBS-NN / NN2",
+      "candidate_match_method": "AI-assisted text normalization",
+      "candidate_match_confidence": "low",
+      "candidate_match_key": "gbs nn nn2",
+      "candidate_aliases": [],
+      "ai_stage_method": "AI-assisted stage classification",
+      "ai_stage_confidence": "high",
+      "ai_stage_rationale": "Stage normalized from public source text.",
+      "source_records": 1,
+      "sources_seen": [
+        "PATH GBS Vaccine Clinical Trial Tracker"
+      ],
+      "ai_candidate_matching": "AI-assisted candidate matching applied"
+    },
+    {
+      "id": "PATHGBS-2ac182f2b5",
+      "candidate": "GBS6",
+      "disease_id": "group_b_streptococcus",
+      "disease": "Group B Streptococcus",
+      "disease_category": "maternal_infant",
+      "stage": "Phase 2",
+      "stage_order": 5,
+      "platform": "Conjugate",
+      "developer": "Pfizer",
+      "sponsors": [
+        "Pfizer"
+      ],
+      "countries": [],
+      "status": "GBS candidate vaccine clinical tracker",
+      "last_update": "2026-05-08",
+      "source": "PATH GBS Vaccine Clinical Trial Tracker",
+      "source_url": "https://www.path.org/our-impact/resources/gbs-vaccine-clinical-trial-tracker/",
+      "supporting_trial_count": 0,
+      "supporting_trials": [],
+      "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available.",
+      "canonical_candidate": "GBS6",
+      "candidate_match_method": "AI-assisted text normalization",
+      "candidate_match_confidence": "low",
+      "candidate_match_key": "gbs6",
+      "candidate_aliases": [],
+      "ai_stage_method": "AI-assisted stage classification",
+      "ai_stage_confidence": "high",
+      "ai_stage_rationale": "Stage normalized from public source text.",
+      "source_records": 1,
+      "sources_seen": [
+        "PATH GBS Vaccine Clinical Trial Tracker"
+      ],
+      "ai_candidate_matching": "AI-assisted candidate matching applied"
+    },
+    {
+      "id": "IAVI-19da601176",
+      "candidate": "rVSVΔG-LASV-GPC",
+      "disease_id": "lassa_virus",
+      "disease": "Lassa virus",
+      "disease_category": "viral_hemorrhagic_fever",
+      "stage": "Phase 2",
+      "stage_order": 5,
+      "platform": "Viral vector",
+      "developer": "IAVI / CEPI / partners",
+      "sponsors": [
+        "IAVI / CEPI / partners"
+      ],
+      "countries": [],
+      "status": "IAVI-led emerging infectious disease candidate",
+      "last_update": "2026-05-08",
+      "source": "IAVI Pipeline",
+      "source_url": "https://www.iavi.org/iavi-pipeline/",
+      "supporting_trial_count": 0,
+      "supporting_trials": [],
+      "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available.",
+      "canonical_candidate": "rVSVΔG-LASV-GPC",
+      "candidate_match_method": "AI-assisted text normalization",
+      "candidate_match_confidence": "low",
+      "candidate_match_key": "rvsvδg lasv gpc",
+      "candidate_aliases": [],
+      "ai_stage_method": "AI-assisted stage classification",
+      "ai_stage_confidence": "medium",
+      "ai_stage_rationale": "Stage normalized from public source text.",
+      "source_records": 1,
+      "sources_seen": [
+        "IAVI Pipeline"
+      ],
+      "ai_candidate_matching": "AI-assisted candidate matching applied"
+    },
+    {
+      "id": "WHO-c938ea3fec",
+      "candidate": "Norovirus VLP vaccine candidates",
+      "disease_id": "norovirus",
+      "disease": "Norovirus",
+      "disease_category": "enteric",
+      "stage": "Phase 2",
+      "stage_order": 5,
+      "platform": "Protein/subunit/VLP",
+      "developer": "Multiple developers",
+      "sponsors": [
+        "Multiple developers"
+      ],
+      "countries": [],
+      "status": "WHO/public vaccine landscape",
+      "last_update": "2026-05-08",
+      "source": "WHO Vaccine Pipeline Tracker / public landscape",
+      "source_url": "https://www.who.int/teams/regulation-prequalification/eul/eul-vaccines/tracking-the-new-vaccine-pipeline",
+      "supporting_trial_count": 0,
+      "supporting_trials": [],
+      "notes": "",
+      "canonical_candidate": "Norovirus VLP vaccine candidates",
+      "candidate_match_method": "AI-assisted text normalization",
+      "candidate_match_confidence": "low",
+      "candidate_match_key": "norovirus vlp candidates",
+      "candidate_aliases": [],
+      "ai_stage_method": "AI-assisted stage classification",
+      "ai_stage_confidence": "medium",
+      "ai_stage_rationale": "Stage normalized from public source text.",
+      "source_records": 1,
+      "sources_seen": [
+        "WHO Vaccine Pipeline Tracker / public landscape"
+      ],
+      "ai_candidate_matching": "AI-assisted candidate matching applied"
+    },
+    {
+      "id": "WHO-650e1be69b",
+      "candidate": "Shigella4V",
+      "disease_id": "shigella",
+      "disease": "Shigella",
+      "disease_category": "enteric",
+      "stage": "Phase 2",
+      "stage_order": 5,
+      "platform": "Conjugate/polysaccharide",
+      "developer": "GSK; LimmaTech Biologics",
+      "sponsors": [
+        "GSK",
+        "LimmaTech Biologics"
+      ],
+      "countries": [],
+      "status": "WHO/public vaccine landscape",
+      "last_update": "2026-05-08",
+      "source": "WHO Vaccine Pipeline Tracker / public landscape",
+      "source_url": "https://www.who.int/teams/regulation-prequalification/eul/eul-vaccines/tracking-the-new-vaccine-pipeline",
+      "supporting_trial_count": 0,
+      "supporting_trials": [],
+      "notes": "",
+      "canonical_candidate": "Shigella4V",
+      "candidate_match_method": "AI-assisted text normalization",
+      "candidate_match_confidence": "low",
+      "candidate_match_key": "shigella4v",
+      "candidate_aliases": [],
+      "ai_stage_method": "AI-assisted stage classification",
+      "ai_stage_confidence": "medium",
+      "ai_stage_rationale": "Stage normalized from public source text.",
+      "source_records": 1,
+      "sources_seen": [
+        "WHO Vaccine Pipeline Tracker / public landscape"
+      ],
+      "ai_candidate_matching": "AI-assisted candidate matching applied"
+    },
+    {
+      "id": "TB-3895c9f194",
+      "candidate": "H56:IC31",
+      "disease_id": "tuberculosis",
+      "disease": "Tuberculosis",
+      "disease_category": "bacterial",
+      "stage": "Phase 2",
+      "stage_order": 5,
+      "platform": "Protein/subunit/VLP",
+      "developer": "Statens Serum Institut; Valneva",
+      "sponsors": [
+        "Statens Serum Institut",
+        "Valneva"
+      ],
+      "countries": [],
+      "status": "Public TB clinical pipeline",
+      "last_update": "2026-05-08",
+      "source": "TB Vaccine Clinical Pipeline",
+      "source_url": "https://newtbvaccines.org/tb-vaccine-pipeline/clinical-phase/",
+      "supporting_trial_count": 0,
+      "supporting_trials": [],
+      "notes": "",
+      "canonical_candidate": "H56:IC31",
+      "candidate_match_method": "AI-assisted text normalization",
+      "candidate_match_confidence": "low",
+      "candidate_match_key": "h56 ic31",
+      "candidate_aliases": [],
+      "ai_stage_method": "AI-assisted stage classification",
+      "ai_stage_confidence": "high",
+      "ai_stage_rationale": "Stage normalized from public source text.",
+      "source_records": 1,
+      "sources_seen": [
+        "TB Vaccine Clinical Pipeline"
+      ],
+      "ai_candidate_matching": "AI-assisted candidate matching applied"
     }
   ],
   "sources": [
@@ -431,7 +1201,7 @@
     {
       "name": "WHO Malaria Vaccine Clinical Development Review",
       "url": "https://www.who.int/observatories/global-observatory-on-health-research-and-development/monitoring/who-review-of-malaria-vaccine-clinical-development",
-      "status": "manual_reference"
+      "status": "best_effort_automated"
     },
     {
       "name": "TB Vaccine Preclinical Pipeline",
@@ -504,9 +1274,40 @@
       "status": "manual_reference"
     }
   ],
-  "limitations": [
+  "ai_intelligence": {
+    "label": "AI支援型ワクチン開発動向トラッカー",
+    "candidate_matching": {
+      "method": "alias rules + normalized string matching",
+      "matched_source_records": 4,
+      "aliases_detected": 9,
+      "confidence_counts": {
+        "low": 49,
+        "high": 13
+      }
+    },
+    "stage_classification": {
+      "method": "registry phase mapping + rule-based public-source text classification",
+      "confidence_counts": {
+        "medium": 43,
+        "high": 19
+      }
+    },
+    "weekly_summary": [
+      "前回データとの比較で明確なステージ進行は検出されませんでした。",
+      "候補数が最も多い疾患領域はCOVID-19（14件）です。",
+      "最も多い技術分類はProtein/subunit/VLP（19件）です。",
+      "Phase 3以降の候補は合計20件です。"
+    ],
+    "changes": {
+      "new_candidates": [],
+      "removed_candidates": [],
+      "stage_progressions": [],
+      "stage_changes": []
+    }
+  },
+  "notes": [
     "ClinicalTrials.gov is trial-level; candidate-level grouping is inferred from intervention names.",
-    "Preclinical records are only captured where public pipeline tables are available or seeded from public trackers.",
-    "Disease-specific source layouts may change, so automated table extraction is best-effort and should be reviewed."
+    "Preclinical candidates are obtained only from curated public pipeline tables where parsable; coverage is incomplete.",
+    "AI-assisted components use transparent heuristic rules in GitHub Actions; classifications should be reviewed before policy use."
   ]
 }

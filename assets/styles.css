@@ -108,3 +108,16 @@ footer { padding: .75rem 0 2rem; color: var(--muted); }
 .badge.stage-phase-4,
 .badge.stage-approved-authorized { background: #e9f7f6; color: #00695c; }
 .error { padding: .8rem 1rem; background: #fff4f4; border-bottom: 1px solid #ffd4d4; color: #8a1f1f; font-weight: 700; }
+
+
+.ai-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.35fr;
+  gap: 12px;
+  margin: 12px 0;
+}
+.ai-card h2 { margin: 4px 0 6px; font-size: 15px; }
+.ai-metric { font-size: 20px; font-weight: 760; margin: 4px 0; letter-spacing: -0.02em; color: var(--ink); }
+.compact-list { margin: 6px 0 0; padding-left: 18px; }
+.compact-list li { margin: 4px 0; color: var(--ink); line-height: 1.45; }
+@media (max-width: 980px) { .ai-grid { grid-template-columns: 1fr; } }

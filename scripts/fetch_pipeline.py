@@ -562,31 +562,210 @@ def load_public_seed_records() -> Tuple[List[Dict[str, Any]], List[Dict[str, Any
             log(f"Public seed load failed: {e}")
     return [], []
 
+
+# --- AI-assisted intelligence layer -------------------------------------------------
+# The dashboard is static and runs on GitHub Actions, so this layer uses transparent
+# deterministic heuristics that are safe to run without sending data to external AI
+# services. It is labelled "AI-assisted" because it performs the first-stage tasks
+# usually needed before LLM use: entity normalization, candidate matching, stage
+# classification, and natural-language update summaries. A future version can swap
+# these functions for an LLM-backed classifier while preserving the output schema.
+
+CANDIDATE_ALIAS_RULES = [
+    (r"\bComirnaty\b|BNT162b2|Pfizer[- ]BioNTech", "BNT162b2 / Comirnaty"),
+    (r"\bSpikevax\b|mRNA[- ]1273", "mRNA-1273 / Spikevax"),
+    (r"NVX[- ]CoV2373|Nuvaxovid|Novavax", "NVX-CoV2373 / Nuvaxovid"),
+    (r"AZD1222|ChAdOx1 nCoV[- ]19|Vaxzevria", "AZD1222 / ChAdOx1 nCoV-19"),
+    (r"Ad26\.COV2\.S|Janssen", "Ad26.COV2.S"),
+    (r"CoronaVac", "CoronaVac"),
+    (r"BBIBP[- ]CorV|Sinopharm", "BBIBP-CorV / Sinopharm"),
+    (r"M72[/\- ]AS01E|M72", "M72/AS01E"),
+    (r"BCG", "BCG"),
+    (r"MTBVAC", "MTBVAC"),
+    (r"VPM1002", "VPM1002"),
+    (r"RTS,S|Mosquirix", "RTS,S/AS01"),
+    (r"R21[/\- ]Matrix[- ]M|R21", "R21/Matrix-M"),
+    (r"mRNA[- ]1345", "mRNA-1345"),
+    (r"RSVpreF|Abrysvo", "RSVpreF / Abrysvo"),
+    (r"RSVPreF3|Arexvy", "RSVPreF3 / Arexvy"),
+    (r"nirsevimab|Beyfortus", "Nirsevimab / Beyfortus"),
+]
+
+STAGE_CONFIDENCE_BY_SOURCE = {
+    "ClinicalTrials.gov": "high",
+    "TB Vaccine Clinical Pipeline": "high",
+    "TB Vaccine Preclinical Pipeline": "medium",
+    "PATH RSV Clinical Trial Tracker": "high",
+    "PATH GBS Vaccine Clinical Trial Tracker": "high",
+    "CIDRAP Coronavirus Vaccine Technology Landscape": "medium",
+    "CIDRAP Universal Influenza Vaccine Technology Landscape": "medium",
+    "WHO Mpox Vaccine Tracker": "medium",
+    "IAVI Pipeline": "medium",
+}
+
+
+def canonical_candidate_name(candidate: str) -> Tuple[str, str, str]:
+    """Return canonical name, method, and confidence."""
+    c = clean_text(candidate)
+    if not c:
+        return "Unspecified vaccine candidate", "AI-assisted normalization", "low"
+    for pattern, canonical in CANDIDATE_ALIAS_RULES:
+        if re.search(pattern, c, flags=re.I):
+            return canonical, "AI-assisted alias rule", "high"
+    # remove obvious dose/adjuvant/formulation noise but keep scientific identifiers
+    cleaned = re.sub(r"\b(low|medium|high) dose\b|\bbooster\b|\bprime[- ]boost\b", " ", c, flags=re.I)
+    cleaned = re.sub(r"\bwith placebo\b|\bversus placebo\b", " ", cleaned, flags=re.I)
+    cleaned = re.sub(r"\s+", " ", cleaned).strip(" ;,/-")
+    if not cleaned:
+        cleaned = c
+    confidence = "medium" if cleaned != c else "low"
+    return cleaned, "AI-assisted text normalization", confidence
+
+
+def candidate_similarity_key(candidate: str) -> str:
+    name, _, _ = canonical_candidate_name(candidate)
+    key = norm_key(name)
+    key = re.sub(r"\b(vaccine|candidate|adjuvanted|recombinant|protein|subunit|mrna|rna|dna)\b", " ", key)
+    return re.sub(r"\s+", " ", key).strip() or norm_key(name)
+
+
+def annotate_stage_classification(rec: Dict[str, Any]) -> None:
+    stage = normalize_stage(rec.get("stage"))
+    source = clean_text(rec.get("source"))
+    raw = " ".join([clean_text(rec.get("notes")), clean_text(rec.get("status")), clean_text(rec.get("stage"))])
+    confidence = STAGE_CONFIDENCE_BY_SOURCE.get(source, "medium")
+    method = "AI-assisted stage classification"
+    rationale = "Stage normalized from public source text."
+    if source == "ClinicalTrials.gov":
+        method = "Registry phase mapping"
+        rationale = "Stage mapped from ClinicalTrials.gov phase field."
+    elif re.search(r"preclinical|pre[- ]clinical", raw, flags=re.I):
+        rationale = "Stage inferred from preclinical pipeline/source wording."
+    elif stage in {"Unknown", "Not Applicable"}:
+        confidence = "low"
+        rationale = "Source did not expose a clear development phase."
+    rec["stage"] = stage
+    rec["stage_order"] = STAGE_ORDER.get(stage, -1)
+    rec["ai_stage_method"] = method
+    rec["ai_stage_confidence"] = confidence
+    rec["ai_stage_rationale"] = rationale
+
+
 def merge_candidate_sources(records: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-    # Keep separate source rows if stages differ; merge exact candidate+disease+source duplicates.
-    merged: Dict[Tuple[str, str, str], Dict[str, Any]] = {}
+    # AI-assisted candidate matching: merge likely equivalent candidates across sources
+    # within the same disease area, preserving aliases and source provenance.
     for rec in records:
-        key = (norm_key(rec.get("candidate", "")), norm_key(rec.get("disease", "")), rec.get("source", ""))
+        canonical, method, conf = canonical_candidate_name(rec.get("candidate", ""))
+        rec["canonical_candidate"] = canonical
+        rec["candidate_match_method"] = method
+        rec["candidate_match_confidence"] = conf
+        rec["candidate_match_key"] = candidate_similarity_key(canonical)
+        rec["candidate_aliases"] = sorted({clean_text(rec.get("candidate")), canonical} - {""})
+        annotate_stage_classification(rec)
+
+    merged: Dict[Tuple[str, str], Dict[str, Any]] = {}
+    source_rows = 0
+    merged_rows = 0
+    for rec in records:
+        source_rows += 1
+        key = (norm_key(rec.get("disease", "")), rec.get("candidate_match_key") or norm_key(rec.get("canonical_candidate", "")))
         if key not in merged:
-            merged[key] = rec
+            new_rec = dict(rec)
+            new_rec["candidate"] = rec.get("canonical_candidate") or rec.get("candidate")
+            new_rec["source_records"] = 1
+            new_rec["sources_seen"] = [rec.get("source", "")]
+            merged[key] = new_rec
             continue
+        merged_rows += 1
         ex = merged[key]
         if STAGE_ORDER.get(rec.get("stage", "Unknown"), -1) > STAGE_ORDER.get(ex.get("stage", "Unknown"), -1):
             ex["stage"] = rec.get("stage", ex.get("stage"))
             ex["stage_order"] = STAGE_ORDER.get(ex["stage"], -1)
+            ex["ai_stage_method"] = rec.get("ai_stage_method", ex.get("ai_stage_method"))
+            ex["ai_stage_confidence"] = rec.get("ai_stage_confidence", ex.get("ai_stage_confidence"))
+            ex["ai_stage_rationale"] = rec.get("ai_stage_rationale", ex.get("ai_stage_rationale"))
         ex["supporting_trial_count"] = int(ex.get("supporting_trial_count") or 0) + int(rec.get("supporting_trial_count") or 0)
         ex["supporting_trials"] = sorted(set(ex.get("supporting_trials", [])) | set(rec.get("supporting_trials", [])))
         ex["sponsors"] = sorted(set(ex.get("sponsors", [])) | set(rec.get("sponsors", [])))
         ex["countries"] = sorted(set(ex.get("countries", [])) | set(rec.get("countries", [])))
-        ex["developer"] = ex.get("developer") if ex.get("developer") != "Unknown" else rec.get("developer", "Unknown")
+        ex["candidate_aliases"] = sorted(set(ex.get("candidate_aliases", [])) | set(rec.get("candidate_aliases", [])) | {rec.get("candidate", "")})
+        ex["sources_seen"] = sorted(set(ex.get("sources_seen", [])) | {rec.get("source", "")})
+        ex["source_records"] = int(ex.get("source_records") or 1) + 1
+        if ex.get("developer") in {"", "Unknown"} and rec.get("developer"):
+            ex["developer"] = rec.get("developer")
         ex["last_update"] = max(ex.get("last_update", ""), rec.get("last_update", ""))
-    return sorted(merged.values(), key=lambda r: (-STAGE_ORDER.get(r.get("stage", "Unknown"), -1), r.get("disease", ""), r.get("candidate", "")))
+        if ex.get("source") == "ClinicalTrials.gov" and rec.get("source") != "ClinicalTrials.gov":
+            # Prefer a source URL from a curated landscape when the candidate is not tied to a single NCT record.
+            ex["source"] = rec.get("source", ex.get("source"))
+            ex["source_url"] = rec.get("source_url", ex.get("source_url"))
+    out = sorted(merged.values(), key=lambda r: (-STAGE_ORDER.get(r.get("stage", "Unknown"), -1), r.get("disease", ""), r.get("candidate", "")))
+    for r in out:
+        r["ai_candidate_matching"] = "AI-assisted candidate matching applied"
+        r["candidate_aliases"] = [a for a in r.get("candidate_aliases", []) if a and norm_key(a) != norm_key(r.get("candidate", ""))][:8]
+    return out
 
 
-def make_summary(candidates: List[Dict[str, Any]], studies: List[Dict[str, Any]], cfg: Dict[str, Any]) -> Dict[str, Any]:
+def load_previous_candidates() -> List[Dict[str, Any]]:
+    path = DATA_DIR / "pipeline.json"
+    if not path.exists():
+        return []
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return []
+
+
+def candidate_diff(previous: List[Dict[str, Any]], current: List[Dict[str, Any]]) -> Dict[str, Any]:
+    def key(r: Dict[str, Any]) -> Tuple[str, str]:
+        return (norm_key(r.get("disease", "")), candidate_similarity_key(r.get("candidate", "")))
+    prev = {key(r): r for r in previous}
+    curr = {key(r): r for r in current}
+    new = [r for k, r in curr.items() if k not in prev]
+    removed = [r for k, r in prev.items() if k not in curr]
+    progressed = []
+    changed = []
+    for k, r in curr.items():
+        if k in prev:
+            old = prev[k]
+            old_stage = normalize_stage(old.get("stage"))
+            new_stage = normalize_stage(r.get("stage"))
+            if STAGE_ORDER.get(new_stage, -1) > STAGE_ORDER.get(old_stage, -1):
+                progressed.append({"candidate": r.get("candidate"), "disease": r.get("disease"), "from": old_stage, "to": new_stage})
+            elif old_stage != new_stage:
+                changed.append({"candidate": r.get("candidate"), "disease": r.get("disease"), "from": old_stage, "to": new_stage})
+    return {"new_candidates": new[:20], "removed_candidates": removed[:20], "stage_progressions": progressed[:20], "stage_changes": changed[:20]}
+
+
+def build_ai_weekly_summary(candidates: List[Dict[str, Any]], changes: Dict[str, Any]) -> List[str]:
     stage_counts = Counter(r.get("stage", "Unknown") for r in candidates)
     disease_counts = Counter(r.get("disease", "Unknown") for r in candidates)
     platform_counts = Counter(r.get("platform", "Unclassified") for r in candidates)
+    bullets = []
+    if changes.get("stage_progressions"):
+        p = changes["stage_progressions"][0]
+        bullets.append(f"{p['disease']}の{p['candidate']}が{p['from']}から{p['to']}へ進行しました。")
+    if changes.get("new_candidates"):
+        bullets.append(f"新規候補として{len(changes['new_candidates'])}件を検出しました。")
+    if not bullets:
+        bullets.append("前回データとの比較で明確なステージ進行は検出されませんでした。")
+    top_disease = disease_counts.most_common(1)[0] if disease_counts else ("", 0)
+    top_platform = platform_counts.most_common(1)[0] if platform_counts else ("", 0)
+    bullets.append(f"候補数が最も多い疾患領域は{top_disease[0]}（{top_disease[1]}件）です。")
+    bullets.append(f"最も多い技術分類は{top_platform[0]}（{top_platform[1]}件）です。")
+    late = sum(stage_counts.get(s, 0) for s in ["Phase 3", "Phase 4", "Approved/Authorized"])
+    bullets.append(f"Phase 3以降の候補は合計{late}件です。")
+    return bullets
+
+def make_summary(candidates: List[Dict[str, Any]], studies: List[Dict[str, Any]], cfg: Dict[str, Any]) -> Dict[str, Any]:
+    previous = load_previous_candidates()
+    changes = candidate_diff(previous, candidates)
+    ai_bullets = build_ai_weekly_summary(candidates, changes)
+    stage_counts = Counter(r.get("stage", "Unknown") for r in candidates)
+    disease_counts = Counter(r.get("disease", "Unknown") for r in candidates)
+    platform_counts = Counter(r.get("platform", "Unclassified") for r in candidates)
+    conf_counts = Counter(r.get("ai_stage_confidence", "unknown") for r in candidates)
+    match_conf_counts = Counter(r.get("candidate_match_confidence", "unknown") for r in candidates)
+    alias_count = sum(len(r.get("candidate_aliases", [])) for r in candidates)
     preclinical = sum(1 for r in candidates if r.get("stage") in {"Discovery", "Preclinical"})
     clinical = sum(1 for r in candidates if STAGE_ORDER.get(r.get("stage", "Unknown"), -1) >= STAGE_ORDER["Phase 1"])
     recent = sorted([r for r in candidates if r.get("last_update")], key=lambda x: x.get("last_update", ""), reverse=True)[:30]
@@ -608,13 +787,27 @@ def make_summary(candidates: List[Dict[str, Any]], studies: List[Dict[str, Any]]
         "platform_counts": dict(platform_counts),
         "recent_updates": recent,
         "sources": sources,
+        "ai_intelligence": {
+            "label": "AI支援型ワクチン開発動向トラッカー",
+            "candidate_matching": {
+                "method": "alias rules + normalized string matching",
+                "matched_source_records": sum(max(0, int(r.get("source_records") or 1) - 1) for r in candidates),
+                "aliases_detected": alias_count,
+                "confidence_counts": dict(match_conf_counts),
+            },
+            "stage_classification": {
+                "method": "registry phase mapping + rule-based public-source text classification",
+                "confidence_counts": dict(conf_counts),
+            },
+            "weekly_summary": ai_bullets,
+            "changes": changes,
+        },
         "notes": [
             "ClinicalTrials.gov is trial-level; candidate-level grouping is inferred from intervention names.",
             "Preclinical candidates are obtained only from curated public pipeline tables where parsable; coverage is incomplete.",
-            "Disease-specific curated source layouts may change, so automated table extraction is best-effort and should be reviewed.",
+            "AI-assisted components use transparent heuristic rules in GitHub Actions; classifications should be reviewed before policy use.",
         ],
     }
-
 
 def fallback_samples() -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
     today = datetime.now(timezone.utc).date().isoformat()
@@ -632,7 +825,7 @@ def write_outputs(candidates: List[Dict[str, Any]], studies: List[Dict[str, Any]
     (DATA_DIR / "studies.json").write_text(json.dumps(studies, ensure_ascii=False, indent=2), encoding="utf-8")
     (DATA_DIR / "summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
     with (DATA_DIR / "pipeline.csv").open("w", encoding="utf-8", newline="") as f:
-        fields = ["id","candidate","disease","stage","platform","developer","status","last_update","source","source_url","supporting_trial_count"]
+        fields = ["id","candidate","candidate_aliases","disease","stage","ai_stage_confidence","platform","developer","status","last_update","source","source_url","supporting_trial_count","sources_seen"]
         writer = csv.DictWriter(f, fieldnames=fields)
         writer.writeheader()
         for r in candidates:
@@ -649,7 +842,7 @@ def main() -> int:
         log("No records fetched from live sources; loading public-source seed records instead of artificial samples.")
         seed_candidates, seed_studies = load_public_seed_records()
         if seed_candidates:
-            candidates, studies = seed_candidates, seed_studies
+            candidates, studies = merge_candidate_sources(seed_candidates), seed_studies
         else:
             log("No public seed file available; writing minimal sample records so the dashboard remains usable.")
             candidates, studies = fallback_samples()

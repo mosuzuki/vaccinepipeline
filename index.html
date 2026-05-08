@@ -12,7 +12,7 @@
     <div>
       <p class="eyebrow">Global Vaccine R&amp;D Intelligence</p>
       <h1>感染症ワクチン開発パイプライン・ダッシュボード（試行版）</h1>
-      <p class="lead">公開情報に基づくワクチン開発パイプライン</p>
+      <p class="lead">公開情報に基づくAI支援型ワクチン開発動向トラッカー</p>
     </div>
     <div class="hero-card">
       <span class="label">Last updated</span>
@@ -47,6 +47,26 @@
         <select id="platformFilter"><option value="">All platforms</option></select>
       </div>
       <button id="resetBtn" type="button">Reset</button>
+    </section>
+
+    <section class="ai-grid" aria-label="AI-assisted intelligence">
+      <article class="panel ai-card">
+        <span class="label">AI-assisted matching</span>
+        <h2>候補ワクチン名寄せ</h2>
+        <p id="aiMatchingMetric" class="ai-metric">–</p>
+        <p id="aiMatchingNote" class="subtle">Loading…</p>
+      </article>
+      <article class="panel ai-card">
+        <span class="label">AI-assisted staging</span>
+        <h2>開発ステージ分類</h2>
+        <p id="aiStageMetric" class="ai-metric">–</p>
+        <p id="aiStageNote" class="subtle">Loading…</p>
+      </article>
+      <article class="panel ai-card ai-summary-card">
+        <span class="label">Weekly pipeline intelligence</span>
+        <h2>今週の開発動向サマリー</h2>
+        <ul id="aiSummaryList" class="compact-list"></ul>
+      </article>
     </section>
 
     <section class="chart-grid">
@@ -99,7 +119,7 @@
       <div>
         <h2>Sources and limitations</h2>
         <ul id="sourceList" class="link-list"></ul>
-        <p class="note">ClinicalTrials.govは試験単位のデータであるため、候補ワクチン単位への名寄せは介入名から推定しています。プレクリニカル候補は、CIDRAP、TB Vaccine Pipelineなど公開パイプラインから取得します。WHO、PATH、疾患別trackerなども組み合わせ、取得可能な形式から段階的に自動化します。</p>
+        <p class="note">ClinicalTrials.govは試験単位のデータであるため、候補ワクチン単位への名寄せは介入名からAI支援ルールで推定しています。開発ステージは、レジストリのphase情報と公開パイプライン表の記載から分類しています。プレクリニカル候補は、CIDRAP、TB Vaccine Pipelineなど公開パイプラインから取得します。</p>
       </div>
     </section>
   </main>

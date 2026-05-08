@@ -22,6 +22,25 @@ function fmtDate(value) {
   if (Number.isNaN(d.getTime())) return value;
   return d.toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" });
 }
+function countObjectTotal(obj) { return Object.values(obj || {}).reduce((a, b) => a + Number(b || 0), 0); }
+function renderAiPanel() {
+  const ai = summary.ai_intelligence || {};
+  const matching = ai.candidate_matching || {};
+  const staging = ai.stage_classification || {};
+  const matched = Number(matching.matched_source_records || 0);
+  const aliases = Number(matching.aliases_detected || 0);
+  document.getElementById("aiMatchingMetric").textContent = `${matched.toLocaleString()} merged / ${aliases.toLocaleString()} aliases`;
+  document.getElementById("aiMatchingNote").textContent = matching.method || "alias rules + normalized matching";
+  const conf = staging.confidence_counts || {};
+  const high = Number(conf.high || 0);
+  const medium = Number(conf.medium || 0);
+  const low = Number(conf.low || 0);
+  document.getElementById("aiStageMetric").textContent = `${high.toLocaleString()} high · ${medium.toLocaleString()} medium · ${low.toLocaleString()} low`;
+  document.getElementById("aiStageNote").textContent = staging.method || "registry phase mapping + text classification";
+  const bullets = ai.weekly_summary || [];
+  document.getElementById("aiSummaryList").innerHTML = bullets.slice(0, 5).map(b => `<li>${escapeHtml(b)}</li>`).join("") || `<li class="subtle">No AI summary available.</li>`;
+}
+
 function uniqueSorted(key) {
   return [...new Set(pipeline.map(r => r[key]).filter(Boolean))].sort((a, b) => String(a).localeCompare(String(b)));
 }
@@ -79,14 +98,14 @@ function renderTable() {
     const trialText = (row.supporting_trials || []).slice(0, 4).map(escapeHtml).join(", ");
     const evidence = row.supporting_trial_count ? `${row.supporting_trial_count} trial(s)<br><span class="subtle">${trialText}</span>` : `<span class="subtle">curated / preclinical source</span>`;
     return `<tr>
-      <td>${link}<br><span class="subtle">${escapeHtml(row.id || "")}</span></td>
+      <td>${link}<br><span class="subtle">${escapeHtml(row.id || "")}</span>${(row.candidate_aliases || []).length ? `<br><span class="subtle">Aliases: ${escapeHtml((row.candidate_aliases || []).slice(0,3).join(", "))}</span>` : ""}</td>
       <td>${escapeHtml(row.disease || "")}</td>
-      <td><span class="badge ${stageClass(row.stage)}">${escapeHtml(row.stage || "Unknown")}</span></td>
+      <td><span class="badge ${stageClass(row.stage)}">${escapeHtml(row.stage || "Unknown")}</span><br><span class="subtle">AI confidence: ${escapeHtml(row.ai_stage_confidence || "–")}</span></td>
       <td>${escapeHtml(row.platform || "Unclassified")}</td>
       <td>${escapeHtml(row.developer || "Unknown")}</td>
       <td>${escapeHtml(row.status || "")}</td>
       <td>${evidence}</td>
-      <td>${escapeHtml(row.source || "")}<br><span class="subtle">${fmtDate(row.last_update)}</span></td>
+      <td>${escapeHtml(row.source || "")}<br><span class="subtle">${fmtDate(row.last_update)}</span>${(row.sources_seen || []).length > 1 ? `<br><span class="subtle">${escapeHtml((row.sources_seen || []).length)} sources matched</span>` : ""}</td>
     </tr>`;
   }).join("");
 }
@@ -160,6 +179,7 @@ async function init() {
   renderCharts();
   renderTable();
   renderLists();
+  renderAiPanel();
 }
 
 init().catch(err => {

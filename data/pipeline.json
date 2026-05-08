@@ -19,7 +19,20 @@
     "source_url": "https://cvr.cidrap.umn.edu/coronavirus-vaccine-technology-landscape-updates",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": ""
+    "notes": "",
+    "canonical_candidate": "mRNA-1283 / mNEXSPIKE",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "1283 mnexspike",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "medium",
+    "ai_stage_rationale": "Stage normalized from public source text.",
+    "source_records": 1,
+    "sources_seen": [
+      "CIDRAP Coronavirus Vaccine Technology Landscape"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "CIDRAPFLU-575995fa35",
@@ -41,7 +54,20 @@
     "source_url": "https://ivr.cidrap.umn.edu/universal-influenza-vaccine-technology-landscape",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
+    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available.",
+    "canonical_candidate": "mRNA-1083 / mCOMBRIAX",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "1083 mcombriax",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "medium",
+    "ai_stage_rationale": "Stage normalized from public source text.",
+    "source_records": 1,
+    "sources_seen": [
+      "CIDRAP Universal Influenza Vaccine Technology Landscape"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "WHOMPOX-0541f81b7e",
@@ -63,7 +89,20 @@
     "source_url": "https://www.who.int/publications/m/item/mpox-vaccine-tracker---list-of-vaccine-candidates-in-research---development",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
+    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available.",
+    "canonical_candidate": "ACAM2000",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "acam2000",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "medium",
+    "ai_stage_rationale": "Stage normalized from public source text.",
+    "source_records": 1,
+    "sources_seen": [
+      "WHO Mpox Vaccine Tracker"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "WHOMPOX-28b8326607",
@@ -85,7 +124,20 @@
     "source_url": "https://www.who.int/publications/m/item/mpox-vaccine-tracker---list-of-vaccine-candidates-in-research---development",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
+    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available.",
+    "canonical_candidate": "LC16m8",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "lc16m8",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "medium",
+    "ai_stage_rationale": "Stage normalized from public source text.",
+    "source_records": 1,
+    "sources_seen": [
+      "WHO Mpox Vaccine Tracker"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "WHOMPOX-b1ad50c296",
@@ -107,7 +159,20 @@
     "source_url": "https://www.who.int/publications/m/item/mpox-vaccine-tracker---list-of-vaccine-candidates-in-research---development",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
+    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available.",
+    "canonical_candidate": "MVA-BN / Jynneos / Imvanex",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "mva bn jynneos imvanex",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "medium",
+    "ai_stage_rationale": "Stage normalized from public source text.",
+    "source_records": 1,
+    "sources_seen": [
+      "WHO Mpox Vaccine Tracker"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "WHO-ce8ea74ba8",
@@ -120,9 +185,10 @@
     "platform": "Protein/subunit/VLP",
     "developer": "University of Oxford; Serum Institute of India; Novavax",
     "sponsors": [
-      "University of Oxford",
+      "Novavax",
       "Serum Institute of India",
-      "Novavax"
+      "University of Oxford",
+      "University of Oxford / Serum Institute of India / Novavax"
     ],
     "countries": [],
     "status": "WHO/public vaccine landscape",
@@ -131,29 +197,21 @@
     "source_url": "https://www.who.int/teams/regulation-prequalification/eul/eul-vaccines/tracking-the-new-vaccine-pipeline",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": ""
-  },
-  {
-    "id": "WHOMAL-1d54e30bfc",
-    "candidate": "R21/Matrix-M",
-    "disease_id": "malaria",
-    "disease": "Malaria",
-    "disease_category": "parasitic",
-    "stage": "Phase 4",
-    "stage_order": 8,
-    "platform": "Protein/subunit/VLP",
-    "developer": "University of Oxford / Serum Institute of India / Novavax",
-    "sponsors": [
-      "University of Oxford / Serum Institute of India / Novavax"
+    "notes": "",
+    "canonical_candidate": "R21/Matrix-M",
+    "candidate_match_method": "AI-assisted alias rule",
+    "candidate_match_confidence": "high",
+    "candidate_match_key": "r21 matrix m",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "medium",
+    "ai_stage_rationale": "Stage normalized from public source text.",
+    "source_records": 2,
+    "sources_seen": [
+      "WHO Vaccine Pipeline Tracker / public landscape",
+      "WHO malaria vaccine clinical development review"
     ],
-    "countries": [],
-    "status": "WHO prequalified and recommended malaria vaccine",
-    "last_update": "2026-05-08",
-    "source": "WHO malaria vaccine clinical development review",
-    "source_url": "https://www.who.int/observatories/global-observatory-on-health-research-and-development/monitoring/who-review-of-malaria-vaccine-clinical-development",
-    "supporting_trial_count": 0,
-    "supporting_trials": [],
-    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "WHO-af4308b118",
@@ -167,6 +225,7 @@
     "developer": "GSK; PATH; partners",
     "sponsors": [
       "GSK",
+      "GSK / PATH",
       "PATH",
       "partners"
     ],
@@ -177,33 +236,27 @@
     "source_url": "https://www.who.int/teams/regulation-prequalification/eul/eul-vaccines/tracking-the-new-vaccine-pipeline",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": ""
-  },
-  {
-    "id": "WHOMAL-d3c8d515a3",
-    "candidate": "RTS,S/AS01E",
-    "disease_id": "malaria",
-    "disease": "Malaria",
-    "disease_category": "parasitic",
-    "stage": "Phase 4",
-    "stage_order": 8,
-    "platform": "Protein/subunit/VLP",
-    "developer": "GSK / PATH",
-    "sponsors": [
-      "GSK / PATH"
+    "notes": "",
+    "canonical_candidate": "RTS,S/AS01",
+    "candidate_match_method": "AI-assisted alias rule",
+    "candidate_match_confidence": "high",
+    "candidate_match_key": "rts s as01",
+    "candidate_aliases": [
+      "RTS,S/AS01E"
     ],
-    "countries": [],
-    "status": "WHO prequalified and recommended malaria vaccine",
-    "last_update": "2026-05-08",
-    "source": "WHO malaria vaccine clinical development review",
-    "source_url": "https://www.who.int/observatories/global-observatory-on-health-research-and-development/monitoring/who-review-of-malaria-vaccine-clinical-development",
-    "supporting_trial_count": 0,
-    "supporting_trials": [],
-    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "medium",
+    "ai_stage_rationale": "Stage normalized from public source text.",
+    "source_records": 2,
+    "sources_seen": [
+      "WHO Vaccine Pipeline Tracker / public landscape",
+      "WHO malaria vaccine clinical development review"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "PATH-278f1af4ae",
-    "candidate": "Nirsevimab",
+    "candidate": "Nirsevimab / Beyfortus",
     "disease_id": "rsv",
     "disease": "RSV",
     "disease_category": "respiratory",
@@ -222,11 +275,26 @@
     "source_url": "https://www.path.org/our-impact/resources/rsv-and-mab-trial-tracker/",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": ""
+    "notes": "",
+    "canonical_candidate": "Nirsevimab / Beyfortus",
+    "candidate_match_method": "AI-assisted alias rule",
+    "candidate_match_confidence": "high",
+    "candidate_match_key": "nirsevimab beyfortus",
+    "candidate_aliases": [
+      "Nirsevimab"
+    ],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "medium",
+    "ai_stage_rationale": "Stage normalized from public source text.",
+    "source_records": 1,
+    "sources_seen": [
+      "PATH RSV and mAb Trial Tracker"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "PATH-819ad36c09",
-    "candidate": "RSVPreF3 OA / Arexvy",
+    "candidate": "RSVpreF / Abrysvo",
     "disease_id": "rsv",
     "disease": "RSV",
     "disease_category": "respiratory",
@@ -235,28 +303,7 @@
     "platform": "Protein/subunit/VLP",
     "developer": "GSK",
     "sponsors": [
-      "GSK"
-    ],
-    "countries": [],
-    "status": "Public RSV tracker / post-authorization evidence",
-    "last_update": "2026-05-08",
-    "source": "PATH RSV and mAb Trial Tracker",
-    "source_url": "https://www.path.org/our-impact/resources/rsv-and-mab-trial-tracker/",
-    "supporting_trial_count": 0,
-    "supporting_trials": [],
-    "notes": ""
-  },
-  {
-    "id": "PATH-65ed6ee2a4",
-    "candidate": "RSVpreF / Abrysvo",
-    "disease_id": "rsv",
-    "disease": "RSV",
-    "disease_category": "respiratory",
-    "stage": "Phase 4",
-    "stage_order": 8,
-    "platform": "Protein/subunit/VLP",
-    "developer": "Pfizer",
-    "sponsors": [
+      "GSK",
       "Pfizer"
     ],
     "countries": [],
@@ -266,11 +313,26 @@
     "source_url": "https://www.path.org/our-impact/resources/rsv-and-mab-trial-tracker/",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": ""
+    "notes": "",
+    "canonical_candidate": "RSVpreF / Abrysvo",
+    "candidate_match_method": "AI-assisted alias rule",
+    "candidate_match_confidence": "high",
+    "candidate_match_key": "rsvpref abrysvo",
+    "candidate_aliases": [
+      "RSVPreF3 OA / Arexvy"
+    ],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "medium",
+    "ai_stage_rationale": "Stage normalized from public source text.",
+    "source_records": 2,
+    "sources_seen": [
+      "PATH RSV and mAb Trial Tracker"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "PATH-823ec889b5",
-    "candidate": "mRNA-1345 / mRESVIA",
+    "candidate": "mRNA-1345",
     "disease_id": "rsv",
     "disease": "RSV",
     "disease_category": "respiratory",
@@ -288,7 +350,22 @@
     "source_url": "https://www.path.org/our-impact/resources/rsv-and-mab-trial-tracker/",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": ""
+    "notes": "",
+    "canonical_candidate": "mRNA-1345",
+    "candidate_match_method": "AI-assisted alias rule",
+    "candidate_match_confidence": "high",
+    "candidate_match_key": "1345",
+    "candidate_aliases": [
+      "mRNA-1345 / mRESVIA"
+    ],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "medium",
+    "ai_stage_rationale": "Stage normalized from public source text.",
+    "source_records": 1,
+    "sources_seen": [
+      "PATH RSV and mAb Trial Tracker"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "CLINICALTRIALS.GOV-ef5b235eb5",
@@ -314,7 +391,20 @@
     "supporting_trials": [
       "NCT04505722"
     ],
-    "notes": ""
+    "notes": "",
+    "canonical_candidate": "Ad26.COV2.S",
+    "candidate_match_method": "AI-assisted alias rule",
+    "candidate_match_confidence": "high",
+    "candidate_match_key": "ad26 cov2 s",
+    "candidate_aliases": [],
+    "ai_stage_method": "Registry phase mapping",
+    "ai_stage_confidence": "high",
+    "ai_stage_rationale": "Stage mapped from ClinicalTrials.gov phase field.",
+    "source_records": 1,
+    "sources_seen": [
+      "ClinicalTrials.gov"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "CLINICALTRIALS.GOV-5c45930395",
@@ -341,11 +431,24 @@
     "supporting_trials": [
       "NCT04526990"
     ],
-    "notes": ""
+    "notes": "",
+    "canonical_candidate": "Ad5-nCoV",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "ad5 ncov",
+    "candidate_aliases": [],
+    "ai_stage_method": "Registry phase mapping",
+    "ai_stage_confidence": "high",
+    "ai_stage_rationale": "Stage mapped from ClinicalTrials.gov phase field.",
+    "source_records": 1,
+    "sources_seen": [
+      "ClinicalTrials.gov"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "CLINICALTRIALS.GOV-fa86b9875a",
-    "candidate": "BNT162b2",
+    "candidate": "BNT162b2 / Comirnaty",
     "disease_id": "covid-19",
     "disease": "COVID-19",
     "disease_category": "respiratory",
@@ -368,11 +471,26 @@
     "supporting_trials": [
       "NCT04713553"
     ],
-    "notes": ""
+    "notes": "",
+    "canonical_candidate": "BNT162b2 / Comirnaty",
+    "candidate_match_method": "AI-assisted alias rule",
+    "candidate_match_confidence": "high",
+    "candidate_match_key": "bnt162b2 comirnaty",
+    "candidate_aliases": [
+      "BNT162b2"
+    ],
+    "ai_stage_method": "Registry phase mapping",
+    "ai_stage_confidence": "high",
+    "ai_stage_rationale": "Stage mapped from ClinicalTrials.gov phase field.",
+    "source_records": 1,
+    "sources_seen": [
+      "ClinicalTrials.gov"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "CLINICALTRIALS.GOV-6f44ebd7ba",
-    "candidate": "NVX-CoV2373",
+    "candidate": "NVX-CoV2373 / Nuvaxovid",
     "disease_id": "covid-19",
     "disease": "COVID-19",
     "disease_category": "respiratory",
@@ -394,7 +512,22 @@
     "supporting_trials": [
       "NCT04583995"
     ],
-    "notes": ""
+    "notes": "",
+    "canonical_candidate": "NVX-CoV2373 / Nuvaxovid",
+    "candidate_match_method": "AI-assisted alias rule",
+    "candidate_match_confidence": "high",
+    "candidate_match_key": "nvx cov2373 nuvaxovid",
+    "candidate_aliases": [
+      "NVX-CoV2373"
+    ],
+    "ai_stage_method": "Registry phase mapping",
+    "ai_stage_confidence": "high",
+    "ai_stage_rationale": "Stage mapped from ClinicalTrials.gov phase field.",
+    "source_records": 1,
+    "sources_seen": [
+      "ClinicalTrials.gov"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "CIDRAP-6d0ddacfca",
@@ -416,11 +549,24 @@
     "source_url": "https://cvr.cidrap.umn.edu/coronavirus-vaccine-technology-landscape",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": ""
+    "notes": "",
+    "canonical_candidate": "PTX-COVID19-B",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "ptx covid19 b",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "medium",
+    "ai_stage_rationale": "Stage normalized from public source text.",
+    "source_records": 1,
+    "sources_seen": [
+      "CIDRAP Coronavirus Vaccine Technology Landscape"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "CLINICALTRIALS.GOV-8d9c848df3",
-    "candidate": "mRNA-1273",
+    "candidate": "mRNA-1273 / Spikevax",
     "disease_id": "covid-19",
     "disease": "COVID-19",
     "disease_category": "respiratory",
@@ -443,7 +589,22 @@
     "supporting_trials": [
       "NCT04470427"
     ],
-    "notes": ""
+    "notes": "",
+    "canonical_candidate": "mRNA-1273 / Spikevax",
+    "candidate_match_method": "AI-assisted alias rule",
+    "candidate_match_confidence": "high",
+    "candidate_match_key": "1273 spikevax",
+    "candidate_aliases": [
+      "mRNA-1273"
+    ],
+    "ai_stage_method": "Registry phase mapping",
+    "ai_stage_confidence": "high",
+    "ai_stage_rationale": "Stage mapped from ClinicalTrials.gov phase field.",
+    "source_records": 1,
+    "sources_seen": [
+      "ClinicalTrials.gov"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "PATH-617710eb78",
@@ -465,29 +626,20 @@
     "source_url": "https://www.path.org/our-impact/resources/rsv-and-mab-trial-tracker/",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": ""
-  },
-  {
-    "id": "TB-1a7baaa8c0",
-    "candidate": "GamTBvac",
-    "disease_id": "tuberculosis",
-    "disease": "Tuberculosis",
-    "disease_category": "bacterial",
-    "stage": "Phase 3",
-    "stage_order": 7,
-    "platform": "Protein/subunit/VLP",
-    "developer": "Gamaleya National Research Center",
-    "sponsors": [
-      "Gamaleya National Research Center"
+    "notes": "",
+    "canonical_candidate": "Clesrovimab / MK-1654",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "clesrovimab mk 1654",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "medium",
+    "ai_stage_rationale": "Stage normalized from public source text.",
+    "source_records": 1,
+    "sources_seen": [
+      "PATH RSV and mAb Trial Tracker"
     ],
-    "countries": [],
-    "status": "Public TB clinical pipeline",
-    "last_update": "2026-05-08",
-    "source": "TB Vaccine Clinical Pipeline",
-    "source_url": "https://newtbvaccines.org/tb-vaccine-pipeline/clinical-phase/",
-    "supporting_trial_count": 0,
-    "supporting_trials": [],
-    "notes": ""
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "TB-aceda908b3",
@@ -511,22 +663,36 @@
     "source_url": "https://newtbvaccines.org/tb-vaccine-pipeline/clinical-phase/",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": ""
+    "notes": "",
+    "canonical_candidate": "M72/AS01E",
+    "candidate_match_method": "AI-assisted alias rule",
+    "candidate_match_confidence": "high",
+    "candidate_match_key": "m72 as01e",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "high",
+    "ai_stage_rationale": "Stage normalized from public source text.",
+    "source_records": 1,
+    "sources_seen": [
+      "TB Vaccine Clinical Pipeline"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
-    "id": "TB-b6dbba2e38",
+    "id": "TB-1a7baaa8c0",
     "candidate": "MTBVAC",
     "disease_id": "tuberculosis",
     "disease": "Tuberculosis",
     "disease_category": "bacterial",
     "stage": "Phase 3",
     "stage_order": 7,
-    "platform": "Live attenuated",
-    "developer": "Biofabri; University of Zaragoza; TBVI",
+    "platform": "Protein/subunit/VLP",
+    "developer": "Gamaleya National Research Center",
     "sponsors": [
       "Biofabri",
-      "University of Zaragoza",
-      "TBVI"
+      "Gamaleya National Research Center",
+      "TBVI",
+      "University of Zaragoza"
     ],
     "countries": [],
     "status": "Public TB clinical pipeline",
@@ -535,7 +701,22 @@
     "source_url": "https://newtbvaccines.org/tb-vaccine-pipeline/clinical-phase/",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": ""
+    "notes": "",
+    "canonical_candidate": "MTBVAC",
+    "candidate_match_method": "AI-assisted alias rule",
+    "candidate_match_confidence": "high",
+    "candidate_match_key": "mtbvac",
+    "candidate_aliases": [
+      "GamTBvac"
+    ],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "high",
+    "ai_stage_rationale": "Stage normalized from public source text.",
+    "source_records": 2,
+    "sources_seen": [
+      "TB Vaccine Clinical Pipeline"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "TB-dcdac5a86c",
@@ -558,7 +739,20 @@
     "source_url": "https://newtbvaccines.org/tb-vaccine-pipeline/clinical-phase/",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": ""
+    "notes": "",
+    "canonical_candidate": "VPM1002",
+    "candidate_match_method": "AI-assisted alias rule",
+    "candidate_match_confidence": "high",
+    "candidate_match_key": "vpm1002",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "high",
+    "ai_stage_rationale": "Stage normalized from public source text.",
+    "source_records": 1,
+    "sources_seen": [
+      "TB Vaccine Clinical Pipeline"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "CLINICALTRIALS.GOV-92d0b9f7c6",
@@ -584,11 +778,24 @@
     "supporting_trials": [
       "NCT06672055"
     ],
-    "notes": ""
+    "notes": "",
+    "canonical_candidate": "VXA-CoV2-3.3",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "vxa cov2 3 3",
+    "candidate_aliases": [],
+    "ai_stage_method": "Registry phase mapping",
+    "ai_stage_confidence": "high",
+    "ai_stage_rationale": "Stage mapped from ClinicalTrials.gov phase field.",
+    "source_records": 1,
+    "sources_seen": [
+      "ClinicalTrials.gov"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "TB-0d6f279e25",
-    "candidate": "BCG revaccination",
+    "candidate": "BCG",
     "disease_id": "tuberculosis",
     "disease": "Tuberculosis",
     "disease_category": "bacterial",
@@ -606,7 +813,22 @@
     "source_url": "https://newtbvaccines.org/tb-vaccine-pipeline/clinical-phase/",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": ""
+    "notes": "",
+    "canonical_candidate": "BCG",
+    "candidate_match_method": "AI-assisted alias rule",
+    "candidate_match_confidence": "high",
+    "candidate_match_key": "bcg",
+    "candidate_aliases": [
+      "BCG revaccination"
+    ],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "high",
+    "ai_stage_rationale": "Stage normalized from public source text.",
+    "source_records": 1,
+    "sources_seen": [
+      "TB Vaccine Clinical Pipeline"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "CIDRAP-cd35b89802",
@@ -628,7 +850,20 @@
     "source_url": "https://cvr.cidrap.umn.edu/coronavirus-vaccine-technology-landscape",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": ""
+    "notes": "",
+    "canonical_candidate": "ReCoV",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "recov",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "medium",
+    "ai_stage_rationale": "Stage normalized from public source text.",
+    "source_records": 1,
+    "sources_seen": [
+      "CIDRAP Coronavirus Vaccine Technology Landscape"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "WHO-99d900a9a3",
@@ -651,7 +886,20 @@
     "source_url": "https://www.who.int/teams/regulation-prequalification/eul/eul-vaccines/tracking-the-new-vaccine-pipeline",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": ""
+    "notes": "",
+    "canonical_candidate": "ACE527",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "ace527",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "medium",
+    "ai_stage_rationale": "Stage normalized from public source text.",
+    "source_records": 1,
+    "sources_seen": [
+      "WHO Vaccine Pipeline Tracker / public landscape"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "PATHGBS-c09a97bfe0",
@@ -673,7 +921,20 @@
     "source_url": "https://www.path.org/our-impact/resources/gbs-vaccine-clinical-trial-tracker/",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
+    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available.",
+    "canonical_candidate": "GBS-NN / NN2",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "gbs nn nn2",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "high",
+    "ai_stage_rationale": "Stage normalized from public source text.",
+    "source_records": 1,
+    "sources_seen": [
+      "PATH GBS Vaccine Clinical Trial Tracker"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "PATHGBS-2ac182f2b5",
@@ -695,7 +956,20 @@
     "source_url": "https://www.path.org/our-impact/resources/gbs-vaccine-clinical-trial-tracker/",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
+    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available.",
+    "canonical_candidate": "GBS6",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "gbs6",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "high",
+    "ai_stage_rationale": "Stage normalized from public source text.",
+    "source_records": 1,
+    "sources_seen": [
+      "PATH GBS Vaccine Clinical Trial Tracker"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "IAVI-19da601176",
@@ -717,7 +991,20 @@
     "source_url": "https://www.iavi.org/iavi-pipeline/",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
+    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available.",
+    "canonical_candidate": "rVSVΔG-LASV-GPC",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "rvsvδg lasv gpc",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "medium",
+    "ai_stage_rationale": "Stage normalized from public source text.",
+    "source_records": 1,
+    "sources_seen": [
+      "IAVI Pipeline"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "WHO-c938ea3fec",
@@ -739,7 +1026,20 @@
     "source_url": "https://www.who.int/teams/regulation-prequalification/eul/eul-vaccines/tracking-the-new-vaccine-pipeline",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": ""
+    "notes": "",
+    "canonical_candidate": "Norovirus VLP vaccine candidates",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "norovirus vlp candidates",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "medium",
+    "ai_stage_rationale": "Stage normalized from public source text.",
+    "source_records": 1,
+    "sources_seen": [
+      "WHO Vaccine Pipeline Tracker / public landscape"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "WHO-650e1be69b",
@@ -762,7 +1062,20 @@
     "source_url": "https://www.who.int/teams/regulation-prequalification/eul/eul-vaccines/tracking-the-new-vaccine-pipeline",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": ""
+    "notes": "",
+    "canonical_candidate": "Shigella4V",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "shigella4v",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "medium",
+    "ai_stage_rationale": "Stage normalized from public source text.",
+    "source_records": 1,
+    "sources_seen": [
+      "WHO Vaccine Pipeline Tracker / public landscape"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "TB-3895c9f194",
@@ -785,7 +1098,20 @@
     "source_url": "https://newtbvaccines.org/tb-vaccine-pipeline/clinical-phase/",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": ""
+    "notes": "",
+    "canonical_candidate": "H56:IC31",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "h56 ic31",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "high",
+    "ai_stage_rationale": "Stage normalized from public source text.",
+    "source_records": 1,
+    "sources_seen": [
+      "TB Vaccine Clinical Pipeline"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "TB-d3ab6d59e1",
@@ -807,7 +1133,20 @@
     "source_url": "https://newtbvaccines.org/tb-vaccine-pipeline/clinical-phase/",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": ""
+    "notes": "",
+    "canonical_candidate": "ID93 + GLA-SE",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "id93 gla se",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "high",
+    "ai_stage_rationale": "Stage normalized from public source text.",
+    "source_records": 1,
+    "sources_seen": [
+      "TB Vaccine Clinical Pipeline"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "TB-bf349ac9e7",
@@ -829,7 +1168,20 @@
     "source_url": "https://newtbvaccines.org/tb-vaccine-pipeline/clinical-phase/",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": ""
+    "notes": "",
+    "canonical_candidate": "TB/FLU-04L",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "tb flu 04l",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "high",
+    "ai_stage_rationale": "Stage normalized from public source text.",
+    "source_records": 1,
+    "sources_seen": [
+      "TB Vaccine Clinical Pipeline"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "CIDRAP-c37219e732",
@@ -851,7 +1203,20 @@
     "source_url": "https://cvr.cidrap.umn.edu/coronavirus-vaccine-technology-landscape",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": ""
+    "notes": "",
+    "canonical_candidate": "VBI-2901a",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "vbi 2901a",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "medium",
+    "ai_stage_rationale": "Stage normalized from public source text.",
+    "source_records": 1,
+    "sources_seen": [
+      "CIDRAP Coronavirus Vaccine Technology Landscape"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "CLINICALTRIALS.GOV-ecf8cf4867",
@@ -877,7 +1242,20 @@
     "supporting_trials": [
       "NCT07069309"
     ],
-    "notes": ""
+    "notes": "",
+    "canonical_candidate": "COVID-19 RNA vaccine candidate",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "covid 19",
+    "candidate_aliases": [],
+    "ai_stage_method": "Registry phase mapping",
+    "ai_stage_confidence": "high",
+    "ai_stage_rationale": "Stage mapped from ClinicalTrials.gov phase field.",
+    "source_records": 1,
+    "sources_seen": [
+      "ClinicalTrials.gov"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "CLINICALTRIALS.GOV-af972d4b9a",
@@ -903,7 +1281,20 @@
     "supporting_trials": [
       "NCT06178991"
     ],
-    "notes": ""
+    "notes": "",
+    "canonical_candidate": "Combined influenza and COVID-19 vaccine",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "combined influenza and covid 19",
+    "candidate_aliases": [],
+    "ai_stage_method": "Registry phase mapping",
+    "ai_stage_confidence": "high",
+    "ai_stage_rationale": "Stage mapped from ClinicalTrials.gov phase field.",
+    "source_records": 1,
+    "sources_seen": [
+      "ClinicalTrials.gov"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "PATHGBS-313b3680b8",
@@ -925,7 +1316,20 @@
     "source_url": "https://www.path.org/our-impact/resources/gbs-vaccine-clinical-trial-tracker/",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
+    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available.",
+    "canonical_candidate": "IVT GBS-06",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "ivt gbs 06",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "high",
+    "ai_stage_rationale": "Stage normalized from public source text.",
+    "source_records": 1,
+    "sources_seen": [
+      "PATH GBS Vaccine Clinical Trial Tracker"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "WHO-17876beace",
@@ -947,7 +1351,20 @@
     "source_url": "https://www.who.int/teams/regulation-prequalification/eul/eul-vaccines/tracking-the-new-vaccine-pipeline",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": ""
+    "notes": "",
+    "canonical_candidate": "HIV Env trimer vaccine candidates",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "hiv env trimer candidates",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "medium",
+    "ai_stage_rationale": "Stage normalized from public source text.",
+    "source_records": 1,
+    "sources_seen": [
+      "WHO Vaccine Pipeline Tracker / public landscape"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "IAVI-8e02181f84",
@@ -969,7 +1386,20 @@
     "source_url": "https://www.iavi.org/iavi-pipeline/",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
+    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available.",
+    "canonical_candidate": "eOD-GT8 60mer mRNA, coreg28v2 60mer mRNA, N332 GT5 mRNA",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "eod gt8 60mer coreg28v2 60mer n332 gt5",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "medium",
+    "ai_stage_rationale": "Stage normalized from public source text.",
+    "source_records": 1,
+    "sources_seen": [
+      "IAVI Pipeline"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "CIDRAPFLU-4cfb20782b",
@@ -991,7 +1421,20 @@
     "source_url": "https://ivr.cidrap.umn.edu/universal-influenza-vaccine-technology-landscape",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
+    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available.",
+    "canonical_candidate": "Centi-Flu 01",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "centi flu 01",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "medium",
+    "ai_stage_rationale": "Stage normalized from public source text.",
+    "source_records": 1,
+    "sources_seen": [
+      "CIDRAP Universal Influenza Vaccine Technology Landscape"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "CIDRAPFLU-4558d9d412",
@@ -1013,7 +1456,20 @@
     "source_url": "https://ivr.cidrap.umn.edu/universal-influenza-vaccine-technology-landscape",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
+    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available.",
+    "canonical_candidate": "Novel H5 Central Antigen mRNA-LNP",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "novel h5 central antigen lnp",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "medium",
+    "ai_stage_rationale": "Stage normalized from public source text.",
+    "source_records": 1,
+    "sources_seen": [
+      "CIDRAP Universal Influenza Vaccine Technology Landscape"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "CIDRAPFLU-d5bd7fa34d",
@@ -1035,7 +1491,20 @@
     "source_url": "https://ivr.cidrap.umn.edu/universal-influenza-vaccine-technology-landscape",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
+    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available.",
+    "canonical_candidate": "Recombinant trivalent VLP",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "trivalent vlp",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "medium",
+    "ai_stage_rationale": "Stage normalized from public source text.",
+    "source_records": 1,
+    "sources_seen": [
+      "CIDRAP Universal Influenza Vaccine Technology Landscape"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "CIDRAPFLU-52d0db6971",
@@ -1057,7 +1526,20 @@
     "source_url": "https://ivr.cidrap.umn.edu/universal-influenza-vaccine-technology-landscape",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
+    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available.",
+    "canonical_candidate": "UniFluVec",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "unifluvec",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "medium",
+    "ai_stage_rationale": "Stage normalized from public source text.",
+    "source_records": 1,
+    "sources_seen": [
+      "CIDRAP Universal Influenza Vaccine Technology Landscape"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "CIDRAPFLU-56e0799ae2",
@@ -1079,7 +1561,20 @@
     "source_url": "https://ivr.cidrap.umn.edu/universal-influenza-vaccine-technology-landscape",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
+    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available.",
+    "canonical_candidate": "rH5-NE",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "rh5 ne",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "medium",
+    "ai_stage_rationale": "Stage normalized from public source text.",
+    "source_records": 1,
+    "sources_seen": [
+      "CIDRAP Universal Influenza Vaccine Technology Landscape"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "WHO-70772b70c7",
@@ -1102,7 +1597,20 @@
     "source_url": "https://www.iavi.org/iavi-pipeline/",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": ""
+    "notes": "",
+    "canonical_candidate": "ChAdOx1 Lassa",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "chadox1 lassa",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "medium",
+    "ai_stage_rationale": "Stage normalized from public source text.",
+    "source_records": 1,
+    "sources_seen": [
+      "WHO Vaccine Pipeline Tracker / public landscape"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "WHO-4f6524bc2d",
@@ -1125,7 +1633,20 @@
     "source_url": "https://www.iavi.org/iavi-pipeline/",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": ""
+    "notes": "",
+    "canonical_candidate": "IAVI C102 / rVSVΔG-LASV-GPC",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "iavi c102 rvsvδg lasv gpc",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "medium",
+    "ai_stage_rationale": "Stage normalized from public source text.",
+    "source_records": 1,
+    "sources_seen": [
+      "WHO Vaccine Pipeline Tracker / public landscape"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "IAVI-90c0861507",
@@ -1147,7 +1668,20 @@
     "source_url": "https://www.iavi.org/iavi-pipeline/",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
+    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available.",
+    "canonical_candidate": "rVSV∆G-MARV-GP",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "rvsv g marv gp",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "medium",
+    "ai_stage_rationale": "Stage normalized from public source text.",
+    "source_records": 1,
+    "sources_seen": [
+      "IAVI Pipeline"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "WHO-1760d21a91",
@@ -1170,7 +1704,20 @@
     "source_url": "https://www.iavi.org/iavi-pipeline/",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": ""
+    "notes": "",
+    "canonical_candidate": "ChAd3-Marburg",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "chad3 marburg",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "medium",
+    "ai_stage_rationale": "Stage normalized from public source text.",
+    "source_records": 1,
+    "sources_seen": [
+      "WHO Vaccine Pipeline Tracker / public landscape"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "WHOMPOX-642e517750",
@@ -1192,7 +1739,20 @@
     "source_url": "https://www.who.int/publications/m/item/mpox-vaccine-tracker---list-of-vaccine-candidates-in-research---development",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
+    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available.",
+    "canonical_candidate": "BNT166a",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "bnt166a",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "medium",
+    "ai_stage_rationale": "Stage normalized from public source text.",
+    "source_records": 1,
+    "sources_seen": [
+      "WHO Mpox Vaccine Tracker"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "WHO-2cb9ce3c00",
@@ -1216,7 +1776,20 @@
     "source_url": "https://www.iavi.org/iavi-pipeline/",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": ""
+    "notes": "",
+    "canonical_candidate": "rVSVΔG-SUDV-GP",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "rvsvδg sudv gp",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "medium",
+    "ai_stage_rationale": "Stage normalized from public source text.",
+    "source_records": 1,
+    "sources_seen": [
+      "WHO Vaccine Pipeline Tracker / public landscape"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "IAVI-e68ec635de",
@@ -1238,7 +1811,20 @@
     "source_url": "https://www.iavi.org/iavi-pipeline/",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
+    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available.",
+    "canonical_candidate": "rVSV∆G-SEBOV-GP",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "rvsv g sebov gp",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "medium",
+    "ai_stage_rationale": "Stage normalized from public source text.",
+    "source_records": 1,
+    "sources_seen": [
+      "IAVI Pipeline"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "IAVI-d3a029828c",
@@ -1260,7 +1846,20 @@
     "source_url": "https://www.iavi.org/iavi-pipeline/",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
+    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available.",
+    "canonical_candidate": "rVSV∆G-SUDV-GP",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "rvsv g sudv gp",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "medium",
+    "ai_stage_rationale": "Stage normalized from public source text.",
+    "source_records": 1,
+    "sources_seen": [
+      "IAVI Pipeline"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "TB-7f2a96e4a6",
@@ -1282,7 +1881,20 @@
     "source_url": "https://newtbvaccines.org/tb-vaccine-pipeline/clinical-phase/",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": ""
+    "notes": "",
+    "canonical_candidate": "ChAdOx1 85A / MVA85A",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "chadox1 85a mva85a",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "high",
+    "ai_stage_rationale": "Stage normalized from public source text.",
+    "source_records": 1,
+    "sources_seen": [
+      "TB Vaccine Clinical Pipeline"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "CIDRAP-a375cf6b76",
@@ -1306,7 +1918,20 @@
     "source_url": "https://cvr.cidrap.umn.edu/coronavirus-vaccine-technology-landscape",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": ""
+    "notes": "",
+    "canonical_candidate": "S2-S-M-NP",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "s2 s m np",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "medium",
+    "ai_stage_rationale": "Stage inferred from preclinical pipeline/source wording.",
+    "source_records": 1,
+    "sources_seen": [
+      "CIDRAP Coronavirus Vaccine Technology Landscape"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "CIDRAP-f54150961e",
@@ -1328,7 +1953,20 @@
     "source_url": "https://cvr.cidrap.umn.edu/coronavirus-vaccine-technology-landscape",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": ""
+    "notes": "",
+    "canonical_candidate": "mRBD-NP",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "mrbd np",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "medium",
+    "ai_stage_rationale": "Stage inferred from preclinical pipeline/source wording.",
+    "source_records": 1,
+    "sources_seen": [
+      "CIDRAP Coronavirus Vaccine Technology Landscape"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "CIDRAP-5daf6785f9",
@@ -1350,7 +1988,20 @@
     "source_url": "https://cvr.cidrap.umn.edu/coronavirus-vaccine-technology-landscape",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": ""
+    "notes": "",
+    "canonical_candidate": "KP3-mRNA",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "kp3",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "medium",
+    "ai_stage_rationale": "Stage inferred from preclinical pipeline/source wording.",
+    "source_records": 1,
+    "sources_seen": [
+      "CIDRAP Coronavirus Vaccine Technology Landscape"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "CIDRAP-c9c90c79b7",
@@ -1373,7 +2024,20 @@
     "source_url": "https://cvr.cidrap.umn.edu/coronavirus-vaccine-technology-landscape",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": ""
+    "notes": "",
+    "canonical_candidate": "MV-014-212",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "mv 014 212",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "medium",
+    "ai_stage_rationale": "Stage inferred from preclinical pipeline/source wording.",
+    "source_records": 1,
+    "sources_seen": [
+      "CIDRAP Coronavirus Vaccine Technology Landscape"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "CIDRAP-9bca5edf39",
@@ -1395,7 +2059,20 @@
     "source_url": "https://cvr.cidrap.umn.edu/coronavirus-vaccine-technology-landscape",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": ""
+    "notes": "",
+    "canonical_candidate": "S-RBD-NUS",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "s rbd nus",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "medium",
+    "ai_stage_rationale": "Stage inferred from preclinical pipeline/source wording.",
+    "source_records": 1,
+    "sources_seen": [
+      "CIDRAP Coronavirus Vaccine Technology Landscape"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "CIDRAP-db0c85e842",
@@ -1417,7 +2094,20 @@
     "source_url": "https://cvr.cidrap.umn.edu/coronavirus-vaccine-technology-landscape",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": ""
+    "notes": "",
+    "canonical_candidate": "XBB.1.5-LNP-mRNA-RBD",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "xbb 1 5 lnp rbd",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "medium",
+    "ai_stage_rationale": "Stage inferred from preclinical pipeline/source wording.",
+    "source_records": 1,
+    "sources_seen": [
+      "CIDRAP Coronavirus Vaccine Technology Landscape"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "IAVI-76b9f6cdc7",
@@ -1439,7 +2129,20 @@
     "source_url": "https://www.iavi.org/iavi-pipeline/",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
+    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available.",
+    "canonical_candidate": "rVSVΔG-Env-HIV",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "rvsvδg env hiv",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "medium",
+    "ai_stage_rationale": "Stage inferred from preclinical pipeline/source wording.",
+    "source_records": 1,
+    "sources_seen": [
+      "IAVI Pipeline"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "TB-38244fb077",
@@ -1461,7 +2164,20 @@
     "source_url": "https://newtbvaccines.org/tb-vaccine-pipeline/preclinical-stage/",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": ""
+    "notes": "",
+    "canonical_candidate": "AEC/BC02",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "aec bc02",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "medium",
+    "ai_stage_rationale": "Stage inferred from preclinical pipeline/source wording.",
+    "source_records": 1,
+    "sources_seen": [
+      "TB Vaccine Preclinical Pipeline"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "TB-206ce3205f",
@@ -1483,7 +2199,20 @@
     "source_url": "https://newtbvaccines.org/tb-vaccine-pipeline/preclinical-stage/",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": ""
+    "notes": "",
+    "canonical_candidate": "CMV-TB",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "cmv tb",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "medium",
+    "ai_stage_rationale": "Stage inferred from preclinical pipeline/source wording.",
+    "source_records": 1,
+    "sources_seen": [
+      "TB Vaccine Preclinical Pipeline"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   },
   {
     "id": "IAVI-a5b7078467",
@@ -1505,6 +2234,19 @@
     "source_url": "https://www.iavi.org/iavi-pipeline/",
     "supporting_trial_count": 0,
     "supporting_trials": [],
-    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available."
+    "notes": "Seed record from public pipeline source; replaced or supplemented by automated fetch when available.",
+    "canonical_candidate": "mRNA-encoded TB antigens",
+    "candidate_match_method": "AI-assisted text normalization",
+    "candidate_match_confidence": "low",
+    "candidate_match_key": "encoded tb antigens",
+    "candidate_aliases": [],
+    "ai_stage_method": "AI-assisted stage classification",
+    "ai_stage_confidence": "medium",
+    "ai_stage_rationale": "Stage inferred from preclinical pipeline/source wording.",
+    "source_records": 1,
+    "sources_seen": [
+      "IAVI Pipeline"
+    ],
+    "ai_candidate_matching": "AI-assisted candidate matching applied"
   }
 ]
