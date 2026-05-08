@@ -1,0 +1,4 @@
+id,candidate,disease,stage,platform,developer,status,last_update,source,source_url,supporting_trial_count
+SAMPLE-PRE-001,Example preclinical coronavirus vaccine,Coronavirus,Preclinical,Protein/subunit/VLP,Example university,Sample,2026-05-08,Sample data,,0
+SAMPLE-P1-001,Example RSV vaccine,RSV,Phase 1,mRNA/RNA,Example biotech,Active,2026-05-08,Sample data,,1
+SAMPLE-P3-001,Example TB vaccine,Tuberculosis,Phase 3,Viral vector,Example PDP,Active,2026-05-08,Sample data,,2

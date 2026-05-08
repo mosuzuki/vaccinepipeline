@@ -1,16 +1,22 @@
-# Vaccine Pipeline Dashboard configuration
-# Edit this file to add/remove target diseases and keyword strategies.
+# Vaccine Development Pipeline Dashboard configuration
+# Goal: candidate-level dashboard with stages from Discovery/Preclinical to Phase 4.
 updated_by: GitHub Actions
 refresh_schedule: weekly
+
 clinicaltrials:
   base_url: https://clinicaltrials.gov/api/v2/studies
   page_size: 100
-  max_pages_per_disease: 5
-  query_template: 'AREA[ConditionSearch]({condition}) AND AREA[InterventionSearch](vaccine OR vaccination OR immunization OR immunisation)'
+  max_pages_per_disease: 8
+  # ClinicalTrials.gov returns trial-level records. The script groups these into approximate candidate-level records.
+  query_template: 'AREA[ConditionSearch]({condition}) AND AREA[InterventionSearch](vaccine OR vaccination OR immunization OR immunisation OR monoclonal antibody)'
   diseases:
     - id: covid19
       label: COVID-19
-      condition: COVID-19
+      condition: COVID-19 OR SARS-CoV-2
+      category: respiratory
+    - id: coronavirus
+      label: Coronavirus / MERS / SARS
+      condition: Coronavirus Infections OR MERS-CoV OR SARS-CoV
       category: respiratory
     - id: influenza
       label: Influenza
@@ -39,6 +45,10 @@ clinicaltrials:
     - id: chikungunya
       label: Chikungunya
       condition: Chikungunya
+      category: arboviral
+    - id: zika
+      label: Zika
+      condition: Zika Virus Infection
       category: arboviral
     - id: mpox
       label: Mpox / Smallpox
@@ -80,19 +90,57 @@ clinicaltrials:
       label: Group B Streptococcus
       condition: Streptococcus Agalactiae
       category: maternal_infant
-curated_sources:
+    - id: hmpv
+      label: Human metapneumovirus
+      condition: Human Metapneumovirus
+      category: respiratory
+    - id: cmv
+      label: Cytomegalovirus
+      condition: Cytomegalovirus Infections
+      category: congenital
+
+# Best-effort automated public sources. These are parsed only when they expose tables or spreadsheets.
+# They are crucial for preclinical candidates, which are generally absent from trial registries.
+automated_curated_sources:
+  - name: TB Vaccine Preclinical Pipeline
+    id_prefix: TBPRE
+    url: https://newtbvaccines.org/tb-vaccine-pipeline/preclinical-stage/
+    disease: Tuberculosis
+    disease_id: tuberculosis
+    category: bacterial
+    default_stage: Preclinical
+    enabled: true
+  - name: TB Vaccine Clinical Pipeline
+    id_prefix: TBCLIN
+    url: https://newtbvaccines.org/tb-vaccine-pipeline/clinical-phase/
+    disease: Tuberculosis
+    disease_id: tuberculosis
+    category: bacterial
+    default_stage: Unknown
+    enabled: true
+  - name: PATH RSV Clinical Trial Tracker
+    id_prefix: PATHRSV
+    url: https://media.path.org/documents/RSV_Clinical_Trial_Tracker_18SEPT2024.xlsx
+    disease: RSV
+    disease_id: rsv
+    category: respiratory
+    default_stage: Unknown
+    as_of: 2024-09-18
+    enabled: true
+
+manual_reference_sources:
   - name: WHO Vaccine Pipeline Tracker
     url: https://www.who.int/teams/regulation-prequalification/eul/eul-vaccines/tracking-the-new-vaccine-pipeline
-    status: manual_review
+    status: manual_reference
   - name: WHO COVID-19 vaccine tracker and landscape
     url: https://www.who.int/teams/blueprint/covid-19/covid-19-vaccine-tracker-and-landscape
-    status: manual_review
+    status: manual_reference
   - name: CIDRAP Coronavirus Vaccine Technology Landscape
     url: https://cvr.cidrap.umn.edu/coronavirus-vaccine-technology-landscape
-    status: manual_review
+    status: manual_reference
   - name: PATH RSV and mAb Trial Tracker
     url: https://www.path.org/our-impact/resources/rsv-and-mab-trial-tracker/
-    status: manual_review
-  - name: TB Vaccine Pipeline
-    url: https://newtbvaccines.org/tb-vaccine-pipeline/
-    status: manual_review
+    status: manual_reference
+  - name: Vaccines Europe Pipeline Dashboard
+    url: https://www.vaccineseurope.eu/vaccines-ecosystem/vaccines-pipeline/
+    status: manual_reference

@@ -12,35 +12,35 @@
     <div>
       <p class="eyebrow">Global Vaccine R&D Intelligence</p>
       <h1>Vaccine Development Pipeline Dashboard</h1>
-      <p class="lead">公開臨床試験レジストリを起点に、感染症ワクチン候補の開発段階・疾患領域・プラットフォーム・更新状況を自動集計する軽量ダッシュボードです。</p>
+      <p class="lead">公開臨床試験レジストリと疾患別パイプライン表を組み合わせ、候補ワクチンごとに <strong>Preclinical / Phase 1 / Phase 2 / Phase 3 / Phase 4</strong> を分類する自動更新ダッシュボードです。</p>
     </div>
     <div class="hero-card">
       <span class="label">Last updated</span>
       <strong id="lastUpdated">Loading…</strong>
-      <span class="subtle">Data source: ClinicalTrials.gov API v2 + curated source registry</span>
+      <span class="subtle">Candidate-level view · GitHub Actions auto-update</span>
     </div>
   </header>
 
   <main>
     <section class="kpi-grid" aria-label="Key metrics">
-      <article class="kpi"><span>Total records</span><strong id="kpiTotal">–</strong></article>
-      <article class="kpi"><span>Active / recruiting</span><strong id="kpiActive">–</strong></article>
-      <article class="kpi"><span>Disease areas</span><strong id="kpiDiseases">–</strong></article>
-      <article class="kpi"><span>Platforms</span><strong id="kpiPlatforms">–</strong></article>
+      <article class="kpi"><span>Candidates</span><strong id="kpiTotal">–</strong></article>
+      <article class="kpi"><span>Preclinical</span><strong id="kpiPreclinical">–</strong></article>
+      <article class="kpi"><span>Clinical</span><strong id="kpiClinical">–</strong></article>
+      <article class="kpi"><span>Diseases</span><strong id="kpiDiseases">–</strong></article>
     </section>
 
     <section class="panel controls">
       <div>
         <label for="searchBox">Search</label>
-        <input id="searchBox" type="search" placeholder="candidate, sponsor, disease, NCT ID…" />
+        <input id="searchBox" type="search" placeholder="candidate, developer, disease, NCT ID…" />
       </div>
       <div>
         <label for="diseaseFilter">Disease</label>
         <select id="diseaseFilter"><option value="">All diseases</option></select>
       </div>
       <div>
-        <label for="phaseFilter">Phase</label>
-        <select id="phaseFilter"><option value="">All phases</option></select>
+        <label for="stageFilter">Stage</label>
+        <select id="stageFilter"><option value="">All stages</option></select>
       </div>
       <div>
         <label for="platformFilter">Platform</label>
@@ -51,8 +51,8 @@
 
     <section class="chart-grid">
       <article class="panel">
-        <h2>Pipeline by phase</h2>
-        <canvas id="phaseChart" height="220"></canvas>
+        <h2>Pipeline by stage</h2>
+        <canvas id="stageChart" height="220"></canvas>
       </article>
       <article class="panel">
         <h2>Top disease areas</h2>
@@ -67,7 +67,7 @@
     <section class="panel">
       <div class="section-heading">
         <div>
-          <h2>Pipeline records</h2>
+          <h2>Candidate-level pipeline</h2>
           <p id="recordCount" class="subtle">Loading records…</p>
         </div>
         <button id="downloadCsv" type="button">Download CSV</button>
@@ -76,14 +76,14 @@
         <table id="pipelineTable">
           <thead>
             <tr>
-              <th>Candidate / Trial</th>
+              <th>Candidate</th>
               <th>Disease</th>
-              <th>Phase</th>
+              <th>Stage</th>
               <th>Platform</th>
+              <th>Developer</th>
               <th>Status</th>
-              <th>Sponsor</th>
-              <th>Countries</th>
-              <th>Updated</th>
+              <th>Evidence</th>
+              <th>Source / Updated</th>
             </tr>
           </thead>
           <tbody></tbody>
@@ -93,19 +93,19 @@
 
     <section class="panel two-col">
       <div>
-        <h2>Recent updates</h2>
+        <h2>Recent candidate updates</h2>
         <ul id="recentList" class="link-list"></ul>
       </div>
       <div>
         <h2>Sources and limitations</h2>
         <ul id="sourceList" class="link-list"></ul>
-        <p class="note">臨床試験レジストリは試験単位です。候補ワクチン単位の名寄せ、前臨床候補、企業発表、WHO PQ/EUL・FDA・EMA承認状況は、今後の拡張で追加する想定です。</p>
+        <p class="note">ClinicalTrials.govは試験単位のデータであるため、候補ワクチン単位への名寄せは介入名から推定しています。プレクリニカル候補は、TBなど表形式で公開されている疾患別パイプラインから取得します。WHO、CIDRAP等はまず参照ソースとして登録し、取得可能な形式が確認できたものから自動化します。</p>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>Vaccine Development Pipeline Dashboard · Static GitHub Pages template</p>
+    <p>Vaccine Development Pipeline Dashboard · Static GitHub Pages</p>
   </footer>
 
   <script src="assets/app.js"></script>
