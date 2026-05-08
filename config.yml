@@ -1,0 +1,98 @@
+# Vaccine Pipeline Dashboard configuration
+# Edit this file to add/remove target diseases and keyword strategies.
+updated_by: GitHub Actions
+refresh_schedule: weekly
+clinicaltrials:
+  base_url: https://clinicaltrials.gov/api/v2/studies
+  page_size: 100
+  max_pages_per_disease: 5
+  query_template: 'AREA[ConditionSearch]({condition}) AND AREA[InterventionSearch](vaccine OR vaccination OR immunization OR immunisation)'
+  diseases:
+    - id: covid19
+      label: COVID-19
+      condition: COVID-19
+      category: respiratory
+    - id: influenza
+      label: Influenza
+      condition: Influenza
+      category: respiratory
+    - id: rsv
+      label: RSV
+      condition: Respiratory Syncytial Virus Infections
+      category: respiratory
+    - id: tuberculosis
+      label: Tuberculosis
+      condition: Tuberculosis
+      category: bacterial
+    - id: malaria
+      label: Malaria
+      condition: Malaria
+      category: parasitic
+    - id: hiv
+      label: HIV
+      condition: HIV Infections
+      category: viral
+    - id: dengue
+      label: Dengue
+      condition: Dengue
+      category: arboviral
+    - id: chikungunya
+      label: Chikungunya
+      condition: Chikungunya
+      category: arboviral
+    - id: mpox
+      label: Mpox / Smallpox
+      condition: Mpox OR Monkeypox OR Smallpox
+      category: orthopoxvirus
+    - id: ebola
+      label: Ebola virus disease
+      condition: Ebola Virus Disease
+      category: viral_hemorrhagic_fever
+    - id: marburg
+      label: Marburg virus disease
+      condition: Marburg Virus Disease
+      category: viral_hemorrhagic_fever
+    - id: lassa
+      label: Lassa fever
+      condition: Lassa Fever
+      category: viral_hemorrhagic_fever
+    - id: pneumococcal
+      label: Pneumococcal disease
+      condition: Pneumococcal Infections
+      category: bacterial
+    - id: meningococcal
+      label: Meningococcal disease
+      condition: Meningococcal Infections
+      category: bacterial
+    - id: shigella
+      label: Shigella
+      condition: Shigella Infections
+      category: enteric
+    - id: etec
+      label: ETEC
+      condition: Enterotoxigenic Escherichia coli
+      category: enteric
+    - id: norovirus
+      label: Norovirus
+      condition: Norovirus Infections
+      category: enteric
+    - id: gbs
+      label: Group B Streptococcus
+      condition: Streptococcus Agalactiae
+      category: maternal_infant
+curated_sources:
+  - name: WHO Vaccine Pipeline Tracker
+    url: https://www.who.int/teams/regulation-prequalification/eul/eul-vaccines/tracking-the-new-vaccine-pipeline
+    status: manual_review
+  - name: WHO COVID-19 vaccine tracker and landscape
+    url: https://www.who.int/teams/blueprint/covid-19/covid-19-vaccine-tracker-and-landscape
+    status: manual_review
+  - name: CIDRAP Coronavirus Vaccine Technology Landscape
+    url: https://cvr.cidrap.umn.edu/coronavirus-vaccine-technology-landscape
+    status: manual_review
+  - name: PATH RSV and mAb Trial Tracker
+    url: https://www.path.org/our-impact/resources/rsv-and-mab-trial-tracker/
+    status: manual_review
+  - name: TB Vaccine Pipeline
+    url: https://newtbvaccines.org/tb-vaccine-pipeline/
+    status: manual_review

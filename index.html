@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vaccine Development Pipeline Dashboard</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <p class="eyebrow">Global Vaccine R&D Intelligence</p>
+      <h1>Vaccine Development Pipeline Dashboard</h1>
+      <p class="lead">公開臨床試験レジストリを起点に、感染症ワクチン候補の開発段階・疾患領域・プラットフォーム・更新状況を自動集計する軽量ダッシュボードです。</p>
+    </div>
+    <div class="hero-card">
+      <span class="label">Last updated</span>
+      <strong id="lastUpdated">Loading…</strong>
+      <span class="subtle">Data source: ClinicalTrials.gov API v2 + curated source registry</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="kpi-grid" aria-label="Key metrics">
+      <article class="kpi"><span>Total records</span><strong id="kpiTotal">–</strong></article>
+      <article class="kpi"><span>Active / recruiting</span><strong id="kpiActive">–</strong></article>
+      <article class="kpi"><span>Disease areas</span><strong id="kpiDiseases">–</strong></article>
+      <article class="kpi"><span>Platforms</span><strong id="kpiPlatforms">–</strong></article>
+    </section>
+
+    <section class="panel controls">
+      <div>
+        <label for="searchBox">Search</label>
+        <input id="searchBox" type="search" placeholder="candidate, sponsor, disease, NCT ID…" />
+      </div>
+      <div>
+        <label for="diseaseFilter">Disease</label>
+        <select id="diseaseFilter"><option value="">All diseases</option></select>
+      </div>
+      <div>
+        <label for="phaseFilter">Phase</label>
+        <select id="phaseFilter"><option value="">All phases</option></select>
+      </div>
+      <div>
+        <label for="platformFilter">Platform</label>
+        <select id="platformFilter"><option value="">All platforms</option></select>
+      </div>
+      <button id="resetBtn" type="button">Reset</button>
+    </section>
+
+    <section class="chart-grid">
+      <article class="panel">
+        <h2>Pipeline by phase</h2>
+        <canvas id="phaseChart" height="220"></canvas>
+      </article>
+      <article class="panel">
+        <h2>Top disease areas</h2>
+        <canvas id="diseaseChart" height="220"></canvas>
+      </article>
+      <article class="panel">
+        <h2>Technology platform</h2>
+        <canvas id="platformChart" height="220"></canvas>
+      </article>
+    </section>
+
+    <section class="panel">
+      <div class="section-heading">
+        <div>
+          <h2>Pipeline records</h2>
+          <p id="recordCount" class="subtle">Loading records…</p>
+        </div>
+        <button id="downloadCsv" type="button">Download CSV</button>
+      </div>
+      <div class="table-wrap">
+        <table id="pipelineTable">
+          <thead>
+            <tr>
+              <th>Candidate / Trial</th>
+              <th>Disease</th>
+              <th>Phase</th>
+              <th>Platform</th>
+              <th>Status</th>
+              <th>Sponsor</th>
+              <th>Countries</th>
+              <th>Updated</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel two-col">
+      <div>
+        <h2>Recent updates</h2>
+        <ul id="recentList" class="link-list"></ul>
+      </div>
+      <div>
+        <h2>Sources and limitations</h2>
+        <ul id="sourceList" class="link-list"></ul>
+        <p class="note">臨床試験レジストリは試験単位です。候補ワクチン単位の名寄せ、前臨床候補、企業発表、WHO PQ/EUL・FDA・EMA承認状況は、今後の拡張で追加する想定です。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Vaccine Development Pipeline Dashboard · Static GitHub Pages template</p>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

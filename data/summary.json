@@ -1,0 +1,119 @@
+{
+  "generated_at": "2026-05-08T05:33:58.367084+00:00",
+  "record_count": 2,
+  "active_record_count": 2,
+  "disease_count": 2,
+  "phase_counts": {
+    "Phase 3": 1,
+    "Phase 2": 1
+  },
+  "disease_counts": {
+    "RSV": 1,
+    "Tuberculosis": 1
+  },
+  "platform_counts": {
+    "Protein/subunit/VLP": 1,
+    "Viral vector": 1
+  },
+  "recent_updates": [
+    {
+      "id": "SAMPLE-RSV-001",
+      "source": "Sample data",
+      "url": "",
+      "title": "Example RSV vaccine candidate trial",
+      "official_title": "",
+      "disease_id": "rsv",
+      "disease": "RSV",
+      "disease_category": "respiratory",
+      "conditions": [
+        "Respiratory Syncytial Virus Infections"
+      ],
+      "candidate": "Example RSV prefusion F vaccine",
+      "interventions": [
+        "RSV vaccine"
+      ],
+      "platform": "Protein/subunit/VLP",
+      "phase": "Phase 3",
+      "study_type": "INTERVENTIONAL",
+      "overall_status": "RECRUITING",
+      "start_date": "2025-01",
+      "completion_date": "2027-06",
+      "last_update": "2026-05-08",
+      "enrollment": 12000,
+      "lead_sponsor": "Example sponsor",
+      "collaborators": [],
+      "countries": [
+        "Japan",
+        "United States"
+      ]
+    },
+    {
+      "id": "SAMPLE-TB-001",
+      "source": "Sample data",
+      "url": "",
+      "title": "Example tuberculosis vaccine study",
+      "official_title": "",
+      "disease_id": "tuberculosis",
+      "disease": "Tuberculosis",
+      "disease_category": "bacterial",
+      "conditions": [
+        "Tuberculosis"
+      ],
+      "candidate": "Example TB vaccine",
+      "interventions": [
+        "Tuberculosis vaccine"
+      ],
+      "platform": "Viral vector",
+      "phase": "Phase 2",
+      "study_type": "INTERVENTIONAL",
+      "overall_status": "ACTIVE_NOT_RECRUITING",
+      "start_date": "2024-04",
+      "completion_date": "2026-12",
+      "last_update": "2026-05-08",
+      "enrollment": 2500,
+      "lead_sponsor": "Example PDP",
+      "collaborators": [],
+      "countries": [
+        "South Africa",
+        "Kenya"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "name": "ClinicalTrials.gov API v2",
+      "url": "https://clinicaltrials.gov/api/v2/studies",
+      "status": "automated"
+    },
+    {
+      "name": "WHO Vaccine Pipeline Tracker",
+      "url": "https://www.who.int/teams/regulation-prequalification/eul/eul-vaccines/tracking-the-new-vaccine-pipeline",
+      "status": "manual_review"
+    },
+    {
+      "name": "WHO COVID-19 vaccine tracker and landscape",
+      "url": "https://www.who.int/teams/blueprint/covid-19/covid-19-vaccine-tracker-and-landscape",
+      "status": "manual_review"
+    },
+    {
+      "name": "CIDRAP Coronavirus Vaccine Technology Landscape",
+      "url": "https://cvr.cidrap.umn.edu/coronavirus-vaccine-technology-landscape",
+      "status": "manual_review"
+    },
+    {
+      "name": "PATH RSV and mAb Trial Tracker",
+      "url": "https://www.path.org/our-impact/resources/rsv-and-mab-trial-tracker/",
+      "status": "manual_review"
+    },
+    {
+      "name": "TB Vaccine Pipeline",
+      "url": "https://newtbvaccines.org/tb-vaccine-pipeline/",
+      "status": "manual_review"
+    }
+  ],
+  "notes": [
+    "ClinicalTrials.gov records are trial-level; candidate-level deduplication is approximate.",
+    "WHO ICTRP and disease-specific trackers should be used as curated validation sources.",
+    "Preclinical candidates are underrepresented unless added from curated sources."
+  ]
+}

@@ -1,0 +1,64 @@
+[
+  {
+    "id": "SAMPLE-RSV-001",
+    "source": "Sample data",
+    "url": "",
+    "title": "Example RSV vaccine candidate trial",
+    "official_title": "",
+    "disease_id": "rsv",
+    "disease": "RSV",
+    "disease_category": "respiratory",
+    "conditions": [
+      "Respiratory Syncytial Virus Infections"
+    ],
+    "candidate": "Example RSV prefusion F vaccine",
+    "interventions": [
+      "RSV vaccine"
+    ],
+    "platform": "Protein/subunit/VLP",
+    "phase": "Phase 3",
+    "study_type": "INTERVENTIONAL",
+    "overall_status": "RECRUITING",
+    "start_date": "2025-01",
+    "completion_date": "2027-06",
+    "last_update": "2026-05-08",
+    "enrollment": 12000,
+    "lead_sponsor": "Example sponsor",
+    "collaborators": [],
+    "countries": [
+      "Japan",
+      "United States"
+    ]
+  },
+  {
+    "id": "SAMPLE-TB-001",
+    "source": "Sample data",
+    "url": "",
+    "title": "Example tuberculosis vaccine study",
+    "official_title": "",
+    "disease_id": "tuberculosis",
+    "disease": "Tuberculosis",
+    "disease_category": "bacterial",
+    "conditions": [
+      "Tuberculosis"
+    ],
+    "candidate": "Example TB vaccine",
+    "interventions": [
+      "Tuberculosis vaccine"
+    ],
+    "platform": "Viral vector",
+    "phase": "Phase 2",
+    "study_type": "INTERVENTIONAL",
+    "overall_status": "ACTIVE_NOT_RECRUITING",
+    "start_date": "2024-04",
+    "completion_date": "2026-12",
+    "last_update": "2026-05-08",
+    "enrollment": 2500,
+    "lead_sponsor": "Example PDP",
+    "collaborators": [],
+    "countries": [
+      "South Africa",
+      "Kenya"
+    ]
+  }
+]
